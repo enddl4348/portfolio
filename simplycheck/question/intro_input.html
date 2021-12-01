@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+  <title>SIMPLY CHECK</title>
+  <meta name="description" content="심플리 체크 네이처스팜 셀프 체크리스트">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="심플리 체크 네이처스팜 셀프 체크리스트">
+  <meta property="og:description" content="심플리 체크 네이처스팜 셀프 체크리스트">
+  <meta property="og:image" content="../img/og_img.jpg">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/reset.css" type="text/css">
+  <link rel="stylesheet" href="../css/font.css" type="text/css">
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+  <link rel="stylesheet" href="../css/swiper.min.css" type="text/css">
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+  <link rel="stylesheet" href="../css/respon.css" type="text/css">
+  <!-- JS -->
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <![endif]-->
+  <!--[if gte IE 9]>
+    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+    <![endif]-->
+  <!--[if !IE]> -->
+  <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+
+  <!-- <![endif]-->
+  <script type="text/javascript" src="../js/swiper.min.js"></script>
+  <script type="text/javascript" src="../js/cmn.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <button type="button" class="go-prev" onclick="history.go(-1);"><img src="../img/cmn/prev.png" alt="이전으로"></button>
+      <h1 class="logo sub"><a href="../index.html" ><img src="../img/cmn/logo.png" alt="네이처스팜진단"></a></h1>
+      <a href="../index.html" class="go-home ir_pm">메인으로</a>
+    </div>
+  </header>
+
+<div class="container">
+  <div class="qs__intro person-info">
+    <i class="intro__bg ir_pm">인트로 개인정보 아이콘</i>
+    <h2>안녕하세요,</h2>
+    <p class="intro_subtit">고객님을 <em>구별할 수 있는 정보</em>를 알려주세요.</p>
+    <form name="" action="">
+      <div class="intro__input-wrap">
+        <input id="name" name="name" type="text" placeholder="이름을 입력해주세요." koreanonly /> <br>
+        <input name="hphone" type="text" placeholder="연락처를 입력해주세요." />
+        <p class="info-chk-wrap">
+          <input type="checkbox" id="info-chk" />
+          <label for="info-chk">개인정보 수집·이용 동의</label>
+          <button type="button" class="detail">[자세히 보기]</button>
+        </p>
+      </div>
+      <div class="type_ok">
+        <a href="./intro.html" class="qs__cmn-btn">다음</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="q-pop-bg"></div>
+<div class="q-pop-cont">
+  <strong>개인정보 수집·이용 동의서</strong>
+  <button type="button" class="pop-del"><img src="../img/icon/bk_del.png" alt="팝업 닫기"></button>
+  <div class="q-cont">
+  <p>네이처스팜(주)는 「개인정보보호법」에 의거하여, 아래와 같은 내용으로 개인정보를 수집하고 있습니다. 아래 내용을 자세히 읽어 보시고, 모든 내용을 이해하신 후에 동의 여부를 결정해 주시기 바랍니다.</p>
+  <dl>
+    <dt>1. 수집하는 개인 정보</dt>
+    <dd>이름, 연락처(자택이나 휴대전화), 나이, 이메일 주소, 서비스 이용 날짜, 웹 페이지 내에서 선택한 항목과 결과값, 기타 이용자가 제공한 정보 
+    </dd>
+  </dl>
+  <dl>
+    <dt>2. 수집한 개인정보의 이용</dt> 
+    <dd>약국 별 고객 관리, 항목 별 데이터 수집 및 분석, 서비스 개발?제공 및 향상을 위한 목적으로만 이용합니다.</dd>
+  </dl>
+  <dl>
+    <dt>3. 개인정보의 보관기간</dt>
+    <dd>수집·이용 동의일로부터 개인정보의 수집·이용목적을 달성할 때까지 안전하게 보관합니다.
+    </dd>
+  </dl>
+  <dl>
+    <dt>4. 개인정보 수집 및 이용 동의를 거부할 권리</dt>
+    <dd>이용자는 개인정보의 수집 및 이용 동의를 거부할 권리가 있습니다. 다만 서비스 이용 시 수집하는 최소한의 개인정보, 즉, 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 서비스 이용이 어려울 수 있습니다.</dd>
+  </dl>
+  </div>
+
+</div>
+
+<? include $_SERVER['DOCUMENT_ROOT'].'/simplycheck/inc/footer.php'; ?>

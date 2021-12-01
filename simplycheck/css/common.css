@@ -1,0 +1,107 @@
+@charset "euc-kr";
+
+/* ------------------ common ------------------ */
+html,body {font-size: 62.5%;}
+body {color:#222;font-family:'notokr','Lato' ,serif; font-weight: 400; line-height: 1; letter-spacing:-0.065em; }
+.container {position: relative; height:100%;width:100%; max-width:120rem; margin:0 auto; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.sub-container {padding:5rem 0 10rem; min-height:54rem;}
+.qs-container {width:80rem; margin:0 auto;}
+.clearfix:after {content:''; display: block; clear:both;}
+.ir_pm {font-size: 0;}
+
+/* ------------------ header ------------------ */
+.header {position: relative; height: 7rem;padding:1.2rem 0 1.5rem; border-bottom:5px solid #f2f2f2; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.header .logo {display: inline-block; width:18rem;}
+.header .logo a {display: inline-block;width:100%; height:4.2rem; }
+.header .logo img {width:100%;}
+
+.header .logo.sub { position: absolute; left: 50%; transform:translateX(-50%); -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%); -o-transform:translateX(-50%); }
+
+.header .go-prev {width:3.8rem; display: inline-block; height: 100%;text-align: left;}
+.header .go-prev img {vertical-align: -2px;}
+.header .header__log , .header .btn-check { position: absolute; top:50%; transform:translateY(-50%); right:0; -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); -o-transform:translateY(-50%); }
+.header .cmn-btn {display: inline-block;padding:0 2rem; height:3.5rem; line-height: 3.1rem; border:2px solid #d22233;font-size: 1.5rem; font-weight: 700; color:#d22233; border-radius:2rem ; -webkit-border-radius:2rem ; -moz-border-radius:2rem ; -ms-border-radius:2rem ; -o-border-radius:2rem ; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.header .chk-btn {position: relative;}
+.header .chk-btn:before { content:''; position: absolute; top:50%; left:-40px; transform:translateY(-50%); width:7px; height: 7px; background: #d22233; border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%; animation:tongue1 .7s 1s infinite ease-in alternate; -webkit-animation:tongue1 .7s 1s infinite ease-in alternate; -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); -o-transform:translateY(-50%); }
+@keyframes tongue1 {
+  0% {
+    left:-40px;
+  }
+  100% {
+   left:-15px;
+  }
+}
+.header__log .logout {border-color:#dcdcdc; color:#777777; vertical-align: middle;}
+.header__log span {display: inline-block; margin-right: 2rem; font-size: 1.4rem; font-weight: 700; color:#999;vertical-align: middle;}
+.header__log span em {color:#222;}
+.header .go-home { position: absolute; right:0; top:50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); width:4rem; height:4rem; background:url(../img/cmn/close.png)no-repeat; -webkit-background-size:2.1rem auto; background-size:2.1rem auto; background-position: right center;}
+
+/* ------------------ footer ------------------ */
+.footer {padding:2rem 0 5.5rem; border-top:1px solid #dcdcdc;}
+.foot__logo {margin-right: 5rem; width:18rem; height:4.2rem;}
+.foot__logo a {width:100%;}
+.foot__logo img {width:100%;}
+.footer .foot__info {float:left; margin-top: 0.6rem;}
+.footer .foot__logo {float:left;}
+.foot__info p {line-height: 2.5rem; font-size: 1.5rem; color:#666; font-weight: 500; }
+.foot__info .name, .foot__info .address {display: inline-block;}
+.foot__info p span:after {content:''; display: inline-block; width:1px; height:1.3rem; background: #dcdcdc;margin:0 1rem; }
+.foot__info .copyright {display: block; margin-top: 1.4rem; font-size: 1.5rem; font-weight: 500; color:#999999; letter-spacing: 0;}
+
+/* ------------------ 결과페이지 상단 공통 부분 ------------------ */ 
+.result__cmn-top {position: relative;width:120rem; margin:0 auto; padding-top:5rem;}
+.patient-info {margin-bottom: 2rem;}
+.patient-info .patient-name {display: inline-block;margin-right:2rem; font-size: 3rem; font-weight: 700;vertical-align: middle;}
+.patient-info span {display: inline-block; font-size: 1.6rem; font-weight: 500; vertical-align: middle;}
+.patient-info .patient-gender:after {content:'';display: inline-block; margin:0 1.1rem; width:1px; height:1rem; background: #dcdcdc;}
+.patient-info  .patient-age {margin-right: 1rem;}
+.patient-info .info-edit {vertical-align: middle;}
+.patient-info .info-edit  img {vertical-align: middle;}
+
+.result__tab {margin-top: 2.2rem;}
+.result__tab .tab__list {font-size: 0;}
+.result__tab li {display: inline-block; width:16.6%;}
+.result__tab li a {display: inline-block;width:100%; height: 4.6rem;line-height: 4.6rem; border-bottom:2px solid #dcdcdc;font-size: 1.8rem;font-weight: 700; color:#777; text-align: center;}
+.result__tab li.on a {color:#5bc3be; border-color:#5bc3be;}
+.result__tab li.orange a {color: #f6945a ; border-color: #f6945a;}
+.result__tab li.red a {color:#d22233; border-color:#d22233;}
+
+
+
+.result__tab li.sleep a {color:rgba(101,95,163); border-color:rgba(101,95,163);}
+.result__tab li.cycle a {color:rgba(136,63,152); border-color:rgba(136,63,152);}
+.result__tab li.skin a {color:rgba(189,166,50); border-color:rgba(189,166,50);}
+.result__tab li.immune a {color:rgba(138,198,64); border-color:rgba(138,198,64);}
+.result__tab li.fatigue a {color:rgba(29,167,74); border-color:rgba(29,167,74);}
+.result__tab li.brains a {color:rgba(0,145,208); border-color:rgba(0,145,208);}
+.result__tab li.eye a {color:rgba(24,162,167); border-color:rgba(24,162,167);}
+.result__tab li.bone a {color:rgba(237,83,50); border-color:rgba(237,83,50);}
+.result__tab li.woman a {color:rgba(156,35,79); border-color:rgba(156,35,79);}
+.result__tab li.man a {color:rgba(66,107,179); border-color:rgba(66,107,179);}
+
+.result__tab .slide-cmn-btn {display: none; left:0;top:auto; bottom:0; width:3.5rem;height:3.5rem;font-size: 0;}
+.result__tab .swiper-button-prev { display: none; background: url(../img/icon/sld_prev.png) no-repeat; background-size: 100% auto; }
+.result__tab .swiper-button-next {right:0;left:auto; background: url(../img/icon/sld_next.png) no-repeat; background-size: 100% auto; }
+
+/* ------------------ paging ------------------ */
+.paging {text-align: center;}
+.paging a {display: inline-block; margin-right: 1rem; vertical-align: middle;}
+.paging .page-num {width:1.8rem; height:1.8rem;line-height: 1.8rem; font-size: 1.5rem; font-weight: 700; color:#999; text-align: center;}
+.paging .current-pg {color:#5b417b;}
+.paging .next {margin-right:0;}
+
+/* 공통 페이징 */
+.paging {text-align: center;}
+.paging a {display: inline-block; width:27px;height: 27px; -webkit-box-sizing: border-box; box-sizing: border-box;font-size: 0;vertical-align: middle;}
+.paging .ico {background: no-repeat;background-position: center; border:1px solid #eee;}
+.paging .prev {margin-right: 2px; background-image: url(../img/icon/prev.png); -webkit-background-size: 9px 9px; background-size: 9px 9px;}
+
+.paging .prev2 {margin-right: 20px; background-image: url(../img/icon/prev2.png); -webkit-background-size: 5px 9px; background-size: 5px 9px;}
+
+.paging .next {margin-left: 20px; background-image: url(../img/icon/next2.png); -webkit-background-size: 5px 9px; background-size: 5px 9px;}
+
+.paging .next2 {margin-left: 2px; background-image: url(../img/icon/next.png); -webkit-background-size: 9px 9px; background-size: 9px 9px;}
+
+.paging b {font-size: 15px; font-weight: 700;vertical-align: middle;}
+.paging .ot-pg {line-height: 27px;text-align: center; margin-left: 12px;font-size: 15px; color:#757575;}

@@ -1,0 +1,1 @@
+-----order_update.php start-----status : ORorderid : 211011221603316paymethod : PVttno : pgbiosma2m03012110112216090601bankkind : 신한은행accountno : 56202760305178pgname : INNOPAYes_check : Nes_stats : INtprice : 800-----order_update.php END-----

@@ -1,0 +1,33 @@
+.scrollme
+{ border-bottom: 1px; }
+
+.scrollme td, 
+.scrollme_wrapper,
+.scrollme_head,
+.scrollme_foot
+{ border:1px solid #ccc; }
+
+.scrollme td
+{ padding:3px 5px; }
+
+.scrollme_wrapper
+{ border-left:0; }
+
+.scrollme_head
+{ background-color:#eee; border-left:0; border-top:0; margin-bottom:3px; }
+
+.scrollme thead td
+{ border-left: 0px solid #b1b1b1; text-align: center; background-color: #6f7684; color: #ffffff; font-weight: bold; font-size: 12px; height: 30px; }
+
+.scrollme tbody td
+{ border-right:0; border-bottom:0; }
+
+.scrollme tbody tr.first td
+{ border-top:0; }
+
+.scrollme_foot
+{ background-color:#eee; border-left:0; border-top:0; margin-top:3px; }
+
+.scrollme tfoot td
+{ border-right:0; border-bottom:0; }
+

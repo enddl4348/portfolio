@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>MRO쇼핑몰 관리자</title>
+    
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    
+    <link rel="stylesheet" href="css/c3.min.css">
+    
+    <!--[if lt IE 9]>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/selectivizr-min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]>
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <![endif]-->
+    <!--[if !IE]> -->
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <!-- <![endif]-->
+    
+    
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/calendar.js"></script></head>
+    <script src="js/c3.min.js"></script></head>
+    <script src="js/cmn.js"></script>
+</head>
+<body>
+  <header class="header clearfix">
+    <h1 class="logo"><a href="index.html">자생 <em>MRO</em> 시스템</a></h1>
+    <ul class="hd__menu">
+      <!--li><a href="">주문배송조회</a></li-->
+      <li><button type="button" class="cart_btn">장바구니</button></li>
+      <!--li><a href="">마이페이지</a></li-->
+      <li><a href="#">로그아웃</a></li>
+    </ul>
+  </header>
+
+  
+
+  <div class="bg"></div>
+  <div class="cart-pop-wrap cmn-pop-wrap">
+    <div class="pop-btn">
+      <button type="button" class="view-all"></button>
+      <button type="button" class="cls-pop"></button>
+    </div>
+
+    <div class="cart-pop">
+      <h4 class="pop-tit">장바구니 <span class="cart-num">1</span> </h4>
+      <div class="cart-inner clearfix">
+        <section class="cart-list-sect">
+          <p class="cart_chk-opt">
+            <input type="checkbox" id="all-selct" onclick="cart_sel_all();">
+            <label for="all-selct">전체선택</label>
+            <button type="button" class="selt-del" onclick="cart_sel_delete();">선택상품 삭제</button>
+          </p>
+          <table class="cart__list">
+            <thead>
+              <tr class="list_top">
+                <td colspan="6">
+                  <input type="checkbox" id="all_testmall" class="chk_all" onclick="cart_sel_mall('testmall');">
+                  <strong>테스트몰</strong>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="cart__list-item">
+                <td width="58px" class="chk">
+                  <input type="checkbox" value="10" class="cart_idx chk_all chk_testmall">
+                </td>
+                <td width="93px">
+                  <div class="prd-img">
+                    <img src="img/sub/prod_1.jpg" alt="엑셀업로드 테스트상품">
+                  </div>
+                </td>
+                <td class="prd-name" width="308px">
+                  엑셀업로드 테스트상품 </td>
+                <td class="amnt-box">
+                  <div class="num-box">
+                    <button type="button" class="minus" onclick="cart_amout_down('10');"><img
+                        src="img/ico/minus.png" alt=""></button>
+                    <span class="amnt-num" id="cart_amout_text_10">10</span>
+                    <button type="button" class="" onclick="cart_amout_up('10');"><img src="img/ico/plus.png"
+                        alt=""></button>
+                  </div>
+                </td>
+                <td class="prd-prc" width="136px">
+                  <em id="cart_price_text_10">100,000</em> 원
+                </td>
+                <td width="58px" class="del-btn">
+                  <button type="button" onclick="cart_delete('10');"><img src="img/ico/cart-del.png"
+                      alt="제품 삭제버튼"></button>
+                </td>
+              </tr>
+            </tbody>
+
+            <tfoot>
+              <tr class="list_btm">
+                <td colspan="6" class="prc-sect">
+                  <span>총 구매금액</span>
+                  <strong class="all-prc"><em class="cart_total_price_text">100,000</em> 원</strong>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+
+        <section class="cart-prc-sect cmn-prd-btn">
+          <strong>전체 합계</strong>
+          <dl class="cmn__all-prc clearfix">
+            <dt>총 구매 금액</dt>
+            <dd><em class="cart_total_price_text">100,000</em> 원</dd>
+          </dl>
+          <button class="req-btn" onclick="cart_sel_buy_view();">구매하기</button>
+        </section>
+      </div>
+    </div> <!-- //cart-pop -->
+  </div>
+
+
+
+  <div class="ad-manage-wrap clearfix">
+
+    <div class="lnb-wrap">
+     
+      <div class="lnb-box">
+    <h4 class="lnb__tit">구매</h4>
+    <ul class="lnb__menu" style="display: none;">
+          <li class=""><a href="purchase/purc_req.html">상품목록</a></li>
+              <li class=""><a href="">견적서출력</a></li>
+              <li class=""><a href="#">주문현황</a></li>
+              <li class=""><a href="#">신규상품등록요청</a></li>
+              <li class=""><a href="#">신규공급사등록요청</a></li>
+              <li class=""><a href="#">즐겨찾기</a></li>
+        </ul>
+  </div>
+  <!-- //구매 -->
+  
+  <div class="lnb-box">
+    <h4 class="lnb__tit">주문관리</h4>
+    <ul class="lnb__menu" style="display: none;">
+          <li class=""><a href="#">주문승인</a></li>
+              <li class=""><a href="#">구매확정등록</a></li>
+              <li class=""><a href="#">주문취소/변경요청</a></li>
+              <li class=""><a href="#">주문반품/교환요청</a></li>
+              <li class=""><a href="#">주문수정이력확인</a></li>
+              <li class=""><a href="#">거래명세서출력</a></li>
+              <li><a href="">마감승인관리</a></li>
+        </ul>
+  </div>
+  <!-- //주문관리 -->
+  
+  <div class="lnb-box">
+    <h4 class="lnb__tit">회원관리/설정</h4>
+    <ul class="lnb__menu" style="display: none;">
+          <li class=""><a href="#">회원관리</a></li>
+              <li class=""><a href="#">부서관리</a></li>
+              <li class=""><a href="#">메일관리</a></li>
+              <li class=""><a href="#">배송지</a></li>
+        </ul>
+  </div>
+  <!-- //회원관리 -->
+  
+  
+  
+  
+  
+  
+    </div>
+    <!-- .lnb-wrap -->
+      
+    <div class="content-wrap">
+      
+    
+  
+  
+  <div class="main__wrap">
+    <section class="main__cmn-sect ord-manage">
+      <h3 class="main__sec-tit">주문관리</h3>
+      <table class="dash__cmn-tb">
+        <thead>
+          <tr>
+            <th width="11%"><span><img src="img/ico/ord-ico.png" alt=""></span> 승인대기</th>
+            <th colspan="2"><span><img src="img/ico/ord-ico1.png" alt=""></span> 발주 (공급사 미접수)</th>
+            <th colspan="2"><span><img src="img/ico/ord-ico2.png" alt=""></span> 공급사 주문접수 (미배송)</th>
+            <th width="11.7%"><span><img src="img/ico/ord-ico3.png" alt=""></span> 배송중</th>
+            <th colspan="2" width="22%"><span><img src="img/ico/ord-ico4.png" alt=""></span> 배송완료(검수대기)</th>
+            <th><span><img src="img/ico/ord-ico5.png" alt=""></span> <span class="vert-txt">입고완료 <br>(정산대기)</span> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">
+            3					</td>
+            <td rowspan="2" width="11%">
+            2					</td>
+            <td class="sub-txt" width="11%">3일 초과</td>
+            <td rowspan="2" width="11%">
+            0					</td>
+            <td class="sub-txt" width="11%">5일 초과</td>
+            <td rowspan="2">
+            0					</td>
+            <td rowspan="2" width="11%">
+            3					</td>
+            <td class="sub-txt" width="11%">3일 초과</td>
+            <td rowspan="2">
+            0					</td>
+          </tr>
+          <tr class="over-num">
+            <td>
+            0					</td>
+            <td>
+            0					</td>
+            <td>
+            0					</td>
+          </tr>
+        </tbody>
+      </table>
+    </section> <!-- //ord-manage -->
+  
+    <section class="main__cmn-sect main__cont-md clearfix">
+      <article class="dash_brd-list">
+        <h3 class="main__sec-tit">최근 게시물</h3>
+        <ul class="board-wrap">
+                <li>
+            <a href="#" class="brd-tit">test</a> 
+            <a href="#" class="date">2021/10/27</a>
+          </li>
+                <li>
+            <a href="#" class="brd-tit">구매사공지</a> 
+            <a href="#" class="date">2021/10/27</a>
+          </li>
+              </ul>
+      </article>
+  
+      <article class="new-reg-apply">
+        <h3 class="main__sec-tit">신규 등록 요청</h3>
+        <table class="dash__cmn-tb  dash__tb-b">
+          <tbody><tr>
+            <td rowspan="2" class="bg-b-tit">신규상품</td>
+            <td class="sub-txt" width="28%">요청</td>
+            <td class="sub-txt" width="28%">견적 진행</td>
+            <td class="sub-txt" width="28%">등록 완료</td>
+          </tr>
+          <tr>
+            <td>
+            1					</td>
+            <td>
+            0					</td>
+            <td>
+            0					</td>
+          </tr>
+          <tr>
+            <td rowspan="2" class="bg-b-tit">신규공급사</td>
+            <td class="sub-txt">요청</td>
+            <td class="sub-txt">견적 진행</td>
+            <td class="sub-txt">등록 완료</td>
+          </tr>
+          <tr>
+            <td>
+            0					</td>
+            <td>
+            0					</td>
+            <td>
+            0					</td>
+          </tr>
+        </tbody></table>
+      </article>
+    </section> <!-- //main__cont-md -->
+  
+    <section class="main__cmn-sect clearfix">
+      <article class="month-chart">
+        <h3 class="main__sec-tit">월별 구매 현황</h3>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script type="text/javascript" src="/admin/js/utils.js"></script>
+  
+  <div class="chart-wrap">
+    <canvas id="monthChart" width="948px" height="240px" style="display: block;"></canvas>
+  </div>
+  <script>
+  var barChartData = {                
+    labels: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월","12월"],         
+    datasets: [{             
+      label: '2020년',             
+      backgroundColor: "#0091ea",             
+      data: ['','','','','','','','','','','','']         
+    }, {            
+      label: '2021년',             
+      backgroundColor: "#d32f2f",            
+      data: ['','','','','','','','','','524500','','']        
+    }]      
+  };  
+  
+  
+  window.onload = function() {     
+    var ctx = $('#monthChart').get(0).getContext("2d");   
+  
+    window.theChart = new Chart(ctx, {          
+      type: 'bar',          
+      data: barChartData,          
+      options: {  
+        responsive:false,              
+        legend: {
+          position: 'bottom', //제목 위치
+          labels: {
+            fontFamily: " 'Mont' , 'notokr' , sans-serif ",
+            fontColor:"#000",
+            fontSize:12,
+            boxWidth:12,
+            boxHeight:12,
+          }
+        },
+        scales: {
+          xAxes: [{//X축 글자 스타일
+            categoryPercentage: 0.42, // 막대사이 간격
+            barThickness: 12,  // number (pixels) or 'flex'  막대 두께
+            maxBarThickness: 12, // number (pixels)
+            ticks: {  //x축 글자스타일
+              fontFamily: " 'Mont' , sans-serif ",
+              fontColor:'#000',
+              fontSize: 12,
+              fontWeight:700,
+            },
+            gridLines: {
+              color:"transparent",
+              zeroLineColor: 'transparent',
+            }
+          }],
+          yAxes: [{//y축 글자 스타일
+            ticks: {    
+              fontFamily: " 'Mont' , sans-serif ",
+              fontColor:'#000',
+              fontSize: 12,
+              fontStyle:'bold'
+            },
+            gridLines: {
+              color:"#eee",
+              lineWidth:1,
+              zeroLineColor: '#000',
+            }
+          }]
+        }//scales
+      }//option
+    });
+  }
+  </script>		</article>
+  
+      <article class="sale-perfrm">
+        <table class="dash-sm-tb">
+          <thead>
+            <tr>
+              <th></th>
+              <th>2021 매출실적</th>
+              <th>10월</th>
+            </tr>
+          </thead>
+                  <tbody>
+            <tr class="total">
+              <td>Total</td>
+              <td>524,500</td>
+              <td>524,500</td>
+            </tr>
+                      <tr>
+              <td>잠실 자생</td>
+              <td>524,500</td>
+              <td>524,500</td>
+            </tr>
+                      <tr>
+              <td>강남 자생</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+                      <tr>
+              <td>광주 자생</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+                      <tr>
+              <td>신정숙</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+                      <tr>
+              <td>차주석</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+                    </tbody>
+        </table>
+      </article>
+    </section>
+  </div><!--  //main__wrap -->
+  
+  
+  </div><!-- //content-wrap -->
+  </div>
+</body>
+</html>

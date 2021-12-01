@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+      <title>BS Welfare</title>
+      <meta name="description" content="바이오스마트 모바일입니다.">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="BIO SMART">
+      <meta property="og:description" content="바이오스마트 모바일입니다.">
+      <!-- og image 이미지의 경우 최소한 600 x 315 픽셀은 되어야 하며, 1200 x 630 픽셀 크기를 권장 -->
+      <meta property="og:image" content="img/main/mobile_logo.jpg">
+      <!-- 파비콘 16*16 or 32*32 사이즈 -->
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  
+      <!-- CSS -->
+      <link rel="stylesheet" type="text/css" href="css/fonts.css">
+      <link rel="stylesheet" type="text/css" href="css/reset.css">
+      <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+      <!-- <link rel="stylesheet" type="text/css" href="m/css/defaSult.css"> -->
+      <link rel="stylesheet" type="text/css" href="css/common.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/respon.css">
+    
+  
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="header__top container">
+        <button type="button" class="gnb__btn ir_pm">전체메뉴버튼</button>
+        <h1 class="m__logo"><a href="index.html"><img src="img/main/logo.png" alt="로고"></a></h1>
+        <div class="icon__area">
+          <!-- <div class="sch__area"> -->
+          <!-- <form name="searchFrm" action="sub/prdlist.html" method="get">
+          <input type="text" name="prdname" value="" placeholder="검색어를 입력하세요">
+        </form> -->
+          <!-- </div> -->
+          <button type="button" class="sch_btn ir_pm">검색버튼</button>
+          <a href="sub/cart.html" class="m__cart"><span class="cart__amnt">7</span></a>
+        </div><!-- //icon__area -->
+      </div>
+      <ul class="gnb__menubar">
+        <li class="on"><a href="index.html">홈</a></li>
+        <li><a href="sub/prdlist.html">타임딜</a></li>
+        <li><a href="sub/prdlist.html">공동구매</a></li>
+        <li><a href="sub/prdlist.html">베스트</a></li>
+        <li><a href="sub/prdlist.html">MD's Pick</a></li>
+      </ul>
+    </header><!-- //header -->
+
+    <!-- 검색 버튼 클릭했을 때 마크업 시작 -->
+    <div class="sch__wrap">
+      <div class="container">
+        <div class="sch__top">
+          <form name="" action="sub/prdlist.html" method="get">
+            <button type="button" class="prev ir_pm">닫기</button>
+            <input type="text" name="" value="" placeholder="검색어를 입력해주세요">
+            <button type="submit" class="sch__submit ir_pm">검색</button>
+          </form>
+        </div>
+        <!-- //sch__top -->
+
+        <ul class="sch__tab">
+          <li><button type="button" class="hotBtn">인기검색어</button></li>
+          <li><button type="button" class="lateBtn">최근검색어</button></li>
+        </ul>
+
+        <div class="sch__result">
+          <!-- 인기검색어 리스트 나오는 거 -->
+          <div class="sch__cont hot">
+            <div class="sch__cont-txt">2021.02.23 기준</div>
+            <ul class="sch__keyword">
+              <li>1.검색어</li>
+              <li>2.검색어</li>
+              <li>3.검색어</li>
+              <li>4.검색어</li>
+            </ul>
+          </div>
+          <!-- //sch__cont -->
+
+          <!-- 최근검색어 있을 때 리스트 나오는 거 -->
+          <div class="sch__cont late ">
+            <div class="sch__cont-txt">검색어 전체 삭제</div>
+            <ul class="sch__keyword">
+              <li>검색어<span class="sch__date">2.23<button type="button" class="sch__del ir_pm">검색기록 삭제</button></span>
+              </li>
+              <li>검색어<span class="sch__date">2.23<button type="button" class="sch__del ir_pm">검색기록 삭제</button></span>
+              </li>
+              <li>검색어<span class="sch__date">2.23<button type="button" class="sch__del ir_pm">검색기록 삭제</button></span>
+              </li>
+            </ul>
+          </div>
+          <!-- //sch__cont -->
+
+          <!-- 최근검색어 없을 때 나오는 마크업 -->
+          <div class="sch__cont latest">
+            <div class="sch__none">
+              최근 검색어가 없습니다.
+            </div>
+          </div>
+          <!-- //sch__cont -->
+        </div>
+        <!-- //sch__result -->
+
+      </div>
+      <!-- //container -->
+      <ul class="company__bar">
+        <li><a href="#">고객센터 <span class="ico"></span> </a></li>
+        <li><a href="#">회사소개 <span class="ico"></span> </a></li>
+        <!--링크는 정확하지 않음-->
+      </ul>
+    </div>
+    <!-- //sch__wrap -->
+
+    <script>
+      var $schTab = $('.sch__tab li');
+      var $hotBtn = $('.hotBtn');
+      var $lateBtn = $('.lateBtn');
+      var $hotCont = $('.hot');
+      var $lateCont = $('.late');
+      var $schClose = $('.prev');
+      var $schBtn = $('.sch_btn');
+      var $schWrap = $('.sch__wrap');
+
+
+      $schBtn.on('click', function () {
+        $schWrap.addClass('active');
+      });
+
+      $schClose.click(function () {
+        $schWrap.removeClass('active');
+      });
+
+      $schTab.click(function () {
+        $(this).addClass('on').siblings().removeClass('on');
+      });
+
+      $hotBtn.on('click', function () {
+        $hotCont.addClass('on').siblings().removeClass('on');
+      });
+
+      $lateBtn.on('click', function () {
+        $lateCont.addClass('on').siblings().removeClass('on');
+      });
+    </script>
+
+    <!-- 전체메뉴 클릭했을 때 마크업 시작 -->
+    <div class="gnb__wrap">
+      <div class="gnb__top">
+        <div class="container">
+          <div class="top__util">
+            <strong class="log__tit login-on">홍길동 님 <span class="log-ico"></span></strong>
+            <a href="" class="log__sub m__logout"
+              style="border:1px solid #ddd; padding:5px 10px;">로그아웃</a>
+          </div>
+          <!-- //top__util -->
+          <button type="button" class="gnb__wrap-cls"></button>
+          <div class="gnb__point-wrap">
+            <a href="sub/my_reserve.html" class="point">
+              복지포인트 <span class="point-amnt"><em>0</em>P</span>
+            </a>
+            <a href="sub/my_reserve.html" class="point-spec">
+              특별포인트 <span class="point-amnt"><em>110,000</em>P</span>
+            </a>
+          </div>
+          <!-- //gnb__point-wrap -->
+        </div>
+        <!-- //container -->
+        <div class="top__lnk">
+          <ul>
+            <li>
+              <a href="#" class="ordlist-lnk">
+                주문/배송
+              </a>
+            </li>
+            <li>
+              <a href="sub/cart.html" class="cart-lnk">
+                장바구니
+                <span class="amnt">7</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/my_wish.html" class="wishlist-lnk">
+                관심상품
+              </a>
+            </li>
+            <li>
+              <a href="sub/myinfo.html" class="mypage-lnk">
+                MY PAGE
+              </a>
+            </li>
+          </ul>
+        </div><!-- //top_lnk -->
+      </div>
+      <!-- gnb__top -->
+
+      <div class="gnb__btm" style="height: 566px;">
+        <div class="nav__categ-wrap">
+          <h2 class="categ-tit">카테고리</h2>
+          <ul>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate1.png"> 패션의류/잡화</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate2.png"> 뷰티</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate3.png"> 출산/유아동</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate4.png"> 식품</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate5.png"> 주방용품</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate6.png"> 생활용품</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate7.png"> 홈인테리어</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate8.png"> 가전디지털</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate9.png"> 스포츠/레저</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate10.png"> 자동차용품</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate11.png"> 완구/취미</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate14.png"> 반려동물용품</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate15.png"> 헬스/건강식품</a></li>
+            <li><a href="sub/prdlist.html"><img src="img/icon/cate16.png"> 제휴관</a></li>
+          </ul>
+        </div>
+        <!-- //nav__categ-wrap -->
+        <ul class="company__bar">
+          <!-- <li><a href="sub/login.php">로그인</a></li> -->
+          <li><a href="#">고객센터 <span class="ico"></span> </a></li>
+          <li><a href="#">회사소개 <span class="ico"></span> </a></li>
+          <!--링크는 정확하지 않음-->
+        </ul>
+      </div>
+    </div><!-- //gnb__wrap -->
+
+
+    <!-- 하단 퀵메뉴 -->
+    <div class="fix-quick_menu">
+      <ul class="quick_menu">
+        <li class="all_menu"><button type="button">카테고리</button></li>
+        <li class="on"><a href="m/index.html" class="quick_home">HOME</a></li>
+        <li class=""><a href="sub/myinfo.html" class="quick_my">MY PAGE</a></li>
+        <li class=""><a href="sub/cart.html" class="quick_cart">장바구니 <span class="cart-amnt">7</span></a></li>
+      </ul>
+    </div>
+    <!-- //fix-quick_menu -->
+
+    <script>
+      // gnb__wrap 높이값 계산
+      var wHeight = $(window).height();
+      var gnbHeadHeight = $('.gnb__top').innerHeight();
+
+      console.log(gnbHeadHeight);
+      var gnbBodyHeight = wHeight - gnbHeadHeight;
+
+      $('.gnb__btm').css({
+        'height': gnbBodyHeight + 'px'
+      });
+
+      //  상단 햄버거메뉴 클릭했을 때 나오는거
+      var $topHam = $('.gnb__btn');
+      var $hamBtn = $('.quick_menu .all_menu');
+      var $cateAll = $('.gnb__wrap');
+      var $closeHam = $('.gnb__wrap-cls');
+
+      $topHam.click(function () {
+        $cateAll.addClass('on');
+      });
+
+      $hamBtn.click(function () {
+        $(this).addClass('on');
+        $cateAll.addClass('on');
+        // $cateAll.show();
+      });
+
+      $closeHam.click(function () {
+        $cateAll.removeClass('on');
+        $hamBtn.removeClass('on');
+      });
+    </script>
+
+    <script>
+      $(window).on('orientationchange', function (event) {
+        /* 모바일 세로모드에서 가로모드로 뷰 변환 시 */
+        $('.gnb_wrap').hide();
+      });
+    </script>
+
+   
+   
+    <!-- <div class="m__main"> -->
+
+
+
+    <div class="m_visual swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" s>
+          <a href="#">
+        <img src="img/main/m_vis1.png" alt="메인비주얼1">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+        <img src="img/main/m_vis2.png" alt="메인비주얼2">
+          </a>
+        </div>
+      </div>
+      <!-- //swiper-wrapper -->
+      <div class="swiper-pagination mainv__pag swiper-pagination-fraction"><span
+          class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">2</span></div>
+      <div class="swiper-button-play main-vis-btn ir_pm">play</div>
+      
+    </div><!-- //m_visual -->
+
+    <!-- 메인슬라이드 jquery 부분 시작 -->
+    <script>
+      $(document).ready(function () {
+        // 메인비쥬얼 슬라이드
+        var mainSwiper = new Swiper('.m_visual.swiper-container', {
+          direction: 'horizontal',
+          // loop:true,
+          speed: 600,
+          autoplay: {
+            delay: 3000,
+            autoplayDisableOnInteraction: true,
+          },
+          // navigation: {
+          //     nextEl: '.swiper-button-next',
+          //     prevEl: '.swiper-button-prev',
+          // },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+          },
+        });
+
+        var $mainVisBtn = $('.main-vis-btn');
+
+        $mainVisBtn.on('click', function () {
+          var playIs = $mainVisBtn.hasClass('swiper-button-play');
+
+          if (playIs == true) {
+            mainSwiper.autoplay.stop();
+            $mainVisBtn.removeClass('swiper-button-play').addClass('swiper-button-pause');
+
+          } else {
+            mainSwiper.autoplay.start();
+            $mainVisBtn.removeClass('swiper-button-pause').addClass('swiper-button-play');
+          }
+        });
+      });
+    </script>
+    <!-- 메인슬라이드 jquery 부분 끝 -->
+
+    <div class="main__planban">
+      <div class="container">
+        <h2 class="main__tit">기획상품</h2>
+        <div class="planban-row">
+          <a href="	" class="cmn_ban">
+            <img src="img/main/m_prdban1.png">
+            <!--<img src="img/main/ban.jpg" alt="기획상품배너">-->
+            <span class="go-ban ir_pm">바로가기</span>
+          </a>
+        </div>
+
+        <!-- 기획상품 2개 가로배너 -->
+        <ul class="planban-col">
+          <li>
+            <a href="" class="cmn_ban">
+              <img src="img/main/m_prdban2.jpg" alt="기획상품배너">
+              <span class="go-ban ir_pm">바로가기</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="cmn_ban">
+              <img src="img/main/m_prdban3.png" alt="기획상품배너">
+              <span class="go-ban ir_pm">바로가기</span>
+            </a>
+          </li>
+        </ul>
+        <!-- // planban-col -->
+      </div>
+      <!-- container -->
+
+      <!-- 기획상품 띠배너 -->
+      <div class="planban-line">
+        <div class="ban_slide swiper-container">
+          <div class="swiper-wrapper" style="transition-duration: 0ms;">
+
+          </div>
+          <!-- //swiper-wrapper -->
+          <div class="banBtn banSlide-next swiper-button-next"></div>
+          <div class="banBtn banSlide-prev swiper-button-prev" >
+          </div>
+          
+        </div>
+        <!-- //swiper-container -->
+      </div>
+      <!-- //planban-line -->
+    </div>
+    <!-- main__planban -->
+
+
+    <!-- 띠배너 슬라이드 -->
+    <script>
+      var Banswiper = new Swiper('.ban_slide.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        speed: 600,
+        autoplay: {
+          delay: 3000,
+          autoplayDisableOnInteraction: true,
+        },
+        navigation: {
+          nextEl: '.ban_slide .swiper-button-next',
+          prevEl: '.ban_slide .swiper-button-prev',
+        },
+      });
+    </script>
+
+    <div class="main__cate-wrap">
+      <h2 class="main__tit">카테고리별 <em>추천상품</em></h2>
+      <div class="catetab-wrap">
+        <ul class="catetab">
+          <li class="on"><a href="#tabbeauty"><button type="button" class="beauty"id="beauty"><span>뷰티</span></button></a></li>
+          <li><a href="#tabbaby"><button type="button" class="baby" id="baby"><span>출산/유아동</span></button></a></li>
+          <li><a href="#tabfood"><button type="button" class="food" id="food"><span>식품</span></button></a></li>
+          <li><a href="#tabdigital"><button type="button" class="digital" id="digital"><span>가전디지털</span></button></a>
+          </li>
+          <li><a href="#tabsport"><button type="button" class="sport" id="sport"><span>스포츠/레저</span></button></a></li>
+          <li><a href="#tabhealth"><button type="button" class="health" id="health"><span>헬스/건강식품</span></button></a>
+          </li>
+        </ul>
+      </div>
+      <!-- //catetab-wrap -->
+      <div class="main__cate-area beauty">
+        <a name="tabbeauty"></a>
+        <h3>뷰티</h3>
+        <div class="category__slide">
+          <div class="swiper-container" id="110000__slide">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="sub/prdview.html	">
+                  <img src="img/main/cate_beauty1.png" alt="링클필 커버팩트">
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="sub/prdview.html	">
+                  <img src="img/main/cate_beauty1.png" alt="링클필 커버팩트">
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="sub/prdview.html	">
+                  <img src="img/main/cate_beauty1.png" alt="링클필 커버팩트">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- //swiper-container -->
+          <div class="cateS-contr" id="mainPrdNav110000">
+            <span class="cate_prev ir_pm" >Prev Slide</span>
+            <span class="cate_next ir_pm">Next Slide</span>
+          </div>
+        </div>
+        <!-- //category__slide -->
+
+        <!-- list menu -->
+        <div class="cate__prdlist-wrap">
+          <ul class="cate__prdlist clearfix">
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/b_prd1.jpg" alt="LG 숨 시크릿 에센스 80ml"></span>
+                <span class="cat__prd-name">LG 숨 시크릿 에센스 80ml</span>
+                <span class="cat__prd-price"><strong>45,400</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/b_prd2.jpg"
+                    alt="니베아 더마 리페어 앤 케어 바디로션 625ml  x 2개"></span>
+                <span class="cat__prd-name">니베아 더마 리페어 앤 케어 바디로션 625ml x 2개</span>
+                <span class="cat__prd-price"><strong>25,900</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/b_prd3.jpg" alt="닥터바이오 랩업 샴푸 750ml"></span>
+                <span class="cat__prd-name">닥터바이오 랩업 샴푸 750ml</span>
+                <span class="cat__prd-price"><strong>13,300</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/b_prd34.jpg" alt="존바바토스 닉 조나스 블루EDT 75ml"></span>
+                <span class="cat__prd-name">존바바토스 닉 조나스 블루EDT 75ml</span>
+                <span class="cat__prd-price"><strong>78,000</strong>원</span>
+              </a>
+            </li>
+          </ul>
+          <!-- //cate__prdlist -->
+          <div class="prdlist__more">
+            <a href="#">뷰티 전체보기 <span class="cate__icon"></span></a>
+          </div>
+        </div>
+        <!-- //cate__prdlist-wrap -->
+      </div>
+      <!-- //main__cate-area(패션 끝) -->
+
+      <!-- //띠배너 -->
+
+      <script>
+        
+          // 메인카테고리 상품 슬라이드- 뷰티
+          var beautySl = new Swiper('#110000__slide', {
+            direction: 'horizontal',
+            loop: true,
+            // autoplay: {
+            //     delay:3000,
+            // },
+            navigation: {
+              nextEl: '#mainPrdNav110000 .cate_next',
+              prevEl: '#mainPrdNav110000 .cate_prev',
+            },
+          });
+        
+      </script>
+      <div class="main__cate-area baby">
+        <a name="tabbaby"></a>
+        <h3>출산/유아동</h3>
+        <div class="category__slide">
+          <div class="swiper-container" id="120000__slide">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_baby1.png" alt="베이비 브레짜 이유식 마스터기">
+              
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_baby1.png" alt="베이비 브레짜 이유식 마스터기">
+              
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_baby1.png" alt="베이비 브레짜 이유식 마스터기">
+              
+                </a>
+              </li>
+            </ul>
+            
+          </div>
+          <!-- //swiper-container -->
+          <div class="cateS-contr" id="mainPrdNav120000">
+            <span class="cate_prev ir_pm" >Prev Slide</span>
+            <span class="cate_next ir_pm">Next Slide</span>
+          </div>
+        </div>
+        <!-- //category__slide -->
+
+        <!-- list menu -->
+        <div class="cate__prdlist-wrap">
+          <ul class="cate__prdlist clearfix">
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/by_prd1.jpg" alt="크리넥스 마이비데 키즈 40매X9팩(캡형)"></span>
+                <span class="cat__prd-name">크리넥스 마이비데 키즈 40매X9팩(캡형)</span>
+                <span class="cat__prd-price"><strong>18,400</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/by_prd2.jpg"
+                    alt="동원 덴마크목장 유기농주스 배도라지/사과푸룬 120ml 24팩"></span>
+                <span class="cat__prd-name">동원 덴마크목장 유기농주스 배도라지/사과푸룬 120ml 24팩</span>
+                <span class="cat__prd-price"><strong>14,300</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/by_prd3.jpg" alt="존슨앤 존슨 존슨즈 베이비로션 (핑크) 300ml"></span>
+                <span class="cat__prd-name">존슨앤 존슨 존슨즈 베이비로션 (핑크) 300ml</span>
+                <span class="cat__prd-price"><strong>9,200</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/by_prd4.jpg" alt="[밤부베베] 순한대나무 솜사탕 거즈손수건 10장"></span>
+                <span class="cat__prd-name">[밤부베베] 순한대나무 솜사탕 거즈손수건 10장</span>
+                <span class="cat__prd-price"><strong>14,600</strong>원</span>
+              </a>
+            </li>
+          </ul>
+          <!-- //cate__prdlist -->
+          <div class="prdlist__more">
+            <a href="#">출산/유아동 전체보기 <span class="cate__icon"></span></a>
+          </div>
+        </div>
+        <!-- //cate__prdlist-wrap -->
+      </div>
+      <!-- //main__cate-area(패션 끝) -->
+
+      <div class="m__lineban-wrap">
+        <a href="#" ><img src="img/main/lineban_1.png"></a>
+      </div>
+      <!-- //띠배너 -->
+
+      <script>
+          var babySl = new Swiper('#120000__slide', {
+            direction: 'horizontal',
+            loop: true,
+            // autoplay: {
+            //     delay:3000,
+            // },
+            navigation: {
+              nextEl: '#mainPrdNav120000 .cate_next',
+              prevEl: '#mainPrdNav120000 .cate_prev',
+            },
+          });
+      </script>
+
+      <div class="main__cate-area food">
+        <a name="tabfood"></a>
+        <h3>식품</h3>
+        <div class="category__slide">
+          <div class="swiper-container" id="catefood__sld">
+            <ul class="swiper-wrapper" >
+              <li class="swiper-slide">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_food1.png" alt="수제 할매 안흥 손찐빵">
+                </a>
+              </li>
+              <li class="swiper-slide ">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_food1.png" alt="수제 할매 안흥 손찐빵">
+                </a>
+              </li>
+              <li class="swiper-slide ">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_food1.png" alt="수제 할매 안흥 손찐빵">
+                </a>
+              </li>
+            </ul>
+            
+          </div>
+          <!-- //swiper-container -->
+          <div class="cateS-contr" id="catefood__sld-nav">
+            <span class="cate_prev ir_pm" >Prev Slide</span>
+            <span class="cate_next ir_pm">Next Slide</span>
+          </div>
+        </div>
+        <!-- //category__slide -->
+
+        <!-- list menu -->
+        <div class="cate__prdlist-wrap">
+          <ul class="cate__prdlist clearfix">
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/fd_prd1.jpg" alt="밥도둑 간장게장 맛집 반찬 젓갈 총출동 ! "></span>
+                <span class="cat__prd-name">밥도둑 간장게장 맛집 반찬 젓갈 총출동 ! </span>
+                <span class="cat__prd-price"><strong>5,600</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/fd_prd2.jpg" alt="자연산 급랭 호래기"></span>
+                <span class="cat__prd-name">자연산 급랭 호래기</span>
+                <span class="cat__prd-price"><strong>11,900</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/fd_prd3.jpg" alt="[한울]우리밀 꿀약과 40g 10개/20개"></span>
+                <span class="cat__prd-name">[한울]우리밀 꿀약과 40g 10개/20개</span>
+                <span class="cat__prd-price"><strong>10,400</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/fd_prd4.jpg" alt="퍼지락 자일리톨 캔디 40g (지퍼백형)"></span>
+                <span class="cat__prd-name">퍼지락 자일리톨 캔디 40g (지퍼백형)</span>
+                <span class="cat__prd-price"><strong>2,800</strong>원</span>
+              </a>
+            </li>
+          </ul>
+          <!-- //cate__prdlist -->
+          <div class="prdlist__more">
+            <a href="#">식품 전체보기 <span class="cate__icon"></span></a>
+          </div>
+        </div>
+        <!-- //cate__prdlist-wrap -->
+      </div>
+      <!-- //main__cate-area(식품 끝) -->
+
+      <!-- //띠배너 -->
+
+      <script>
+        $(document).ready(function () {
+          // 메인카테고리 상품 슬라이드-식품
+          var fashionSl = new Swiper('#catefood__sld', {
+            direction: 'horizontal',
+            loop: true,
+            // autoplay: {
+            //     delay:3000,
+            // },
+            navigation: {
+              nextEl: '#catefood__sld-nav .cate_next',
+              prevEl: '#catefood__sld-nav .cate_prev',
+            },
+          });
+        });
+      </script>
+      <div class="main__cate-area digital">
+        <a name="tabdigital"></a>
+        <h3>가전디지털</h3>
+        <div class="category__slide">
+          <div class="swiper-container" id="170000__slide">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_digital1.png" alt="아띠즈 애플워치 멀티 충전 거치대">
+              
+                </a>
+              </li>
+              <li class="swiper-slide ">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_digital1.png" alt="아띠즈 애플워치 멀티 충전 거치대">
+              
+                </a>
+              </li>
+              <li class="swiper-slide ">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_digital1.png" alt="아띠즈 애플워치 멀티 충전 거치대">
+              
+                </a>
+              </li>
+            </ul>
+            
+          </div>
+          <!-- //swiper-container -->
+          <div class="cateS-contr" id="mainPrdNav170000">
+            <span class="cate_prev ir_pm" >Prev Slide</span>
+            <span class="cate_next ir_pm">Next Slide</span>
+          </div>
+        </div>
+        <!-- //category__slide -->
+
+        <!-- list menu -->
+        <div class="cate__prdlist-wrap">
+          <ul class="cate__prdlist clearfix">
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/dg_prd1.jpg" alt="아띠즈 프라임 매쉬 루프 애플워치 메탈 스트랩"></span>
+                <span class="cat__prd-name">아띠즈 프라임 매쉬 루프 애플워치 메탈 스트랩</span>
+                <span class="cat__prd-price"><strong>22,300</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/dg_prd2.jpg"
+                    alt="[캐리어] 프리미엄 라운드 미니 와인셀러(10병) - CSR-28WR"></span>
+                <span class="cat__prd-name">[캐리어] 프리미엄 라운드 미니 와인셀러(10병) - CSR-28WR</span>
+                <span class="cat__prd-price"><strong>135,000</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/dg_prd3.jpg" alt="[이즈미] 더블스핀 완전방수 전기면도기 IKR-7000"></span>
+                <span class="cat__prd-name">[이즈미] 더블스핀 완전방수 전기면도기 IKR-7000</span>
+                <span class="cat__prd-price"><strong>145,000</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/dg_prd4.jpg"
+                    alt="[사운드룩] 보헤미안 아웃도어 LP턴테이블 SLT-200BT"></span>
+                <span class="cat__prd-name">[사운드룩] 보헤미안 아웃도어 LP턴테이블 SLT-200BT</span>
+                <span class="cat__prd-price"><strong>112,000</strong>원</span>
+              </a>
+            </li>
+          </ul>
+          <!-- //cate__prdlist -->
+          <div class="prdlist__more">
+            <a href="#">가전디지털 전체보기 <span class="cate__icon"></span></a>
+          </div>
+        </div>
+        <!-- //cate__prdlist-wrap -->
+      </div>
+      <!-- //main__cate-area(가전디지털) -->
+
+      <div class="m__lineban-wrap">
+        <a href=""><img src="img/main/lineban_2.png"></a>
+      </div>
+      <!-- //띠배너 -->
+
+      <script>
+        $(document).ready(function () {
+          // 메인카테고리 상품 슬라이드-가전디지털
+          var digitalSl = new Swiper('#170000__slide', {
+            direction: 'horizontal',
+            loop: true,
+            // autoplay: {
+            //     delay:3000,
+            // },
+            navigation: {
+              nextEl: '#mainPrdNav170000 .cate_next',
+              prevEl: '#mainPrdNav170000 .cate_prev',
+            },
+          });
+        });
+      </script>
+      <div class="main__cate-area sport">
+        <a name="tabsport"></a>
+        <h3>스포츠/레저</h3>
+        <div class="category__slide">
+          <div class="swiper-container" id="180000__slide">
+            <ul class="swiper-wrapper" >
+              <li class="swiper-slide ">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_sport1.png" alt="핏분 다이얼 무게조절 덤벨">
+                </a>
+              </li>
+              <li class="swiper-slide ">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_sport1.png" alt="핏분 다이얼 무게조절 덤벨">
+                </a>
+              </li>
+              <li class="swiper-slide ">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_sport1.png" alt="핏분 다이얼 무게조절 덤벨">
+                </a>
+              </li>
+            </ul>
+            
+          </div>
+          <!-- //swiper-container -->
+          <div class="cateS-contr" id="mainPrdNav180000">
+            <span class="cate_prev ir_pm" >Prev Slide</span>
+            <span class="cate_next ir_pm">Next Slide</span>
+          </div>
+        </div>
+        <!-- //category__slide -->
+
+        <!-- list menu -->
+        <div class="cate__prdlist-wrap">
+          <ul class="cate__prdlist clearfix">
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/s_prd1.jpg"
+                    alt="[테일러메이드] 2021 스파이더 EX 말렛형 퍼터 #3 숏슬랜트"></span>
+                <span class="cat__prd-name">[테일러메이드] 2021 스파이더 EX 말렛형 퍼터 #3 숏슬랜트</span>
+                <span class="cat__prd-price"><strong>346,000</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/s_prd2.jpg"
+                    alt="[휠라] FILA 로고 트렌드핏 사계절 면 버킷햇 벙거지 모자"></span>
+                <span class="cat__prd-name">[휠라] FILA 로고 트렌드핏 사계절 면 버킷햇 벙거지 모자</span>
+                <span class="cat__prd-price"><strong>26,300</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/s_prd3.jpg"
+                    alt="3M 넥가드 자전거 스포츠 오토바이 멀티 스카프 토시 머플러 사계절용"></span>
+                <span class="cat__prd-name">3M 넥가드 자전거 스포츠 오토바이 멀티 스카프 토시 머플러 사계절용</span>
+                <span class="cat__prd-price"><strong>8,900</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/s_prd4.jpg" alt="[위너스피릿] 오토리턴 골프 퍼팅연습기 미라클 580"></span>
+                <span class="cat__prd-name">[위너스피릿] 오토리턴 골프 퍼팅연습기 미라클 580</span>
+                <span class="cat__prd-price"><strong>69,800</strong>원</span>
+              </a>
+            </li>
+          </ul>
+          <!-- //cate__prdlist -->
+          <div class="prdlist__more">
+            <a href="#">스포츠/레저 전체보기 <span class="cate__icon"></span></a>
+          </div>
+        </div>
+        <!-- //cate__prdlist-wrap -->
+      </div>
+      <!-- //main__cate-area(스포츠 끝) -->
+      <script>
+        $(document).ready(function () {
+          // 메인카테고리 상품 슬라이드-스포츠
+          var sportSl = new Swiper('#180000__slide', {
+            direction: 'horizontal',
+            loop: true,
+            // autoplay: {
+            //     delay:3000,
+            // },
+            navigation: {
+              nextEl: '#mainPrdNav180000 .cate_next',
+              prevEl: '#mainPrdNav180000 .cate_prev',
+            },
+          });
+        });
+      </script>
+      <div class="main__cate-area health">
+        <a name="tabhealth"></a>
+        <h3>헬스/건강식품</h3>
+        <div class="category__slide">
+          <div class="swiper-container" id="240000__slide">
+            <ul class="swiper-wrapper" >
+              <li class="swiper-slide">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_health1.png" alt="천지연 산삼배양근">
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_health1.png" alt="천지연 산삼배양근">
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="sub/prdview.html">
+                  <img src="img/main/cate_health1.png" alt="천지연 산삼배양근">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- //swiper-container -->
+          <div class="cateS-contr" id="mainPrdNav240000">
+            <span class="cate_prev ir_pm" >Prev Slide</span>
+            <span class="cate_next ir_pm">Next Slide</span>
+          </div>
+        </div>
+        <!-- //category__slide -->
+
+        <!-- list menu -->
+        <div class="cate__prdlist-wrap">
+          <ul class="cate__prdlist clearfix">
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/h_prd1.jpg" alt="[한미양행]츄어블 멀티비타민3박스 종합비타민"></span>
+                <span class="cat__prd-name">[한미양행]츄어블 멀티비타민3박스 종합비타민</span>
+                <span class="cat__prd-price"><strong>21,700</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/h_prd2.jpg" alt="[자연그대로]국내산 배도라지즙 100ml 60포"></span>
+                <span class="cat__prd-name">[자연그대로]국내산 배도라지즙 100ml 60포</span>
+                <span class="cat__prd-price"><strong>26,500</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/h_prd3.jpg" alt="네이처그랩 산양유 단백질 분말 가루 160g"></span>
+                <span class="cat__prd-name">네이처그랩 산양유 단백질 분말 가루 160g</span>
+                <span class="cat__prd-price"><strong>11,900</strong>원</span>
+              </a>
+            </li>
+            <li>
+              <a href="sub/prdview.html">
+                <span class="prd_img"><img src="img/main/h_prd4.jpg" alt="보령 루테인지아잔틴500mg x 60캡슐 "></span>
+                <span class="cat__prd-name">보령 루테인지아잔틴500mg x 60캡슐 </span>
+                <span class="cat__prd-price"><strong>22,000</strong>원</span>
+              </a>
+            </li>
+          </ul>
+          <!-- //cate__prdlist -->
+          <div class="prdlist__more">
+            <a href="#">헬스/건강식품 전체보기 <span class="cate__icon"></span></a>
+          </div>
+        </div>
+        <!-- //cate__prdlist-wrap -->
+      </div>
+      <!-- //main__cate-area(건강 끝) -->
+
+      <div class="m__lineban-wrap">
+        <a href="#" target="_BLANK"><img src="img/main/line_ban.jpg"></a>
+      </div>
+      <!-- //띠배너 -->
+
+      <script>
+        $(document).ready(function () {
+          // 메인카테고리 상품 슬라이드-건강
+          var healthSl = new Swiper('#240000__slide', {
+            direction: 'horizontal',
+            loop: true,
+            // autoplay: {
+            //     delay:3000,
+            // },
+            navigation: {
+              nextEl: '#mainPrdNav240000 .cate_next',
+              prevEl: '#mainPrdNav240000 .cate_prev',
+            },
+          });
+        });
+      </script>
+    </div>
+    <!-- //main__cate-wrap -->
+    <script>
+      $(document).ready(function () {
+        var $cateTabBtn = $('.catetab > li');
+        var $maincateArea = $('.main__cate-area');
+
+        $cateTabBtn.eq(0).addClass('on');
+        $maincateArea.eq(0).addClass('on');
+
+        // 카테고리 클릭시 색깔 바뀜
+        $cateTabBtn.on('click', function () {
+          var idx = $(this).index();
+          $(this).addClass('on').siblings().removeClass('on');
+          $maincateArea.eq(idx).addClass('on').siblings().removeClass('on');
+        });
+      });
+    </script>
+
+    <!-- </div> -->
+    <!-- //m__main -->
+
+    <footer class="footer">
+      <div class="footer__top">
+        <ul class="footer__menu">
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보취급방침</a></li>
+        </ul>
+      </div>
+      <div class="footer__btm">
+        <h2 class="footer__logo"><a href="m/"><img src="img/main/logo.png" alt="푸터 로고 이미지"></a></h2>
+        <div class="footer__info-top">
+          <p>(주)바이오스마트</p>
+          <p>서울시 성동구 광나루로 172(성수동1가 13-5) 린하우스 4층 </p>
+          <p>사업자등록번호:201-81-49003 </p>
+          <p> 통신판매업신고:제 2021-서울성동-01114호</p>
+          <small>COPYLIGHT ⓒ 2021 bswelfare.com All rights reserved.</small>
+        </div>
+        <strong class="foot__tit">고객센터</strong>
+        <div class="footer__info-btm">
+          <p>개인정보보호책임자 :민창석 </p>
+          <p>전화 :<em class="col"> 02-3218-9073</em> (평일09:00 ~ 18:00)</p>
+          <p> 팩스 :02-3218-9050/ E-mail :<em class="col"> csmin@bs-group.kr </em> </p>
+        </div>
+        <!-- 위로가기버튼 -->
+        <button type="button" class="go_top ir_pm">위로가기버튼</button>
+      </div>
+      <!-- //footer__btm -->
+
+      <!--위로가기 버튼 구현 -->
+      <script>
+        var $goTop = $('.go_top');
+
+        $goTop.click(function () {
+          $('html, body').animate({
+            scrollTop: 0
+          }, 400);
+          return false;
+        });
+
+        var $goTopview = $('.prd-vw');
+
+        $goTopview.click(function () {
+          $('html, body').animate({
+            scrollTop: 0
+          }, 400);
+          return false;
+        });
+      </script>
+
+    </footer>
+  </div> <!-- //wrap -->
+</body>
+</html>

@@ -1,0 +1,386 @@
+@charset "euc-kr";
+
+@media screen and (max-width:1200px){
+  
+  .container {padding:0 3.2%; max-width:auto; width:100%; }
+  .header .header__log , .header .btn-check {right:3.2%;}
+  .header .go-home {right:3.2%;}
+
+  .main_visual {background-position: right -9vw top 15vh; background-size: 78rem auto;}
+  .main_visual .main__txt {left:3.2%;}
+  .main_visual .main__txt {padding-left:3.8%;}
+  .search__tab {width:100%;}
+  .result__cmn-top {width:100%;}
+  .patient-info {padding-left: 3.3%;}
+  /* .check-option span {width:26%;} */
+  /* .check-option span:nth-child(4n) {width:18%;} */
+  .srch-select {right: 3.2%;}
+}
+
+@media screen and (max-width:1024px){
+  html {font-size: 9.8px;}
+  .header {height:8rem;padding:1.6rem 0 1.5rem;}
+  .main_visual {height:105rem; background-position: right -7vw top 45vh; background-size:72% auto;}
+  .main__txt .main__tit {margin-bottom: 2.8rem; font-size: 6.2rem; }
+  .srch__list-tb .list-hover {display: none;}
+  .srch__list-tb .member-list:hover td {color:#222;} 
+  /* .check-option span ,.check-option span:nth-child(4n) {width:32.8%;} */
+  .result__cmn-sect .graph-section {width:49%; margin-right: 2%;}
+  .result__cmn-sect .result-desc{width:49%;}
+  .outcome__sub-opt p {font-size: 1.4rem;}
+  /* .check-option span:nth-child(n+4) {margin-bottom: 0;} */
+
+  .qs__intro {padding:8rem 0;}
+  .qs__intro h2 {margin-bottom: 4.2rem; font-size: 4rem; line-height: 5.2rem;}
+  .person-info h2 {margin-bottom: 0; margin-top: 2rem;}
+  .person-info .intro_subtit {font-size: 4rem; line-height: 5.2rem;}
+  .srch__list-tb .member-list {border-color:1px solid #ddd;}
+ 
+  .phamarcy-record .drug-name {width:82%; font-size: 1.6rem;}
+}
+
+@media screen and (max-width:900px){
+  .header {padding:1.5rem 0 1.1rem;}
+  .header__log span {margin-right: 1rem;}
+  /* .search__input-sect button img {width:86%;} */
+  .main_visual {height:92rem; background-position: right -6vw top 47vh; background-size: 68% auto;}
+  .main__txt .main__tit {font-size: 5.5rem;}
+  .sub__search .search__input {width:67.7rem;}
+  .sub__search .srch-input-box,.search__input input[type="text"] {width:55rem;}
+  .search__tab a {height: 3.6rem; line-height: 3.6rem; font-size: 1.5rem;}
+  .sub-container {padding-bottom:8rem;}
+  .foot__logo  {margin-right: 3.8rem;}
+
+  .result__tab li a {font-size: 1.6rem;}
+  .result__cmn-sect {padding:3rem 0 9rem;}
+  .result__cmn-sect .graph-img {width:100%;}
+  .result__cmn-sect.synthesis .graph-img {padding: 3rem 0;}
+  .result__list .list__right, .result__list .list__left {float:none; width:65%;}
+  /* .phamarcy-record .phamarcy__btn {display: none;} */
+  .phamarcy-record .drug-name {font-size: 1.7rem;}
+  .phamarcy-record .graph-img {padding-bottom: 3rem;}
+
+  /* 질문 db */
+  .cmn-question {padding:8rem 0;}
+  .qs-container {width:82%;}
+  .cmn-question .qs__tit {font-size: 3.2rem;}
+  .qstn-input-wrap {margin:3rem 0 5rem;}
+  .qs-type__progress {margin-top: 10rem;}
+  .qstn-input-wrap .chk-wrap {width:45%; padding:2.2rem 0 2.2rem 4.4%;}
+  .basic__cmn {padding:3rem 0 3rem 3rem;}
+  .qs-type__prog {width:80rem;}
+  .result__cmn-sect .check-option {padding-top:2.5rem; padding-bottom: 1.5rem;}
+}
+
+@media screen and (max-width:800px){
+  html {font-size: 9.56px;}
+  .qstn-input-wrap .chk-wrap {width:44%;}
+  .qstn-input-wrap .chk-wrap.width-big {width:64%;}
+  .qstn-input-wrap .sleep.width-big {width:75%;}
+  .cmn-question .chklist2 .first {line-height: 1.4;}
+  .qstn-input-wrap.radio-chk .center-box {width:68%;}
+
+  .qs-type__prog {width:112%;} 
+}
+
+
+@media screen and (max-width:780px){
+  .sub__search .search__input {width:92%;}
+  .sub__search .srch-input-box {width:calc(100% - 11.8rem); margin-right: 0.6rem;}
+  
+  .search__input input[type="text"] {width:100%;}
+  .cmn-question .qs__tit {width:90%; margin:0 auto;}
+  .basic-qstn .qstn-input-wrap input[type="checkbox"] + label {font-size: 2rem;background-size: 1.7rem auto;}
+  .chklist2 input[type="radio"] + label, .qstn-input-wrap input[type="checkbox"] + label {font-size: 1.8rem; background-size: 1.8rem auto;}
+  .qs__tit.fatigue_2 br {display: none;}
+
+  .progressbar {width:75%;}
+  .load-tit {font-size: 2.8rem;}
+}
+
+@media screen and (max-width:767px){
+  html {font-size: 9.4px;}
+  .container {padding: 0 4.4%;}
+  .header {/* height:8.6rem; */padding:1.4rem 0 1.1rem;}
+  .header__log .logout {padding:0; width:1.9rem; font-size: 0; border:0; background: url(../img/cmn/logout-ico.png)no-repeat; -webkit-background-size: 1.9rem 1.9rem;background-size: 1.9rem 1.9rem;background-position: 0 center;}
+  .header .go-home {background-size: 1.7rem auto;}
+
+  .main_visual {height:100vh; background-position: right -9vw top 44vh; background-size: 86% auto;}
+  .main_visual.login-pg {background-position:right -10vw top 51vh;} 
+  .main_visual .main__txt {top:16vh;}
+  .main__txt .main__tit {margin-bottom:1.5rem; font-size:4.7rem; }
+  .main__txt .main__sub-txt {font-size: 2.1rem;}
+  .header__log .login {padding:0; font-size: 0; border:0; width:5rem; height:5rem; /* background: url(../img/cmn/log-ico.png)no-repeat; background-position: right .6rem center; -webkit-background-size: 2.8rem 2.8rem; background-size: 2.8rem 2.8rem; */}
+  .header__log .chk-btn {}
+  .main__txt .main__sub-txt {padding:.5rem 0;padding-left: 3.3rem;background-size: 2.2rem 2.2rem; -webkit-background-size: 2.2rem 2.2rem;}
+  .login-pg .log__desc {font-size: 1.6rem;}
+  .log-input-wrap input {margin-bottom: 0.5rem; width:76%; height:4rem; line-height: 4rem;}
+  .log-input-wrap input[type="text"]::placeholder, .log-input-wrap input[type="password"]::placeholder {font-size: 1.5rem;}
+  .log-input-wrap input[type="password"] {margin-bottom: 1rem;}
+  .id-save {margin-bottom: 2.6rem;} 
+  .log-input-wrap button {width:76%;height:4rem; line-height: 4rem;}
+  .search__tab {margin-bottom: 3rem;}
+  .search__tab a {font-size: 1.6rem;}
+  .search__ord-option {display: none;}
+  .sub-container {padding:3rem 0 5rem;} 
+
+  .srch__list-tb {border-top:1px solid #999999;}
+  .srch__list-tb td {padding:1.5rem 0;}
+  .srch__list-tb thead {display: none;}
+  .srch__list-tb .member-list {position: relative;}
+  .srch__list-tb .member-list {padding:2rem 0;}
+  .srch__list-tb .btm__info  {display: block;}
+  .srch__list-tb .name  {/* margin-bottom: 2.2rem; *//*  padding-top:2rem; */padding-left: .6rem; width:29%; text-align: left; font-size: 1.8rem;}
+  .srch__list-tb .age {width:43%;}
+  .srch__list-tb .date {text-align: right;}
+  .srch__list-tb .btm__info {display: flex;justify-content: space-between; padding-bottom:2rem;}
+  .srch__list-tb .btm__info span {position: relative;font-size: 1.6rem; }
+  .srch__list-tb .btm__info em {font-size: 1.4rem; color:#999; display: inline-block; margin-right:.9rem ;}
+  .srch__list-tb .btm__info span:after { content:''; position: absolute; top:50%;transform:translateY(-50%); width:1px; height:1.5rem; background:  #dcdcdc; -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); -o-transform:translateY(-50%);margin-left:90%; }
+  .srch__list-tb .btm__info span:last-child:after {display: none;}
+  .srch__list-tb .none {display: none;}
+  .srch__list-tb td {/* text-align: left; */ text-align: center; height:auto;}
+  .search__input button {right:.8rem;}
+  .member-list .del { /* position: absolute; */ width:2rem; height: 2rem; /* right:.6rem; top:50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%);  */}
+  .member-list .del img {width:100%;}
+  
+  .result__cmn-top {padding-top: 4rem;}
+  .new-write {display: none;}
+  .new-write.top {display:block; position: absolute; top:-11rem;right:4.4%;}
+
+  .result__cmn-sect {padding:2.8rem 0 5rem;}
+  .result__cmn-sect .graph-section , .result__cmn-sect .result-desc {width:100%;}
+  .result__cmn-sect .graph-img {/* width:62%; */height:auto;}
+  .result__cmn-sect .graph-box {height:auto; margin-bottom: 3rem;}
+  .result__cmn-sect .graph-section, .result__cmn-sect .result-desc {float:none;}
+  .result__cmn-sect .summary {margin-bottom: 3rem;}
+
+  .result__btm {margin-top: 1.6rem;}
+
+  .result__tab .slide-cmn-btn {display:block; z-index: 10;} 
+  .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {opacity: 0;}
+  
+
+  .outcome__sub-opt .option-btn {position: static; display: block;margin-top: 1rem; text-align: right;}
+  .option-btn button {width:4rem; height:4rem;}
+  .option-btn .graph-btn {background-size:4rem 4rem; background-position: center;}
+  .outcome__sub-opt {padding-bottom: 1.5rem; margin-bottom: 1.5rem;}
+
+  .result__list {padding:2rem;}
+  .result__list .list__right, .result__list .list__left { width:85%;}
+  .result__list .list__desc-item p, .result__list .list__desc-item ul {float:none; width:100%;}
+  .phamarcy-record .drug-name {font-size: 1.5rem; width:98%;}
+  .result__cmn-sect textarea {padding:1.5rem;}
+
+  .qs__intro {padding:6rem 0 5rem;}
+  .qs__intro h2 {margin:3rem auto 4.6rem;width:68%; font-size: 2.5rem; line-height: 3.3rem;} 
+  .intro__bg {background-size: 12rem auto;}
+  .qs__intro .qs__cmn-btn  {padding:0 4.6rem; height:3.8rem; line-height: 3.8rem; font-size: 1.6rem;}
+  .person-info h2 {margin-bottom: 0; margin-top: 2.4rem;}
+  .person-info .intro_subtit {width:70%; margin:0 auto; font-size: 2.5rem; line-height: 3.3rem;}
+  .intro__input-wrap input {height:4rem; line-height: 4rem;}
+  .intro__bg {height:12rem;}
+  
+  .qs-container {width:91%;}
+  .cmn-question .qs__tit {font-size: 2.3rem;}
+  .qstn-input-wrap .chk-wrap {width:56%;}
+  .qstn-input-wrap input[type="radio"] + label, .qstn-input-wrap input[type="checkbox"] + label { padding-left: 2.4rem; -webkit-background-size: 1.6rem auto;background-size: 1.6rem auto;}
+
+  .qs-type__progress {width:85%; margin:7rem auto 0;}
+  .qs-type__progress:before {top:.5rem;}
+  .qs-type__progress span em {font-size: 0;}
+  .qs-type__progress span:before {width:12px; height: 12px;}
+  .qs-type__progress span:nth-child(1):before, 
+  .qs-type__progress span:nth-child(2):before,
+  .qs-type__progress span:nth-child(3):before,
+  .qs-type__progress span:nth-child(4):before,
+  .qs-type__progress span:nth-child(5):before,
+  .qs-type__progress span:nth-child(6):before, .qs-type__progress span.basic.on:before {content:'';}
+  .qs-type__progress span:first-child {left: 0;}
+  .qs-type__progress span:last-child {right: 0;}
+
+  /* 프로그레스 수정 */
+  .prg-wrap {min-height:9.5rem; }
+  .qs-type__prog {margin-top: 7rem;}
+  .qs-type__prog:before {top:22%; height: 1px;}
+  .qs-type__prog span, .qs-type__prog em {font-size: 0;}
+  .qs-type__prog span {width:12px;height:12px; }
+
+  .cmn-question .qs__tit {line-height: 3rem; width:59%;}
+  .basic__cmn span {margin-bottom: 2rem;}
+  .basic__cmn span:nth-of-type(odd) {width:54%;}
+  .basic__cmn span:nth-of-type(even) {width:46%;}
+  .basic__cmn span:nth-of-type(n+6)  {margin-bottom: 2rem;}
+  /* .basic__cmn span:nth-of-type(n+9) {margin-bottom: 0;} */
+  .chklist2 input[type="radio"] + label, .qstn-input-wrap input[type="checkbox"] + label {font-size: 1.6rem;}
+  .digestion dl dt {font-size: 1.6rem; width:9.2rem;}
+  .digestion dl .radio-box {width:calc(100% - 9.2rem);}
+  .radio-box input[type="radio"] + label {font-size: 1.5rem; padding-left: 0;}
+  .qstn-input-wrap .radio-box span:nth-child(1), .qstn-input-wrap .radio-box span:nth-child(2) {margin-right: 8rem;}
+  .second .radio-box span:nth-child(1) {margin-right: 7.3rem;}
+  .second .radio-box span:nth-child(2) {margin-right: 6.4rem;}
+  .qs-type__progress span:nth-child(3) {left: 38%;}
+  .qs-type__progress span:nth-child(4) {left: 58%;}
+  .qs-type__progress span:nth-child(5) {left: 78%;}
+
+  .phamarcy-record .drug__txt  {/*height:4rem; */ line-height: 1.3; width:80%;}
+
+  .phamarcy-record .outcome__sub-opt {padding-top: 5rem;}
+
+  .drug_pop {width:90%; padding:8% 5%;  z-index: 60;}
+  .export-pop {width:90%;}
+  .load-tit {margin-top: -6rem;}
+
+  .qs-type__progress span:nth-child(2) {left: 20%;}
+  .qs-type__progress span:nth-child(3) {left: 40%;}
+  .qs-type__progress span:nth-child(4) {left: 60%;}
+  .qs-type__progress span:nth-child(5) {left: 80%;}
+
+  .srch__member-list .srch__list-count {margin-bottom: 1rem;}
+  .srch-select {top:-1%; right: 4.4%;}
+
+
+   /* 결과 탭 모바일일때 스크롤 */
+  .result__tab  {overflow-x:auto; -webkit-overflow-scrolling: touch;  -ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */}
+  .result__tab::-webkit-scrollbar {display: none; /* Chrome, Safari, Opera*/}
+
+  .result__tab .tab__list {position: relative;}
+  .result__tab .tab__list.on {left: -45%;}
+}
+
+@media screen and (max-width:530px){
+  .cmn-question .qs__tit {width:72%;}
+  .qstn-input-wrap .chk-wrap.width-big {width:75%;}
+  .qs__tit.fatigue_2 {width:79%;}
+  .qstn-input-wrap .chk-wrap.width-big {width:88%;}
+  .q-pop-cont {width:90%;}
+  .basic__cmn {padding:3rem 4%;}
+
+  .radio-box:before {width:78%;}
+  .export-ip p span {width:34%;}
+  .search__input-sect .srch {width: 3rem; height: 3rem;}
+  .search__input-sect .srch img {vertical-align: -3px;}
+}
+
+@media screen and (max-width:450px){
+  html {font-size: 9.2px;}
+  .container {padding:0 4.4%;}
+  .header {height:6rem;padding:1.4rem 0 1.2rem;}
+  .header .logo {width:13rem;}
+  .header .go-prev img {width:1.8rem;}
+  .header__log span {margin-right: 0.5rem;}
+  .header__log .logout { -webkit-background-size: 1.9rem 1.9rem;background-size: 1.9rem 1.9rem;}
+
+  .main_visual {height: 79rem; background-position: right -7vw top 45vh; background-size: 82% auto;}
+  .main_visual.login-pg {background-position:right -9vw top 54vh;}
+  .main_visual.login-pg .main__txt {top:6.7vh;}
+  .main_visual .main__txt {top:14vh;}
+  .main__txt .main__tit {font-size:3.5rem; }
+  .main__txt .main__sub-txt {margin-bottom: 5rem; font-size: 1.5rem;}
+  .main__txt .go-check {height: 4rem; line-height: 3.8rem; font-size: 1.5rem; padding:0 4rem;}
+  .main_visual .main__txt {padding-left: 1.8%;}
+  .login-pg .log__desc-sub {width:90%;}
+  .header .cmn-btn {height: 3rem; line-height: 2.8rem; font-size: 1.4rem;}
+  .header__log .login , .header__log .logout {font-size: 0;}
+  .foot__logo {margin-bottom: 1.4rem;}
+  .foot__info p {font-size: 1.3rem;line-height: 2rem;}
+  .footer {padding:1.4rem 0 3.4rem;}
+  .search__input button {width:3.6rem;height:3.6rem; }
+  .new-write {width:12.6rem; padding-left: 4.8rem;}
+  .patient-info {margin-bottom: 3.8rem;}
+  .patient-info .patient-name {font-size: 2.4rem;}
+
+  .result__tab li {width:auto;}
+  .result__tab li a {padding:0 2rem; width:auto;}
+  /* .result__tab .slide-cmn-btn {display:block; z-index: 10;}  */
+  /* .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {opacity: 0;} */
+  .result__tab li a {height: 3.5rem; line-height: 3.5rem;}
+  .intro__input-wrap {margin:2.4rem auto 5rem; width:32rem;} 
+  .intro__input-wrap input {width:32rem;}
+  .intro__input-wrap input:first-child {margin-bottom: 0.7rem;}
+  .header__log .login { -webkit-background-size: 2.6rem auto; background-size: 2.6rem auto;}
+
+  .cmn-question {padding:5rem 0;}
+  .qstn-input-wrap {margin:2rem 0 4.5rem;}
+  .qstn-input-wrap .chk-wrap {width:61%; margin:2rem auto 0;}
+  
+  .qstn-input-wrap input[type="radio"] + label, .qstn-input-wrap input[type="checkbox"] + label  {font-size: 1.5rem;}
+  .qstn__btn a, .qstn__btn button {width:10rem; font-size: 1.6rem;}
+  .qs-type__progress {margin-top: 7rem;}
+  .qs-type__progress:before {top:.8rem; height: 1px;}
+  .qstn-input-wrap .chk-wrap {border-width:2px;}
+  .cmn-question .qs__tit {width:85%;}
+  .basic__cmn.chklist2 span:nth-child(odd), .basic__cmn.chklist2 span:nth-child(even) {width:100%;}
+
+  .basic-qstn .qstn-input-wrap input[type="checkbox"] + label {padding:.2rem 0 .2rem 2.6rem; font-size: 1.5rem; background-size: 1,6rem auto;}
+  /* .chklist2 {padding-left: 2rem;} */
+
+  /* 레이어 팝업 */
+  .info-pop {width:90%;} 
+  .info-pop dl dt {width: 18%;}
+  .info-pop dl dd {width:82%;}
+  .btn-wrap a, .btn-wrap button {width: 61%; height: 4.5rem; line-height: 4.5rem;}
+  .info-pop dd input[type="text"] {width: 25%;}
+  .info-pop dd input[type="text"].age {width: 40%;}
+
+  .progressbar {width:80%; height: 5rem;}
+  .loading {height: 3.4rem;}
+  .load-tit {font-size: 2.4rem;} 
+
+  .chk-export-box , .qr-code-box {width:90%;}
+  .export-ip input[type="text"] {height: 3.2rem; line-height: 3rem;}
+}
+@media screen and (max-width:400px){
+  .srch__list-tb .btm__info span:after {margin-left: 76%;}
+  .qs__intro h2 {width:80%;}
+  .qstn-input-wrap input[type="radio"] + label, .qstn-input-wrap input[type="checkbox"] + label {-webkit-background-size: 1.5rem auto;background-size: 1.5rem auto;} 
+ 
+  .digestion dl dt {width:6rem;}
+  .digestion dl .radio-box {width:calc(100% - 6rem);}
+  .qstn-input-wrap .radio-box span:nth-child(1), .qstn-input-wrap .radio-box span:nth-child(2) {margin-right: 7rem;}
+  .second .radio-box span:nth-child(1) {margin-right:6.4rem;}
+  .second .radio-box span:nth-child(2) {margin-right: 5.46rem;}
+  .qstn-input-wrap input[type="radio"] + label, .qstn-input-wrap input[type="checkbox"] + label {font-size: 1.5rem;}
+  .qstn-input-wrap.radio-chk .center-box {width:85%;}
+  .cmn-question .chklist2 .mb0 {margin-bottom: 2rem;}
+  /* .search__input-sect button img {vertical-align: -5px;} */
+  .radio-row .center-box {width:88%;}
+
+  .radio-box:before {width:65%;}
+  .export-pop {padding:5%;}
+  .export-ip p span {width:38%;}
+  .export-ip input[type="text"] {/* height:34px; line-height: 34px; */ width:58%;}
+
+  .loading {left: .5rem;  width: calc(100% - 1rem);}
+  .srch__list-tb td .save {font-size: 1.3rem; padding:0 0.4rem;}
+  .pop-btn button {width:7.5rem;}
+}
+
+@media screen and (max-width:381px){
+  html {font-size: 8.9px;}
+  .srch__list-tb .btm__info span:after {margin-left: 65%;}
+  .search__input input[type="text"] {height:4rem; line-height: 3.8rem;}
+  .search__input-sect .go-regist {width:4rem; height:4rem;}
+  .header__log span {font-size: 1.3rem; margin-right: 0.6rem;}
+  .person-info .intro_subtit {width:89%;}
+  .qstn-input-wrap .chk-wrap.width-big {width:80%;} 
+  .qstn-input-wrap .sleep.width-big {width:88%;}
+  .basic-qstn .qstn-input-wrap input[type="checkbox"] + label {line-height: 1.24;}
+  .qstn-input-wrap.all-check.bone {padding-right: 1.2rem;}
+  .qstn-input-wrap.txtarea > div {width:90%}
+  .radio-box:before {width:75%;}
+
+  .srch__list-tb .date {padding-right: 0.4rem;}
+  .srch__list-tb td .save {font-size: 1.2rem; padding:0 0.4rem; margin-left: 0.2rem;}
+}
+@media screen and (max-width:350px){
+  .qstn-input-wrap .sleep.width-big {width:95%;} 
+  .basic-qstn .qstn-input-wrap input[type="checkbox"] + label {padding-left: 2.4rem; }
+  .srch__list-tb .age {width:35%;}
+}
+
+@media screen and (max-width:330px){
+  html {font-size: 8.3px;}
+  .srch__list-tb .btm__info span:after {margin-left: 55%;}
+  .qstn-input-wrap .chk-wrap {padding-left: 2.8%;}
+}

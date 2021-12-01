@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+  <title>SIMPLY CHECK</title>
+  <meta name="description" content="심플리 체크 네이처스팜 셀프 체크리스트">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="심플리 체크 네이처스팜 셀프 체크리스트">
+  <meta property="og:description" content="심플리 체크 네이처스팜 셀프 체크리스트">
+  <meta property="og:image" content="../img/og_img.jpg">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/reset.css" type="text/css">
+  <link rel="stylesheet" href="../css/font.css" type="text/css">
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+  <link rel="stylesheet" href="../css/swiper.min.css" type="text/css">
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+  <link rel="stylesheet" href="../css/respon.css" type="text/css">
+  <!-- JS -->
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <![endif]-->
+  <!--[if gte IE 9]>
+    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+    <![endif]-->
+  <!--[if !IE]> -->
+  <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+
+  <!-- <![endif]-->
+  <script type="text/javascript" src="../js/swiper.min.js"></script>
+  <script type="text/javascript" src="../js/cmn.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <button type="button" class="go-prev" onclick="history.go(-1);"><img src="../img/cmn/prev.png" alt="이전으로"></button>
+      <h1 class="logo sub"><a href="../index.html" ><img src="../img/cmn/logo.png" alt="네이처스팜진단"></a></h1>
+      <a href="../index.html" class="go-home ir_pm">메인으로</a>
+    </div>
+  </header>
+
+<div class="cmn-question basic-qstn check-radio">
+  <form name="" action="" >
+ 
+  <div class="qs-container">
+    <h2 class="qs__tit">홍길동님이 평소 불편하시거나 걱정되시는 항목을 선택해주세요. <em>(3가지 선택)</em> </h2>
+    <div class="qstn-input-wrap clearfix basic__cmn">
+      <span><input type="checkbox" id="fatigue" value="fatigue"> <label for="fatigue">간/피로</label></span>
+      <span><input type="checkbox" id="immune" value="immune"> <label for="immune">면역</label></span>
+      <span><input type="checkbox" id="sleep"	value="sleep"> <label for="sleep">수면</label></span>
+      <span><input type="checkbox" id="eye"	value="eye"> <label for="eye">눈</label></span>
+      <span><input type="checkbox" id="bone" value="bone" > <label for="bone">관절/뼈</label></span>
+
+      <span><input type="checkbox" class="woman"> <label for="woman">여성</label></span>
+      <span><input type="checkbox" class="man"> <label for="man">남성</label></span>
+
+      <span><input type="checkbox" id="cycle"	value="cycle"> <label for="cycle">순환</label></span>
+      <span><input type="checkbox" id="skin" value="skin"> <label for="skin">피부/헤어</label></span>
+      <span><input type="checkbox" id="brains"value="brains"> <label for="brains">두뇌</label></span>
+    </div>
+   
+    <div class="qstn__btn">
+    <button type="button" class="prev" onclick="getPost();">이전</button> <!-- 필요시에 button태그로 바꾸셔도 돼요 -->
+	  <a href="./basic_cmnadd.html">다음</a>
+    </div>
+    <div class="prg-wrap">
+      <div class="qs-type__prog clearfix">
+        <div>
+          <span class="basic on">1</span>
+          <em>기본</em>
+        </div>
+        <div>
+          <span class="">2</span>
+          <em> 소화</em>
+        </div>
+        <div>
+          <span class="">3</span>
+          <em> 대소변</em>
+        </div>
+        <div>
+          <span class="">4</span>
+          <em> </em> 
+        </div>
+        <div>
+          <span class="">5</span>
+          <em>  </em>
+        </div>
+        <div>
+          <span class="">6</span>
+          <em>  </em> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //container -->
+</form>
+
+
+</div>
+<!-- //cmn-question -->
+
+<script>
+function getPost(){
+var frm = document.frm;
+frm.action = "basic_new3.html";
+frm.submit();
+}
+</script>

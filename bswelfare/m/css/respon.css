@@ -1,0 +1,67 @@
+@charset "euc-kr";
+
+
+@media screen and (max-width:900px){
+  html,body{font-size:12px;}
+}
+@media screen and (max-width:640px){
+  
+  .pass-reset-step li {padding:6% 0 5%;}
+  
+}
+
+@media screen and (max-width:600px){
+  html,body{font-size:11px;}
+  .pass-reset-step li {padding:7% 0 5%;}
+  
+}
+@media screen and (max-width:500px){
+ 
+  .pass-reset-step li {padding:5% 0 3%;}
+  
+}
+
+@media screen and (max-width:450px){
+  html,body{font-size:10.5px;}
+  .ord__payment__tb select {width:100%;}
+  .ord_info_table td {line-height: 2rem;}
+  .orderlist_detail .payinfo .cont table th, .orderlist_wrap .orderlist_detail .payinfo .cont table td {line-height: 1.8rem;}
+  .orderlist_detail .delinfo .cont table th, .orderlist_wrap .orderlist_detail .delinfo .cont table td {line-height: 1.8rem;}
+}
+@media screen and (max-width:440px){
+  html,body {font-size:10.2px;}
+  .log__btm__top {padding:0 10% 4rem;}
+  .login__btn-wrap a, .login__btn-wrap button {font-size:1.4rem; padding-left: 11%;}
+}
+@media screen and (max-width:400px){
+  html,body{font-size:10px;}
+  .footer__menu a {padding:1.8rem .6rem 2rem; font-size: 1.3rem;}
+  .ord__payment__tb th, .ord__payment__tb td {font-size: 1.3rem;}
+  .ord__payment__tb select {width:90%;}
+  .ord__payment__tb th {width:17%;}
+  .ord_info_table th, .ord_info_table td {height:4.2rem;}
+  .ord_info_table td {line-height: 1.8rem;}
+  .orderlist_wrap .orderlist .code .order_cancel {padding:0; width:6rem; font-size: 1.2rem;}
+  .footer__info-top p ,.footer__info-btm p {width:90%; margin:0 auto; line-height: 2rem;}
+  .pass-reset-step li {font-size: 1.4rem; padding:4.2% 0 3.2%;}
+}
+
+@media screen and (max-width:360px){
+  html,body{font-size:9.5px;}
+  .footer__info-top {line-height: 1.8rem; }
+  .orderlist_wrap .orderlist .code p {padding-left: .6rem;}
+  .partner-wrap li img {max-width:9.2rem;}
+  .m__myqna_list th, .m__myqna_list td {padding:1.4rem .6rem;}
+  .myqna_date {width:28%;}
+  .pass-reset-step li {font-size: 1.4rem; padding:3.9% 0 2.8%;}
+  .pass-reset-step span {margin: 0.3rem;}
+  .app-down .down-link .andr {margin-right: 4rem;}
+}
+
+@media screen and (max-width:340px){
+  html,body{font-size:9px;}
+  .prdview_wrap .prd__info-tb dt {width:22%;}
+  .orderlist_wrap .orderlist .code .order_cancel {width:5rem;}
+  .comp__contact .contact__desc {line-height: 2rem;}
+  .pass-reset-step li {font-size: 1.3rem; padding:3.7% 0 2.6%;}
+} 

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+  <title>SIMPLY CHECK</title>
+  <meta name="description" content="심플리 체크 네이처스팜 셀프 체크리스트">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="심플리 체크 네이처스팜 셀프 체크리스트">
+  <meta property="og:description" content="심플리 체크 네이처스팜 셀프 체크리스트">
+  <meta property="og:image" content="../img/og_img.jpg">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/reset.css" type="text/css">
+  <link rel="stylesheet" href="../css/font.css" type="text/css">
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+  <link rel="stylesheet" href="../css/swiper.min.css" type="text/css">
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+  <link rel="stylesheet" href="../css/respon.css" type="text/css">
+  <!-- JS -->
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <![endif]-->
+  <!--[if gte IE 9]>
+    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+    <![endif]-->
+  <!--[if !IE]> -->
+  <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+
+  <!-- <![endif]-->
+  <script type="text/javascript" src="../js/swiper.min.js"></script>
+  <script type="text/javascript" src="../js/cmn.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <button type="button" class="go-prev" onclick="history.go(-1);"><img src="../img/cmn/prev.png" alt="이전으로"></button>
+      <h1 class="logo sub"><a href="../index.html"><img src="../img/cmn/logo.png" alt="네이처스팜진단"></a></h1>
+      <a href="../index.html" class="go-home ir_pm">메인으로</a>
+    </div>
+  </header>
+<script>
+function inputCheck(frm){
+   var chk = $('input:checkbox:checked').is(':checked');
+   if(chk == false){
+      alert("항목을 선택해주세요");
+      return false;
+   }
+
+}
+</script>
+<div class="cmn-question basic-qstn interest-type">
+  <div class="qs-container">
+    <h2 class="qs__tit">가지고 계신 관절/뼈 관련 질환을  모두 선택해주세요.</h2>
+	<form name="frm" action="jindan_save.php" method="post" onSubmit="return inputCheck(this);">
+	<input type="hidden" name= "next" value="<?=$next_title[$next_vol]?>_2"/>
+	<input type="hidden" name= "next_num" value="<?=$next_num?>"/>
+	<input type="hidden" name= "next_vol" value="<?=$next_vol?>"/>
+	<input type="hidden" name= "idx" value="<?=$idx?>"/>
+	<input type="hidden" name= "midx" value="<?=$quest_row[idx]?>"/>
+	<input type="hidden" name= "mode" value="simplycheck"/>
+  <div class="qstn-input-wrap clearfix chklist2 basic__cmn">
+    <div class="">
+         <span>
+    <input type="checkbox" id="d_include0" name="digestion[]" class="chk_class" value="109">
+    <label for="d_include0">골다공증</label>
+   </span>
+    
+       <span>
+    <input type="checkbox" id="d_include1" name="digestion[]" class="chk_class" value="110">
+    <label for="d_include1">골관절염</label>
+   </span>
+    
+       <span>
+    <input type="checkbox" id="d_include2" name="digestion[]" class="chk_class" value="111">
+    <label for="d_include2">류마티스 관절염</label>
+   </span>
+    
+       <span>
+    <input type="checkbox" id="d_include3" name="digestion[]" class="chk_class" value="112">
+    <label for="d_include3">통풍</label>
+   </span>
+    
+       <span>
+    <input type="checkbox" id="d_include4" name="digestion[]" class="chk_class" value="113">
+    <label for="d_include4">오십견</label>
+   </span>
+    
+       <span>
+    <input type="checkbox" id="d_include5" name="digestion[]" class="chk_class" value="114">
+    <label for="d_include5">추간판 탈출증</label>
+   </span>
+    
+       <span>
+    <input type="checkbox" id="d_include6" name="digestion[]" class="chk_class" value="115">
+    <label for="d_include6">해당사항 없음</label>
+   </span>
+    
+        </div>
+  </div>
+    <div class="qstn__btn">
+      <button type="button" class="prev" onclick="history.go(-1);">이전</button> <!-- 필요시에 button태그로 바꾸셔도 돼요 -->
+      <a href="./bone_2.html" class="next">다음</a>
+    </div>
+	</form>
+  <div class="prg-wrap">
+    <div class="qs-type__prog clearfix">
+      <div>
+        <span class="basic">1</span>
+        <em>기본</em>
+      </div>
+      <div>
+        <span class="cmn-type">2</span>
+        <em> 소화</em>
+      </div>
+      <div>
+        <span class="cmn-type">3</span>
+        <em> 대소변</em>
+      </div>
+      <div>
+        <span class="inter-type on">4</span>
+        <em>관절/뼈 </em> 
+      </div>
+      <div>
+        <span class="">5</span>
+        <em> 순환 </em>
+      </div>
+      <div>
+        <span class="">6</span>
+        <em> 피부/헤어 </em> 
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- //container -->
+
+</div>
+<!-- //cmn-question -->

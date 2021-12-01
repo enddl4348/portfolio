@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>BS Welfare</title>
+    <meta name="description" content="바이오스마트 모바일입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BIO SMART">
+    <meta property="og:description" content="바이오스마트 모바일입니다.">
+    <!-- og image 이미지의 경우 최소한 600 x 315 픽셀은 되어야 하며, 1200 x 630 픽셀 크기를 권장 -->
+    <meta property="og:image" content="../../img/main/mobile_logo.jpg">
+    <!-- 파비콘 16*16 or 32*32 사이즈 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/respon.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+  </head>
+
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="header__top container">
+        <button type="button" class="gnb__btn ir_pm">전체메뉴버튼</button>
+        <h1 class="m__logo"><a href="../index.html"><img src="../img/main/logo.png" alt="로고"></a></h1>
+        <div class="icon__area">
+          <button type="button" class="sch_btn ir_pm">검색버튼</button>
+          <a href="./cart.html" class="m__cart"><span class="cart__amnt">7</span></a>
+        </div><!-- //icon__area -->
+      </div>
+      <ul class="gnb__menubar">
+        <li class="on"><a href="../index.html">홈</a></li>
+        <li><a href="./prdlist.html">타임딜</a></li>
+        <li><a href="./prdlist.html">공동구매</a></li>
+        <li><a href="./prdlist.html">베스트</a></li>
+        <li><a href="./prdlist.html">MD's Pick</a></li>
+      </ul>
+    </header><!-- //header -->
+
+    <!-- 검색 버튼 클릭했을 때 마크업 시작 -->
+    <div class="sch__wrap">
+      <div class="container">
+        <div class="sch__top">
+          <form name="" method="get">
+            <button type="button" class="prev ir_pm">닫기</button>
+            <input type="text" name="" value="" placeholder="검색어를 입력해주세요">
+            <button type="submit" class="sch__submit ir_pm">검색</button>
+          </form>
+        </div>
+        <!-- //sch__top -->
+
+        <ul class="sch__tab">
+          <li><button type="button" class="hotBtn">인기검색어</button></li>
+          <li><button type="button" class="lateBtn">최근검색어</button></li>
+        </ul>
+
+        <div class="sch__result">
+          <!-- 인기검색어 리스트 나오는 거 -->
+          <div class="sch__cont hot">
+            <div class="sch__cont-txt">2021.02.23 기준</div>
+            <ul class="sch__keyword">
+              <li>1.검색어</li>
+              <li>2.검색어</li>
+              <li>3.검색어</li>
+              <li>4.검색어</li>
+            </ul>
+          </div>
+          <!-- //sch__cont -->
+
+          <!-- 최근검색어 있을 때 리스트 나오는 거 -->
+          <div class="sch__cont late ">
+            <div class="sch__cont-txt">검색어 전체 삭제</div>
+            <ul class="sch__keyword">
+              <li>검색어<span class="sch__date">2.23<button type="button" class="sch__del ir_pm">검색기록 삭제</button></span>
+              </li>
+              <li>검색어<span class="sch__date">2.23<button type="button" class="sch__del ir_pm">검색기록 삭제</button></span>
+              </li>
+              <li>검색어<span class="sch__date">2.23<button type="button" class="sch__del ir_pm">검색기록 삭제</button></span>
+              </li>
+            </ul>
+          </div>
+          <!-- //sch__cont -->
+
+          <!-- 최근검색어 없을 때 나오는 마크업 -->
+          <div class="sch__cont latest">
+            <div class="sch__none">
+              최근 검색어가 없습니다.
+            </div>
+          </div>
+          <!-- //sch__cont -->
+        </div>
+        <!-- //sch__result -->
+
+      </div>
+      <!-- //container -->
+      <ul class="company__bar">
+        <li><a href="#">고객센터 <span class="ico"></span> </a></li>
+        <li><a href="#">회사소개 <span class="ico"></span> </a></li>
+      </ul>
+    </div>
+    <!-- //sch__wrap -->
+
+    <script>
+      var $schTab = $('.sch__tab li');
+      var $hotBtn = $('.hotBtn');
+      var $lateBtn = $('.lateBtn');
+      var $hotCont = $('.hot');
+      var $lateCont = $('.late');
+      var $schClose = $('.prev');
+      var $schBtn = $('.sch_btn');
+      var $schWrap = $('.sch__wrap');
+
+
+      $schBtn.on('click', function () {
+        $schWrap.addClass('active');
+      });
+
+      $schClose.click(function () {
+        $schWrap.removeClass('active');
+      });
+
+      $schTab.click(function () {
+        $(this).addClass('on').siblings().removeClass('on');
+      });
+
+      $hotBtn.on('click', function () {
+        $hotCont.addClass('on').siblings().removeClass('on');
+      });
+
+      $lateBtn.on('click', function () {
+        $lateCont.addClass('on').siblings().removeClass('on');
+      });
+    </script>
+
+    
+    <!-- 전체메뉴 클릭했을 때 마크업 시작 -->
+    <div class="gnb__wrap">
+      <div class="gnb__top">
+        <div class="container">
+          <div class="top__util">
+            <strong class="log__tit login-on">홍길동 님 <span class="log-ico"></span></strong>
+            <a href="" class="log__sub m__logout"
+              style="border:1px solid #ddd; padding:5px 10px;">로그아웃</a>
+          </div>
+          <!-- //top__util -->
+          <button type="button" class="gnb__wrap-cls"></button>
+          <div class="gnb__point-wrap">
+            <a href="./my_reserve.html" class="point">
+              복지포인트 <span class="point-amnt"><em>0</em>P</span>
+            </a>
+            <a href="./my_reserve.html" class="point-spec">
+              특별포인트 <span class="point-amnt"><em>110,000</em>P</span>
+            </a>
+          </div>
+          <!-- //gnb__point-wrap -->
+        </div>
+        <!-- //container -->
+        <div class="top__lnk">
+          <ul>
+            <li>
+              <a href="#" class="ordlist-lnk">
+                주문/배송
+              </a>
+            </li>
+            <li>
+              <a href="./cart.html" class="cart-lnk">
+                장바구니
+                <span class="amnt">7</span>
+              </a>
+            </li>
+            <li>
+              <a href="./my_wish.html" class="wishlist-lnk">
+                관심상품
+              </a>
+            </li>
+            <li>
+              <a href="./myinfo.html" class="mypage-lnk">
+                MY PAGE
+              </a>
+            </li>
+          </ul>
+        </div><!-- //top_lnk -->
+      </div>
+      <!-- gnb__top -->
+
+      <div class="gnb__btm" style="height: 566px;">
+        <div class="nav__categ-wrap">
+          <h2 class="categ-tit">카테고리</h2>
+          <ul>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate1.png"> 패션의류/잡화</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate2.png"> 뷰티</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate3.png"> 출산/유아동</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate4.png"> 식품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate5.png"> 주방용품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate6.png"> 생활용품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate7.png"> 홈인테리어</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate8.png"> 가전디지털</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate9.png"> 스포츠/레저</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate10.png"> 자동차용품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate11.png"> 완구/취미</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate14.png"> 반려동물용품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate15.png"> 헬스/건강식품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate16.png"> 제휴관</a></li>
+          </ul>
+        </div>
+        <!-- //nav__categ-wrap -->
+        <ul class="company__bar">
+          <!-- <li><a href="./login.php">로그인</a></li> -->
+          <li><a href="#">고객센터 <span class="ico"></span> </a></li>
+          <li><a href="#">회사소개 <span class="ico"></span> </a></li>
+          <!--링크는 정확하지 않음-->
+        </ul>
+      </div>
+    </div><!-- //gnb__wrap -->
+
+
+
+    <!-- 하단 퀵메뉴 -->
+    <div class="fix-quick_menu">
+      <ul class="quick_menu">
+        <li class="all_menu"><button type="button">카테고리</button></li>
+        <li class="on"><a href="" class="quick_home">HOME</a></li>
+        <li class=""><a href="./myinfo.html" class="quick_my">MY PAGE</a></li>
+        <li class=""><a href="./cart.html" class="quick_cart">장바구니 <span class="cart-amnt">7</span></a></li>
+      </ul>
+    </div>
+    <!-- //fix-quick_menu -->
+
+    <script>
+      // gnb__wrap 높이값 계산
+      var wHeight = $(window).height();
+      var gnbHeadHeight = $('.gnb__top').innerHeight();
+
+      console.log(gnbHeadHeight);
+      var gnbBodyHeight = wHeight - gnbHeadHeight;
+
+      $('.gnb__btm').css({
+        'height': gnbBodyHeight + 'px'
+      });
+
+      //  상단 햄버거메뉴 클릭했을 때 나오는거
+      var $topHam = $('.gnb__btn');
+      var $hamBtn = $('.quick_menu .all_menu');
+      var $cateAll = $('.gnb__wrap');
+      var $closeHam = $('.gnb__wrap-cls');
+
+      $topHam.click(function () {
+        $cateAll.addClass('on');
+      });
+
+      $hamBtn.click(function () {
+        $(this).addClass('on');
+        $cateAll.addClass('on');
+        // $cateAll.show();
+      });
+
+      $closeHam.click(function () {
+        $cateAll.removeClass('on');
+        $hamBtn.removeClass('on');
+      });
+    </script>
+
+    <script>
+      $(window).on('orientationchange', function (event) {
+        /* 모바일 세로모드에서 가로모드로 뷰 변환 시 */
+        $('.gnb_wrap').hide();
+      });
+    </script>
+
+    <!-- <div class="m__main"> -->
+
+			<div class="sub__title">
+				<button type="button" class="sub__prev ir_pm"">이전으로</button>
+				회원정보 수정
+			</div>
+
+      <form name="" action="" method="post">
+        <div class="myinfo__wrap">
+          <dl class="data-table">
+            <dt>아이디 <i>*</i></dt>
+            <dd>test</dd>
+          </dl>
+        
+          <dl class="data-table">
+            <dt>비밀번호 <i>*</i> <br> <small>(특수문자 및 한글입력은 불가하며 대소문자를 구별합니다. 6자리 이상 입력해주시기 바랍니다) </small></dt>
+            <dd>
+              <input name="passwd" type="password" class="input_style">
+            </dd>
+          </dl>
+        
+        
+          <dl class="data-table">
+            <dt>비밀번호 확인 <i>*</i> <small>비밀번호 확인을 위해 다시 한 번 입력해 주시기 바랍니다. </small></dt>
+            <dd>
+              <input name="passwd2" type="password" class="input_style">
+            </dd>
+          </dl>
+        
+          <dl class="data-table">
+            <dt>이름 <i>*</i></dt>
+            <dd>홍길동</dd>
+          </dl>
+        
+          <dl class="data-table">
+            <dt>사번 <i>*</i></dt>
+            <dd>0001</dd>
+          </dl>
+        
+            
+          <dl class="data-table">
+            <dt>회사명 </dt>
+            <dd></dd>
+          </dl>
+        
+          <dl class="data-table">
+            <dt>부서명 </dt>
+            <dd>
+            <input name="part_name" value="" type="text" class="input_style">
+            </dd>
+          </dl>
+        
+          <dl class="data-table">
+            <dt>직급 </dt>
+            <dd>
+            <input name="position_name" value="" type="text" class="input_style">
+            </dd>
+          </dl>
+        
+              <dl class="data-table">
+              <dt>회사이메일 <i>
+              *</i>
+              </dt>
+              <dd>
+                <div>
+                 <input name="email" value="test@naver.com" type="text" class="input_style">
+                          </div>
+                <div style="margin:10px 0 0;" class="joinfrm__radio">
+                  메일정보수신
+                  <input id="agree_yes" name="reemail" type="radio" value="Y"> <label for="agree_yes"> 동의</label>
+                  <input id="agree_no" name="reemail" type="radio" value="N" checked=""> <label for="agree_no"> 동의안함</label>
+                </div>
+              </dd>
+            </dl>
+            <dl class="data-table">
+              <dt>개인이메일</dt>
+              <dd>
+                <div>
+                 <input name="email2" value="test@naver.com" type="text" class="input_style">
+                </div>
+              </dd>
+            </dl>
+          
+            <dl class="data-table">
+            <dt>회사 전화번호 <i>* </i></dt>
+            <dd>
+            <input name="tphone" value="070" type="text" style="width:60px;" class="input_style">
+              -
+              <input name="tphone2" value="4355" type="text" style="width:60px;" class="input_style">
+              -
+              <input name="tphone3" value="6307" type="text" style="width:60px;" class="input_style">
+            </dd>
+          </dl>
+          
+            <dl class="data-table">
+            <dt>휴대 전화번호 <i>
+                *</i></dt>
+            <dd>
+              <div>
+                <input name="hphone" value="010" type="text" style="width:60px;" class="input_style">
+                -
+                <input name="hphone2" value="8445" type="text" style="width:60px;" class="input_style">
+                -
+                <input name="hphone3" value="6284" type="text" style="width:60px;" class="input_style">
+              </div>
+        
+              <div style="margin:10px 0 0;" class="joinfrm__radio">
+                SMS수신
+                <input name="resms" id="sms_yes" type="radio" value="Y"> <label for="sms_yes">동의</label>
+        
+                <input name="resms" id="sms_no" type="radio" value="N" checked="">
+                <label for="sms_no">동의안함</label>
+              </div>
+            </dd>
+          </dl>
+          
+            <dl class="data-table">
+            <dt> 주소 <i>
+                *</i></dt>
+            <dd>
+              <div>
+                <input name="post"  type="text" style="width:10rem;">
+                <button type="button">우편번호 찾기</button>
+              </div>
+              <div style="margin:5px 0 0;"><input name="address" value="" type="text" style="width:95%;" class="input_style" maxlength="80"></div>
+              <div style="margin:5px 0 0;"><input name="address2" value="" type="text" style="width:95%;" class="input_style" maxlength="80"></div>
+            </dd>
+          </dl>
+          
+          </div>
+        </div>
+        <div class="button_common">
+          <button type="submit">수정</button>
+        </div>
+        </form>
+
+		
+
+  <footer class="footer">
+    <div class="footer__top">
+      <ul class="footer__menu">
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">고객센터</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보취급방침</a></li>
+      </ul>
+    </div>
+    <div class="footer__btm">
+      <h2 class="footer__logo"><a href=""><img src="../img/main/logo.png" alt="푸터 로고 이미지"></a></h2>
+      <div class="footer__info-top">
+        <p>(주)바이오스마트</p>
+        <p>서울시 성동구 광나루로 172(성수동1가 13-5) 린하우스 4층 </p>
+        <p>사업자등록번호:201-81-49003 </p>
+        <!--201-81-49003 제 2021-0000-0000호-->
+        <p> 통신판매업신고:제 2021-서울성동-01114호</p>
+        <small>COPYLIGHT ⓒ 2021 bswelfare.com All rights reserved.</small>
+      </div>
+
+      <strong class="foot__tit">고객센터</strong>
+      <div class="footer__info-btm">
+        <p>개인정보보호책임자 :민창석 </p>
+        <p>전화 :<em class="col"> 02-3218-9073</em> (평일09:00 ~ 18:00)</p>
+        <p> 팩스 :02-3218-9050/ E-mail :<em class="col"> csmin@bs-group.kr </em> </p>
+      </div>
+
+      <!-- 위로가기버튼 -->
+      <button type="button" class="go_top ir_pm">위로가기버튼</button>
+
+    </div>
+    <!-- //footer__btm -->
+
+    <!--위로가기 버튼 구현 -->
+    <script>
+      var $goTop = $('.go_top');
+
+      $goTop.click(function () {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 400);
+        return false;
+      });
+
+
+      var $goTopview = $('.prd-vw');
+
+      $goTopview.click(function () {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 400);
+        return false;
+      });
+    </script>
+
+  </footer>
+    
+    </div>
+    <!-- //wrap -->
+    

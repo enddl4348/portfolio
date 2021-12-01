@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"			content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Pragma"		content="no-cache">
+	<meta http-equiv="Expires"		content="-1">
+	<meta http-equiv="Cache-Control"content="no-cache">
+	<title>BS Welfare</title>
+	<meta name="description"		content="BS WELFARE 복지몰, 복지몰, MRO, 선택적복지">
+	<meta property="og:type"		content="website">
+	<meta property="og:title"		content="BS Welfare">
+	<meta property="og:description" content="BS WELFARE 복지몰, 복지몰, MRO, 선택적복지">
+	<link href="../css/reset.css" rel="stylesheet" type="text/css">
+	<link href="../css/fonts.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="/admin../css/jquery-ui.css">
+	<link href="../css/swiper.min.css" rel="stylesheet" type="text/css">
+	<link href="../css/style.css" rel="stylesheet" type="text/css">
+	<link href="../css/style_add.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script src="../js/swiper.min.js" type="text/javascript"></script>
+	<script src="../js/ui-index.js" type="text/javascript"></script>
+	<script src="../js/main_210208.js" type="text/javascript"></script>
+	<script src="../js/lib.js" type="text/javascript"></script>
+</head>
+<body>
+<!-- //헤더 -->
+<div class="path basic-page">
+	<div class="container">
+		<a href="../index.html">Home</a> &gt; 식품 &gt; <strong>과일</strong>	</div>
+</div>
+<div class="prd_view_topinfo_wrap">
+  <div class="container clearfix">
+    <div class="prd_topinfo_wrap clearfix">
+      <div class="view__left-img">
+        <div class="prd_img_wrap">
+          <div class="prd_img">
+            <img src="../img/sub/list_prd_1.jpg">
+          </div>
+          <!--이미지는 호버시 기능 구현 때문에 임의로 넣어놓았습니다. 썸네일 호버시 위에 큰 이미지 나옴 -->
+        </div>
+        <!--.prd_img_wrap -->
+        <div class="thumb_box">
+          <span class="thumb"><img src="../img/sub/list_prd_1.jpg" data-large="../img/sub/list_prd_1.jpg" alt="썸네일 이미지"></span>
+        </div>
+      </div>
+      <!-- view__left-img -->
+      <script>
+        var $bigImage = $('.prd_img > img');
+        var $thumbImage = $('.thumb_box .thumb');
+
+        $thumbImage.on('click', function () {
+          var nowImg = $(this).children('img').attr('data-large');
+          $bigImage.attr('src', nowImg);
+        });
+      </script>
+      <div class="prd_detailinfo_wrap">
+
+        <!-- 여기서부터 생코딩 자리  -->
+        <div class="prd-ttl">
+          <h2>양구 고당도 홍로사과 5kg/10kg (사이즈 택1)</h2>
+          <button type="button" class="view__share-ico ir_pm">공유 버튼</button>
+          <div class="layer-share">
+            <h2 class="share-tit">공유하기</h2>
+            <button type="button" class="share-canc ir_pm">닫기</button>
+            <div class="sns-list">
+              <button type="button" class="btn-sns kakao" id="kakao-link-btn">카카오톡 </button>
+
+              <button type="button" class="btn-sns urlcopy">URL 복사</button>
+
+            </div>
+          </div>
+        </div><!-- .prd-ttl -->
+
+        <!-- 공유버튼 제이쿼리 -->
+        <script>
+          var shareBtn = $('.view__share-ico');
+          var shareCont = $('.layer-share');
+          var shareCanc = $('.share-canc');
+
+          shareBtn.on('click', function () {
+            shareCont.addClass('active');
+          });
+
+          shareCanc.on('click', function () {
+            shareCont.removeClass('active');
+          });
+        </script>
+
+        <div class="price-table">
+          <div class="price__wrap clearfix" style="border-bottom:0;">
+            <strong class="price-down">26%</strong>
+            <div class="price-wrap">
+              <b id="ori_total">57,300원</b>
+              <p class="prd__price-info">
+               32,700<span>원</span>
+              </p>
+            </div>
+          </div>
+          <dl class="prd__info first">
+            <dt class="p_tit">브랜드</dt>
+            <dd class="p_info">퀸즈테이블</dd>
+          </dl>
+          <dl class="prd__info">
+            <dt class="p_tit">제조사</dt>
+            <dd class="p_info">케이타잔</dd>
+          </dl>
+          <dl class="prd__info">
+            <dt class="p_tit">모델명</dt>
+            <dd class="p_info">양구 홍로 사과</dd>
+          </dl>
+          <dl class="prd__info">
+            <dt class="p_tit">원산지</dt>
+            <dd class="p_info">한국</dd>
+          </dl>
+          <dl class="prd__info last">
+            <dt class="p_tit">배송비</dt>
+            <dd class="p_info">0원</dd>
+          </dl>
+          <!-- //price-info -->
+
+
+
+          <div class="option-wrap">
+            <form name="" action="" method="post" >
+              <div class="prd__sel-option">
+                <select name="opttitle5" id="_opttitle5" class="optcode">
+                  <option value="선택" opt_price="0" opt_name="선택안함" opt_cost="0" selected="">선택: 선택</option>
+                  <option value="선택" opt_price="0" opt_name="양구 홍로 사과:선택" opt_cost="" opt_stock="">
+                    양구 홍로 사과:선택</option>
+                </select>
+              </div>
+            </form>
+
+            <div id="option_html">
+            </div>
+            <div class="product-chose price" style="display:none;">
+              <div class="product-chose-row product-chose-row2">
+                <span>구매단가</span>
+                <p id="buy_unit">62,700원<span>(옵션포함)</span></p><!-- 옵션포함 글자까지 넘어오게 해주세요 -->
+              </div>
+              <div class="product-chose-row product-chose-row2">
+                <span>구매금액</span>
+                <p id="buy_price_befor">62,700원 </p>
+              </div>
+            </div>
+
+            <dl class="total_price clearfix">
+              <dt>총 금액</dt>
+              <dd>
+                <b id="buy_total" class="real-price">0<span>원</span></b>
+                <b id="ori_total" style="text-decoration:line-through;"></b>
+              </dd>
+            </dl>
+          </div><!-- .option-wrap -->
+          <div class="btn-wrap clearfix">
+            <button type="button" class="heart-btn hBtn102202"></button>
+            <button type="button" class="l_btn" >
+              <i class="cart_ico"></i>장바구니</button>
+            <button type="button" class="buy-btn">구매하기</button>
+          </div><!-- //btn-wrap -->
+        </div>
+        <!--.price-table-->
+      </div><!-- .prd_detailinfo_wrap -->
+    </div><!-- .prd_topinfo_wrap -->
+
+    <!-- 여기가 상단 끝 -->
+
+    <a name="prdinfo"></a>
+    <ul class="prd_view_tab">
+      <li class="on"><a href="#prdinfo">상품상세</a></li>
+      <li><a href="#prdrev">구매후기(0)</a></li>
+      <li><a href="#counsel">상품문의</a></li>
+      <li><a href="#deliver">배송/환불안내</a></li>
+    </ul><!-- .prd_view_tab -->
+
+    <div class="prd_view_contwrap">
+      <h3 class="tablist__tit">필수 표기정보</h3>
+      <table cellspacing="0" cellpadding="0" width="100%" class="comn-prdinfo">
+        <tbody>
+          <tr>
+            <th>포장단위별 용량(중량), 수량, 크기</th>
+            <td>상세페이지 참고</td>
+            <th>생산자, 수입품의 경우 수입자를 함께 표기</th>
+            <td>상세페이지 참고</td>
+          </tr>
+          <tr>
+            <th>농수산물의 원산지 표시에 관한 법률에 따른 원산지</th>
+            <td>상세페이지 참고</td>
+            <th>제조연월일(포장일 또는 생산연도), 유통기한 또는 품질유지기한</th>
+            <td>상세페이지 참고</td>
+          </tr>
+          <tr>
+            <th>관련법상 표시사항</th>
+            <td>상세페이지 참고</td>
+            <th>상품구성</th>
+            <td>상세페이지 참고</td>
+          </tr>
+          <tr>
+            <th>보관방법 또는 취급방법</th>
+            <td>상세페이지 참고</td>
+            <th>소비자상담 관련 전화번호</th>
+            <td>상세페이지 참고</td>
+          </tr>
+          <tr>
+            <th>기타</th>
+            <td>상세페이지 참고</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="img-box">
+        <p align="center"><img src="../img/sub/view_desc.jpg"></p>
+        <!-- <p align="center"><img src="http://frank121111.ivyro.net/encom191201/mski330.jpg"></p>
+        <p align="center"><img src="http://frank121111.ivyro.net/encom180301/AllMODULEbottom.jpg"></p>
+        <p align="center"><img src="http://frank121111.ivyro.net/encom180301/CALLCENTER.jpg"></p> -->
+      </div>
+    </div>
+    <!-- .prd_view_contwrap -->
+
+    <a name="prdrev"></a>
+    <ul class="prd_view_tab">
+      <li><a href="#prdinfo">상품상세</a></li>
+      <li class="on"><a href="#prdrev">구매후기(0)</a></li>
+      <li><a href="#counsel">상품문의</a></li>
+      <li><a href="#deliver">배송/환불안내</a></li>
+    </ul><!-- .prd_view_tab -->
+    <div class="prd_view_contwrap review">
+      <h3 class="tablist__tit">구매후기</h3>
+
+      <table width="100%" class="cmn-write__table review__table">
+        <colgroup>
+          <col style="width:9%">
+          <col style="width:61%">
+          <col style="width:11%">
+          <col style="width:9%">
+          <col style="width:10%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col"><strong>번호</strong></th>
+            <th scope="col"><strong>제목</strong></th>
+            <th scope="col"><strong>별점</strong></th>
+            <th scope="col"><strong>작성자</strong></th>
+            <th scope="col"><strong>작성일</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="review__head">
+            <td colspan="5">등록된 게시물이 없습니다.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-btn">
+      </div>
+
+      <div class="tab__cont__btn">
+        <a href="#" class="wirte-rev">상품평 쓰기</a>
+        <a href="#" class="all-list">전체보기</a>
+      </div>
+    </div><!-- .prd_view_contwrap -->
+
+    <a name="counsel"></a>
+    <ul class="prd_view_tab">
+      <li><a href="#prdinfo">상품상세</a></li>
+      <li><a href="#prdrev">구매후기(0)</a></li>
+      <li class="on"><a href="#counsel">상품문의</a></li>
+      <li><a href="#deliver">배송/환불안내</a></li>
+    </ul><!-- .prd_view_tab -->
+
+    <div class="prd_view_contwrap counsel">
+      <h3 class="tablist__tit">상품문의</h3>
+
+      <table width="100%" class="cmn-write__table counsel__table">
+        <colgroup>
+          <col style="width:9%">
+          <col style="width:61%">
+          <col style="width:11%">
+          <col style="width:9%">
+          <col style="width:10%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col"><strong>번호</strong></th>
+            <th scope="col"><strong>제목</strong></th>
+            <th scope="col"><strong>처리상태</strong></th>
+            <th scope="col"><strong>작성자</strong></th>
+            <th scope="col"><strong>작성일</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center" colspan="5" height="30">등록된 게시물이 없습니다.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-btn">
+      </div>
+
+      <div class="tab__cont__btn">
+        <a href="#" class="counsel">문의하기</a>
+        <a href="#" class="all-list">전체보기</a>
+      </div>
+    </div><!-- .prd_view_contwrap -->
+
+    <a name="deliver"></a>
+    <ul class="prd_view_tab">
+      <li><a href="#prdinfo">상품상세</a></li>
+      <li><a href="#prdrev">구매후기</a></li>
+      <li><a href="#counsel">상품문의</a></li>
+      <li class="on"><a href="#deliver">배송/환불안내</a></li>
+    </ul><!-- .prd_view_tab -->
+
+    <div class="prd_view_contwrap deliver">
+      <h3 class="tablist__tit">배송안내</h3>
+      <table width="100%" class="comn-prdinfo delb__info">
+        <tbody>
+          <tr>
+            <th>배송 방법</th>
+            <td>롯데글로벌로지스</td>
+            <th>배송 비용</th>
+            <td class="last">0원</td>
+          </tr>
+          <tr>
+            <th>배송 지역</th>
+            <td>전국</td>
+            <th>배송 추적</th>
+            <td class="last">온라인으로 송장번호 추적 가능(롯데글로벌로지스)</td>
+          </tr>
+          <tr>
+            <th>배송 문의</th>
+            <td colspan="3">1588-2121</td>
+          </tr>
+          <tr class="delb-time">
+            <th>배송 기간</th>
+            <td colspan="3">
+              <ul>
+                <li>결제일 기준으로 1일~3일</li>
+                <li>* 택배사의 제조사의 사정 및 공휴일(특히, 명절기간 공지확인 요함)로 인해 2~5일 지연될 수 있습니다.</li>
+                <li>*군부대 및 도서산간지역은 추가 운임이 발생할 수 있으며, 1~3일의 추가 소요시간과 추가요금(1,000원~7,000원)이 발생할 수 있습니다.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="tablist__tit">교환 및 환불안내</h3>
+      <table width="100%" class="exch-info comn-prdinfo">
+        <tbody>
+          <tr>
+            <th>반품 배송비</th>
+            <td>[구매자 귀책] 반품 7,200원 / 무료배송 상품시 왕복(x2) 배송비 부과</td>
+          </tr>
+          <tr>
+            <th>반품 주소</th>
+            <td>서울 강서구 마곡중앙로 171 프라이빗타워2차 1205호</td>
+          </tr>
+          <tr>
+            <th>반품 안내</th>
+            <td>고객센터와 확인 후 처리 요청드립니다.</td>
+          </tr>
+          <tr>
+            <th>반품 기준</th>
+            <td>
+              <ul>
+                <li>상품수령 후 7일 이내에 신청하실 수 있습니다.<br>
+                  단, 재화 등의 내용이 표시·광고의 내용과 다르거나 계약내용과 다르게 이행된 경우에는 그 재화 등을 공급받은 날부터 3개월 이내,<br>그 사실을 안 날 또는 알 수 있었던 날로부터
+                  30일 이내에 반품이 가능 할 수 있습니다.<br><br>
+                  추가적으로 다음의 경우에 해당하는 반품은 신청이 불가능 할 수 있습니다.
+                </li>
+                <li>- 소비자의 책임이 있는 사유로 상품 등 이 멸실 또는 훼손된 경우(단지, 상품 확인을 위한 포장 훼손 제외)</li>
+                <li>- 소비자의 사용 또는 소비에 의한 상품 등의 가치가 현저히 감소한 경우</li>
+                <li>- 시간의 경과에 의해 재판매가 곤란할 정도로 상품 등의 가치가 현저히 감소한 경우</li>
+                <li>- 복제가 가능한 상품 등의 포장을 훼손한 경우</li>
+                <li>- 소비자의 주문에 따라 개별적으로 생산되는 상품이 제작에 들어간 경우</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- .prd_view_contwrap -->
+
+<script>
+
+
+$(document).ready(function(){
+ $("dl.prd__info").removeClass("first");
+ $("dl.prd__info:first").addClass("first");
+ $("dl.prd__info").removeClass("last");
+ $("dl.prd__info:last").addClass("last");
+
+ document.getElementsByName("trade_type")[0].value = '';
+ check_amount(document.prdForm.amount.value);
+
+ $(".optcode").change(function(){ checkOptions(); getTotalPrice(); });
+ getTotalPrice();
+});
+
+// 엔터 막기
+function stopRKey(evt){
+ var evt = (evt) ? evt : ((event) ? event : null);
+ var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+ if ((evt.keyCode == 13) && (node.type=="text")){return false;}
+}
+// 엔터 막기 실행
+// document.onkeypress = stopRKey;
+</script>
+<script>
+var revHead = $('.review__head');
+var revDetail = $('.review__detail');
+
+revHead.click(function(i){
+ var idx = $(this).index();
+ revDetail.eq(idx).toggleClass('on');
+});
+
+var counselHead = $('.counsel__head');
+var counselDetail = $('.counsel__detail');
+
+counselHead.click(function(i){
+ var idx = $(this).index();
+ counselDetail.eq(idx).toggleClass('on');
+});
+</script>

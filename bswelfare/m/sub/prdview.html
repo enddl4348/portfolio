@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>BS Welfare</title>
+    <meta name="description" content="바이오스마트 모바일입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BIO SMART">
+    <meta property="og:description" content="바이오스마트 모바일입니다.">
+    <!-- og image 이미지의 경우 최소한 600 x 315 픽셀은 되어야 하며, 1200 x 630 픽셀 크기를 권장 -->
+    <meta property="og:image" content="../img/main/mobile_logo.jpg">
+    <!-- 파비콘 16*16 or 32*32 사이즈 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/respon.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+  </head>
+
+<body>
+<div class="wrap">
+  <header class="header">
+    <div class="header__top container">
+      <button type="button" class="gnb__btn ir_pm">전체메뉴버튼</button>
+      <h1 class="m__logo"><a href="../index.html"><img src="../img/main/logo.png" alt="로고"></a></h1>
+      <div class="icon__area">
+        <button type="button" class="sch_btn ir_pm">검색버튼</button>
+        <a href="./cart.html" class="m__cart"><span class="cart__amnt">7</span></a>
+      </div><!-- //icon__area -->
+    </div>
+    <ul class="gnb__menubar">
+      <li class="on"><a href="../index.html">홈</a></li>
+      <li><a href="./prdlist.html">타임딜</a></li>
+      <li><a href="./prdlist.html">공동구매</a></li>
+      <li><a href="./prdlist.html">베스트</a></li>
+      <li><a href="./prdlist.html">MD's Pick</a></li>
+    </ul>
+  </header><!-- //header -->
+
+<!-- 검색 버튼 클릭했을 때 마크업 시작 -->
+<div class="sch__wrap">
+  <div class="container">
+    <div class="sch__top">
+      <form name="" method="get">
+        <button type="button" class="prev ir_pm">닫기</button>
+        <input type="text" name="" value="" placeholder="검색어를 입력해주세요">
+        <button type="submit" class="sch__submit ir_pm">검색</button>
+      </form>
+    </div>
+    <!-- //sch__top -->
+
+    <ul class="sch__tab">
+      <li><button type="button" class="hotBtn">인기검색어</button></li>
+      <li><button type="button" class="lateBtn">최근검색어</button></li>
+    </ul>
+
+    <div class="sch__result">
+      <!-- 인기검색어 리스트 나오는 거 -->
+      <div class="sch__cont hot">
+        <div class="sch__cont-txt">2021.02.23 기준</div>
+        <ul class="sch__keyword">
+          <li>1.검색어</li>
+          <li>2.검색어</li>
+          <li>3.검색어</li>
+          <li>4.검색어</li>
+        </ul>
+      </div>
+      <!-- //sch__cont -->
+
+      <!-- 최근검색어 있을 때 리스트 나오는 거 -->
+      <div class="sch__cont late ">
+        <div class="sch__cont-txt">검색어 전체 삭제</div>
+        <ul class="sch__keyword">
+          <li>검색어<span class="sch__date">2.23<button type="button" class="sch__del ir_pm">검색기록 삭제</button></span>
+          </li>
+          <li>검색어<span class="sch__date">2.23<button type="button" class="sch__del ir_pm">검색기록 삭제</button></span>
+          </li>
+          <li>검색어<span class="sch__date">2.23<button type="button" class="sch__del ir_pm">검색기록 삭제</button></span>
+          </li>
+        </ul>
+      </div>
+      <!-- //sch__cont -->
+
+      <!-- 최근검색어 없을 때 나오는 마크업 -->
+      <div class="sch__cont latest">
+        <div class="sch__none">
+          최근 검색어가 없습니다.
+        </div>
+      </div>
+      <!-- //sch__cont -->
+    </div>
+    <!-- //sch__result -->
+
+  </div>
+  <!-- //container -->
+  <ul class="company__bar">
+    <li><a href="#">고객센터 <span class="ico"></span> </a></li>
+    <li><a href="#">회사소개 <span class="ico"></span> </a></li>
+  </ul>
+</div>
+<!-- //sch__wrap -->
+
+<script>
+    var $schTab = $('.sch__tab li');
+    var $hotBtn = $('.hotBtn');
+    var $lateBtn = $('.lateBtn');
+    var $hotCont = $('.hot');
+    var $lateCont = $('.late');
+    var $schClose = $('.prev');
+    var $schBtn = $('.sch_btn');
+    var $schWrap = $('.sch__wrap');
+
+
+    $schBtn.on('click',function(){
+      $schWrap.addClass('active');
+    });
+
+    $schClose.click(function(){
+      $schWrap.removeClass('active');
+    });
+
+    $schTab.click(function(){
+      $(this).addClass('on').siblings().removeClass('on');
+    });
+
+    $hotBtn.on('click',function(){
+      $hotCont.addClass('on').siblings().removeClass('on');
+    });
+
+    $lateBtn.on('click',function(){
+      $lateCont.addClass('on').siblings().removeClass('on');
+    });
+
+
+</script>
+
+
+    <!-- 전체메뉴 클릭했을 때 마크업 시작 -->
+    <div class="gnb__wrap">
+      <div class="gnb__top">
+        <div class="container">
+          <div class="top__util">
+            <strong class="log__tit login-on">홍길동 님 <span class="log-ico"></span></strong>
+            <a href="" class="log__sub m__logout"
+              style="border:1px solid #ddd; padding:5px 10px;">로그아웃</a>
+          </div>
+          <!-- //top__util -->
+          <button type="button" class="gnb__wrap-cls"></button>
+          <div class="gnb__point-wrap">
+            <a href="./my_reserve.html" class="point">
+              복지포인트 <span class="point-amnt"><em>0</em>P</span>
+            </a>
+            <a href="./my_reserve.html" class="point-spec">
+              특별포인트 <span class="point-amnt"><em>110,000</em>P</span>
+            </a>
+          </div>
+          <!-- //gnb__point-wrap -->
+        </div>
+        <!-- //container -->
+        <div class="top__lnk">
+          <ul>
+            <li>
+              <a href="#" class="ordlist-lnk">
+                주문/배송
+              </a>
+            </li>
+            <li>
+              <a href="./cart.html" class="cart-lnk">
+                장바구니
+                <span class="amnt">7</span>
+              </a>
+            </li>
+            <li>
+              <a href="./my_wish.html" class="wishlist-lnk">
+                관심상품
+              </a>
+            </li>
+            <li>
+              <a href="./myinfo.html" class="mypage-lnk">
+                MY PAGE
+              </a>
+            </li>
+          </ul>
+        </div><!-- //top_lnk -->
+      </div>
+      <!-- gnb__top -->
+
+      <div class="gnb__btm" style="height: 566px;">
+        <div class="nav__categ-wrap">
+          <h2 class="categ-tit">카테고리</h2>
+          <ul>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate1.png"> 패션의류/잡화</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate2.png"> 뷰티</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate3.png"> 출산/유아동</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate4.png"> 식품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate5.png"> 주방용품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate6.png"> 생활용품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate7.png"> 홈인테리어</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate8.png"> 가전디지털</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate9.png"> 스포츠/레저</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate10.png"> 자동차용품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate11.png"> 완구/취미</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate14.png"> 반려동물용품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate15.png"> 헬스/건강식품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate16.png"> 제휴관</a></li>
+          </ul>
+        </div>
+        <!-- //nav__categ-wrap -->
+        <ul class="company__bar">
+          <!-- <li><a href="./login.php">로그인</a></li> -->
+          <li><a href="#">고객센터 <span class="ico"></span> </a></li>
+          <li><a href="#">회사소개 <span class="ico"></span> </a></li>
+          <!--링크는 정확하지 않음-->
+        </ul>
+      </div>
+    </div><!-- //gnb__wrap -->
+
+
+
+<!-- 하단 퀵메뉴 -->
+<div class="fix-quick_menu">
+  <ul class="quick_menu">
+    <li class="all_menu"><button type="button">카테고리</button></li>
+    <li class="on"><a href="index.html" class="quick_home">HOME</a></li>
+    <li class=""><a href="./myinfo.html" class="quick_my">MY PAGE</a></li>
+    <li class=""><a href="./cart.html" class="quick_cart">장바구니 <span class="cart-amnt">7</span></a></li>
+  </ul>
+</div>
+<!-- //fix-quick_menu -->
+
+<script>
+  // gnb__wrap 높이값 계산
+  var wHeight = $(window).height();
+  var gnbHeadHeight = $('.gnb__top').innerHeight();
+
+  console.log(gnbHeadHeight);
+  var gnbBodyHeight = wHeight - gnbHeadHeight;
+
+  $('.gnb__btm').css({
+    'height': gnbBodyHeight + 'px'
+  });
+
+  //  상단 햄버거메뉴 클릭했을 때 나오는거
+  var $topHam = $('.gnb__btn');
+  var $hamBtn = $('.quick_menu .all_menu');
+  var $cateAll = $('.gnb__wrap');
+  var $closeHam = $('.gnb__wrap-cls');
+
+  $topHam.click(function () {
+    $cateAll.addClass('on');
+  });
+
+  $hamBtn.click(function () {
+    $(this).addClass('on');
+    $cateAll.addClass('on');
+    // $cateAll.show();
+  });
+
+  $closeHam.click(function () {
+    $cateAll.removeClass('on');
+    $hamBtn.removeClass('on');
+  });
+</script>
+
+<script>
+  $(window).on('orientationchange', function (event) {
+    /* 모바일 세로모드에서 가로모드로 뷰 변환 시 */
+    $('.gnb_wrap').hide();
+  });
+</script>
+
+<!-- 중분류 선택 마크업 -->
+<div class="prdlist__top-tit">
+<button type="button" class="sub__prev ir_pm" onclick="history.back();">이전으로</button>
+<div class="mid__cate">
+<a>식품</a> <!-- 중분류 자리-->
+<span class="prdlist_arr"></span>
+</div>
+<ul class="mid__depth">
+  <li><a href="#">과일</a></li>
+  <li><a href="#">견과/건과</a></li>
+  <li><a href="#">채소</a></li>
+  <li><a href="#">쌀/잡곡</a></li>
+  <li><a href="#">축산/계란</a></li>
+  <li><a href="#">수산물/건어물</a></li>
+  <li><a href="#">생수/음료</a></li>
+  <li><a href="#">커피/원두/차</a></li>
+  <li><a href="#">과자/초콜릿/시리얼</a></li>
+  <li><a href="#">면/통조림/가공식품</a></li>
+  <li><a href="#">가루/조미료/오일</a></li>
+  <li><a href="#">장/소스/드레싱/식초</a></li>
+  <li><a href="#">유제품/아이스크림</a></li>
+  <li><a href="#">냉장/냉동/간편요리</a></li>
+  </ul>
+</div>
+<!-- //sub_title -->
+
+<!-- 중분류 펼침 스크립트 -->
+<script>
+var $listCate = $('.mid__cate');
+var $selectIcon = $('.prdlist_arr');
+
+$listCate.on('click',function(e){
+e.preventDefault();
+//$('.mid__depth').toggleClass('on');
+$('.prdlist_category').toggle();
+$selectIcon.toggleClass('on');
+});
+</script>
+<div class="prdview_wrap">
+
+<div class="prdview__top">
+<div class="swiper-container" id="prdview__sld">
+<div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img src="../img/sub/prdview_img.jpg" alt="썸네일 이미지"></a></div>
+    </div>
+<div class="swiper-pagination prdv__pag swiper-pagination-fraction"><span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">1</span></div>
+<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+<!-- //swiper-container -->
+</div>
+<!-- //prdview__top -->
+
+<div class="prdview__info">
+<div class="prd__tit">
+<h2 class="prd-name">동원 덴마크 청미채 옐로우 / 그린 200ml 24팩</h2>
+
+<button type="button" class="view__share-ico ir_pm">공유 버튼</button>
+<div class="share__bg">
+  <div class="layer-share active" style="width:22rem;">
+    <h2 class="share-tit">공유하기</h2>
+    <button type="button" class="share-canc ir_pm">닫기</button>
+    <div class="sns-list">
+  <button type="button" class="btn-sns kakao" id="kakao-link-btn">카카오톡</button>
+  
+  <button type="button" onclick="clip();" class="btn-sns urlcopy">URL 복사</button>
+
+  <script>
+  function clip(){
+    var url = '';
+    var textarea = document.createElement("textarea");
+    document.body.appendChild(textarea);
+    url = window.document.location.href;
+    textarea.value = url;
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert("URL이 복사되었습니다.")
+  }
+  </script>
+    </div>
+  </div>
+  <!-- //layer-share -->
+ </div>
+ <!-- //share__bg -->
+
+<!-- 공유하기 클릭 -->
+<script>
+var $shareBtn = $('.view__share-ico'),
+$shareCls = $('.share-canc');
+$shareCont = $('.share__bg');
+
+$shareBtn.on('click', function(){
+$shareCont.css('display','block');
+});
+
+$shareCls.on('click', function(){
+$shareCont.css('display','none');
+});
+
+</script>
+<div class="price__wrap">
+  <strong class="sale__perc">10%</strong>        
+  <p class="prd-price">
+    <del>18,900원</del><span class="real_prc">17,000 <em>원</em> </span>
+  </p>
+</div>
+<!-- //price__wrap -->
+</div>
+<!-- //prd__tit -->
+<dl class="prd__info-tb first">
+<dt class="p_tit">브랜드</dt>
+<dd class="p_info">동원</dd>
+</dl>
+<dl class="prd__info-tb second">
+<dt class="p_tit">제조사</dt>
+<dd class="p_info">동원</dd>
+</dl>
+        <dl class="prd__info-tb second">
+<dt class="p_tit">원산지</dt>
+<dd class="p_info">상품상세설명 참조</dd>
+</dl>
+<dl class="prd__info-tb last">
+<dt class="p_tit">배송비</dt>
+<dd class="p_info">0원</dd>
+</dl>
+
+</div>
+<!-- //prdview__info -->
+<div class="prdview__tab">
+<ul class="prd_tabBtn clearfix">
+<li class="on">상품상세</li>
+<li>구매후기</li>
+<li>상품문의</li>
+<li>배송/환불안내</li>
+</ul><!-- //prd_tabBtn -->
+
+<div class="tab__cont-wrap">
+
+<div class="tab__cont prd_detail" style="display: block;">
+<div class="container">
+  <h3 class="tab__tit">필수 표기정보</h3>
+  <style>
+.prdview_info tr th{width:45%; padding:4px 0; vertical-align:middle; line-height:2rem;}
+.prd_detail tr td{vertical-align:middle;}
+</style>
+<table cellspacing="0" cellpadding="0" width="100%" class="prdview_info">
+  <tbody>
+    <tr>
+      <th>식품의 유형</th>
+      <td>상품상세설명 참조</td>
+    </tr>
+    <tr>
+      <th>생산자, 수입품의 경우<br>수입자를 함께 표기</th>
+      <td>상품상세설명 참조</td>
+    </tr>
+    <tr>
+      <th>제조연월일, 유통기한 또는 품질유지기한</th>
+      <td>상품상세설명 참조</td>
+    </tr>
+    <tr>
+      <th>포장단위별 용량(중량), 수량</th>
+      <td>상품상세설명 참조</td>
+    </tr>
+    <tr>
+      <th>원재료명 및 함량</th>
+      <td>상품상세설명 참조</td>
+    </tr>
+    <tr>
+      <th>영양성분</th>
+      <td>상품상세설명 참조</td>
+    </tr>
+    <tr>
+      <th>유전자재조합식품에 해당하는 경우의 표시</th>
+      <td>상품상세설명 참조</td>
+    </tr>
+    <tr>
+      <th>영유아식 또는 체중조절식품 등에 해당하는 경우 표시광고 사전심의필</th>
+      <td>상품상세설명 참조</td>
+    </tr>
+    <tr>
+      <th>수입식품에 해당하는 경우 "식품위생법에 따른 수입신고를 필함"의 문구</th>
+      <td>상품상세설명 참조</td>
+    </tr>
+    <tr>
+      <th>소비자상담 관련 전화번호</th>
+      <td>상품상세설명 참조</td>
+    </tr>
+    <tr>
+      <th>기타</th>
+      <td colspan="3">상품상세설명 참조</td>
+    </tr>
+  </tbody>
+</table>
+  <div class="prdview_tabban">
+    <img src="http://gi.esmplus.com/imaummall/2option1000.gif">
+    <img src="http://gi.esmplus.com/imaummall/EX/ETC/chungmichae_1.jpg"><br>
+    <img src="http://gi.esmplus.com/imaummall/EX/ETC/chungmichae_2.jpg"><br>
+    <img src="http://gi.esmplus.com/imaummall/EX/ETC/chungmichae_3.jpg"><br>
+    <img src="http://gi.esmplus.com/imaummall/EX/ETC/chungmichae_4.jpg"><br>
+    <img src="http://gi.esmplus.com/imaummall/0FAQ1000.gif">
+  </div>
+  <!-- //prdview_img -->
+</div>
+<!-- //container -->
+</div><!-- 상품정보 -->
+<!-- //tab__cont -->
+
+<!-- 구매후기 시작 -->
+<div class="tab__cont prd_revw">
+  <div class="container">
+    <h3 class="tab__tit">구매후기(0)</h3>
+    <table class="prdview_info">
+      <tbody>
+        <tr class="rev__list rev__none">
+          <td>등록된 게시물이 없습니다.</td>
+        </tr>
+      </tbody>
+    </table><!-- //prdview_info -->
+    <!-- 구매후기 게시판 열리기 -->
+    <script>
+      var $revList = $('.prd_revw .rev__list');
+      var $revnoneList = $('.prd_revw .rev__list.rev__none');
+
+      $revList.on('click', function () {
+        $(this).find('td').toggleClass('on');
+        $(this).next('tr').toggleClass('on');
+      });
+
+      $revnoneList.unbind('click');
+    </script>
+    <div class="cmn__paging">
+    </div>
+  </div>
+  <!-- //container -->
+</div><!-- 구매후기 -->
+<!-- //tab__cont -->
+
+<div class="tab__cont prd_qna">
+  <div class="container">
+    <h3 class="tab__tit">상품문의(0)</h3>
+
+    <table class="prdview_info">
+      <tbody>
+        <tr class="rev__list rev__none">
+          <td>등록된 게시물이 없습니다.</td>
+        </tr>
+      </tbody>
+    </table><!-- //prdview_info -->
+    <!-- 구매후기 게시판 열리기 -->
+    <script>
+      var $qnaList = $('.prd_qna .rev__list');
+      var $qnanoneList = $('.prd_qna .rev__list.rev__none');
+
+      $qnaList.on('click', function () {
+        $(this).find('td').toggleClass('on');
+        $(this).next('tr').toggleClass('on');
+      });
+
+      $qnanoneList.unbind('click');
+    </script>
+    <a href="" class="qna__btn">문의하기</a>
+  </div>
+  <!-- //container -->
+</div><!-- 상품문의 -->
+<!-- //tab__cont -->
+
+<div class="tab__cont prd_cancel" style="display: none;">
+<div class="container">
+  <h3 class="tab__tit">배송안내</h3>
+  <table class="prdview_info first">
+    <tbody>
+      <tr>
+        <th>배송 방법</th>
+        <td>CJ대한통운</td>
+      </tr>
+      <tr>
+        <th>배송 비용</th>
+        <td>0원</td>
+      </tr>
+      <tr>
+        <th>배송 지역</th>
+        <td>전국</td>
+      </tr>
+      <tr>
+        <th>배송 추적</th>
+        <td>온라인으로 송장번호 추적 가능 (CJ대한통운)</td>
+      </tr>
+      <tr>
+        <th>배송 문의</th>
+        <td>1588-1255 (월~금 09:00~18:00 / 토 09:00~13:00)</td>
+      </tr>
+      <tr class="del_method">
+        <th>배송 기간</th>
+        <td>
+          <ul>
+            <li>결제일 기준으로 1일~3일</li>
+            <li>* 택배사의 제조사의 사정 및 공휴일(특히, 명절기간 공지확인 요함)로 인해 2~5일 지연될 수 있습니다.</li>
+            <li>*군부대 및 도서산간지역은 추가 운임이 발생할 수 있으며, 1~3일의 추가 소요시간과 추가요금(1,000원~7,000원)이 발생할 수 있습니다.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table><!-- //prdview_info -->
+
+  <h3 class="tab__tit">교환 및 환불안내</h3>
+  <table class="prdview_info">
+    <tbody>
+      <tr>
+        <th>반품 배송비</th>
+        <td>[구매자 귀책] 반품 3,000원 / 무료배송 상품시 왕복(x2) 배송비 부과</td>
+      </tr>
+      <tr>
+        <th>반품주소</th>
+        <td>경북 영천시 올밤길 50 웨스트윙 물류센터</td>
+      </tr>
+      <tr>
+        <th>반품안내</th>
+        <td>고객센터와 확인 후 처리 요청드립니다.</td>
+      </tr>
+      <tr>
+        <th>반품 기준</th>
+        <td>
+          <ul>
+            <li>상품수령 후 7일 이내에 신청하실 수 있습니다.<br>
+              단, 재화 등의 내용이 표시·광고의 내용과 다르거나 계약내용과 다르게 이행된 경우에는 그 재화 등을 공급받은 날부터 3개월 이내,<br>그 사실을 안 날 또는 알 수 있었던 날로부터 30일
+              이내에 반품이 가능 할 수 있습니다.<br><br>
+              추가적으로 다음의 경우에 해당하는 반품은 신청이 불가능 할 수 있습니다.
+            </li>
+            <li>- 소비자의 책임이 있는 사유로 상품 등 이 멸실 또는 훼손된 경우(단지, 상품 확인을 위한 포장 훼손 제외)</li>
+            <li>- 소비자의 사용 또는 소비에 의한 상품 등의 가치가 현저히 감소한 경우</li>
+            <li>- 시간의 경과에 의해 재판매가 곤란할 정도로 상품 등의 가치가 현저히 감소한 경우</li>
+            <li>- 복제가 가능한 상품 등의 포장을 훼손한 경우</li>
+            <li>- 소비자의 에 따라 개별적으로 생산되는 상품이 제작에 들어간 경우</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table><!-- //prdview_info -->
+</div>
+<!-- //container -->
+</div><!-- 배송안내 -->
+<!-- //tab__cont -->
+
+<!-- tab 스크립트 -->
+<script style="display: none;">
+  //prdview tab
+  var $prdBtn = $('.prd_tabBtn li'),
+      $prdCont = $('.tab__cont-wrap').find('.tab__cont');
+
+    $prdBtn.click(function () {
+
+    var idx = $(this).index();
+    $prdCont.eq(idx).show().siblings().hide();
+    $(this).addClass('on').siblings().removeClass('on');
+  });
+</script>
+</div>
+<!-- //prdview__tabprdview__tab -->
+
+<!-- 장바구니 클릭했을 때 뜨는 팝업 -->
+<div class="cart__layer-pop">
+<div class="dim__bg"></div>
+
+<div class="cart-on-wrap">
+  <span class="popBtn ir_pm">팝업닫기버튼</span>
+  <h3 class="option_tit">옵션선택</h3>
+
+  <form name="" action="" method="get">
+    <div class="product-chose price" style="display:none;">
+      <div class="product-chose-row product-chose-row2">
+        <span>구매단가</span>
+        <p id="buy_unit">17,000원<span>(옵션포함)</span></p>
+      </div>
+      <div class="product-chose-row product-chose-row2">
+        <span>구매금액</span>
+        <p id="buy_price_befor">17,000원 </p>
+      </div>
+    </div>
+
+    <div class="prd__sel-option">
+      <select name="opttitle5" id="_opttitle5" onchange="checkOpt('5', this);" class="optcode">
+        <option value="선택" opt_price="0" opt_name="선택안함" opt_cost="0" selected="">선택: 선택</option>
+        <option value="선택" opt_price="0" opt_name="청미채 옐로우 200ml 24팩" opt_cost="" opt_stock="">청미채 옐로우 200ml 24팩 [재고:
+          무제한]</option>
+        <option value="선택" opt_price="0" opt_name="청미채 그린 200ml 24팩" opt_cost="" opt_stock="">청미채 그린 200ml 24팩 [재고: 무제한]
+        </option>
+      </select>
+    </div>
+  </form>
+
+  <div id="option_html">
+  </div>
+
+  <!-- //option-chek -->
+  <script>
+    function up(unit) {
+      var old_num = document.getElementById('number').value;
+      var new_num = eval(old_num + '+' + unit);
+      stock_check(new_num);
+      document.getElementById('number').value = new_num;
+    }
+
+    function down(unit) {
+      var old_num = document.getElementById('number').value;
+      var new_num = eval(old_num + '-' + unit);
+      if (new_num < 0) {
+        new_num = 0;
+      }
+      stock_check(new_num);
+      document.getElementById('number').value = new_num;
+    }
+  </script>
+
+  <dl class="prdv__amount">
+    <dt>총 금액</dt>
+    <dd id="buy_total">0<span>원</span></dd>
+  </dl>
+
+  <div class="buying__btn pop">
+    <button type="button" class="wish">
+      <img src="../img/icon/cart_wish.png" alt="찜하기 아이콘">
+    </button>
+    <div class="cart_link-wrap">
+      <button type="button" class="cart"
+        onclick="document.location.href='http://bswelfare.com./form.php?code=bulk&amp;prdcode=119752';"
+        style="width:26%;">대량</button>
+      <button type="button" class="cart" onclick="saveBasket('basket');" style="width:35%;"><i
+          class="cart_ico"></i>장바구니</button>
+      <button type="button" class="buy_btn" onclick="saveBasket('buy');" style="width:35%;">바로</button>
+    </div>
+  </div>
+  <!-- //buying__btn -->
+</div>
+<!-- //cart-on-wrap -->
+
+</div>
+<!-- //cart__layer-pop -->
+
+<!-- 하단 따라다니는 버튼 wrap -->
+<div class="buying__btn footcart-wrap">
+<button type="button" class="wish">
+<img src="../img/icon/cart_wish.png" alt="찜하기 아이콘">
+</button>
+<div class="cart_link-wrap">
+  <button type="button" class="cart" style="width:26%;">대량</button>
+  <button type="button" class="cart foot__cart" style="width:35%;"><i class="cart_ico"></i>장바구니</button>
+  <button type="button" class="buy_btn foot__cart" style="width:35%;">바로</button>
+</div>
+</div>
+<!-- //buying__btn -->
+
+<script>
+var $cartBtn = $('.foot__cart');
+
+$cartBtn.on('click',function(){
+$('.cart__layer-pop').fadeIn();
+/* $('.footcart-wrap').fadeOut(); */ //popup펼치는 용도의 하단 장바구니 wrap은 popup열렸을 때 사라짐
+});
+
+$('.dim__bg').on('click',function(){
+$('.cart__layer-pop').fadeOut();
+});
+
+$('.popBtn').on('click',function(){
+$('.cart__layer-pop').fadeOut();
+});
+</script>
+
+<!-- 상단 이미지 슬라이드 -->
+<script>
+var mainSwiper = new Swiper ('#prdview__sld', {
+direction:'horizontal',
+// loop:true,
+speed: 700,
+autoplay: {
+delay:3000,
+autoplayDisableOnInteraction: true,
+},
+pagination: {
+  el: '#prdview__sld .swiper-pagination',
+  type: 'fraction',
+},
+});
+</script>
+
+</div><!-- //prd_wrap -->
+<footer class="footer">
+<div class="footer__top">
+    <ul class="footer__menu">
+        <!--<li><a href="http://bswelfare.com/m/">회사소개</a></li>-->
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">고객센터</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보취급방침</a></li>
+    </ul>
+</div>
+<div class="footer__btm">
+    <h2 class="footer__logo"><a href="/m/"><img src="../img/main/logo.png" alt="푸터 로고 이미지"></a></h2>
+    <div class="footer__info-top">
+      <p>(주)바이오스마트</p>
+      <p>서울시 성동구 광나루로 172(성수동1가 13-5) 린하우스 4층  </p>
+      <p>사업자등록번호:201-81-49003 </p><!--201-81-49003 제 2021-0000-0000호-->
+      <p> 통신판매업신고:제 2021-서울성동-01114호</p>
+      <small>COPYLIGHT ⓒ 2021 bswelfare.com All rights reserved.</small>
+    </div>
+
+    <strong class="foot__tit">고객센터</strong>
+    <div class="footer__info-btm">
+      <p>개인정보보호책임자 :민창석 </p>
+      <p>전화 :<em class="col"> 02-3218-9073</em> (평일09:00 ~ 18:00)</p>
+      <p> 팩스 :02-3218-9050/ E-mail :<em class="col"> csmin@bs-group.kr </em> </p>
+    </div>
+
+    <!-- 위로가기버튼 -->
+    <button type="button" class="go_top ir_pm">위로가기버튼</button>
+
+              <button type="button" class="go_top prd-vw ir_pm">위로가기버튼</button>
+          </div>
+<!-- //footer__btm -->
+
+<!--위로가기 버튼 구현 -->
+<script>
+
+  var $goTop = $('.go_top');
+
+  $goTop.click(function() {
+        $('html, body').animate({
+            scrollTop : 0
+        }, 400);
+        return false;
+    });
+
+
+    var $goTopview = $('.prd-vw');
+
+    $goTopview.click(function() {
+          $('html, body').animate({
+              scrollTop : 0
+          }, 400);
+          return false;
+      });
+
+
+</script>
+
+</footer>
+
+</div>
+<!-- //wrap -->
+
+<form name="frmParter" action="/go_partner.php" method="get" target="_blank">
+<input type="hidden" name="catcode">
+<input type="hidden" name="device" value="M">
+</form>
+<script>
+function goPartner(v){
+var f=document.frmParter;
+f.catcode.value=v;
+f.submit();
+}
+</script>
+
+</div>
+
+</body>
+</html>

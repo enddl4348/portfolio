@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <title>BS Welfare</title>
+  <meta name="description" content="BS WELFARE 복지몰, 복지몰, MRO, 선택적복지">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BS Welfare">
+  <meta property="og:description" content="BS WELFARE 복지몰, 복지몰, MRO, 선택적복지">
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <link href="css/fonts.css" rel="stylesheet" type="text/css">
+  <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/style_add.css" rel="stylesheet" type="text/css">
+
+  <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script> 
+  <script src="js/swiper.min.js" type="text/javascript"></script>
+  <script src="js/include.js" type="text/javascript"></script>
+  <script src="js/ui-index.js" type="text/javascript"></script>
+  <script src="js/includeHTML.js"></script>
+  <script src="js/main_210208.js" type="text/javascript"></script>
+  <script src="js/lib.js" type="text/javascript"></script>
+
+  <!-- w3인클루드 파일 -->
+</head>
+
+<body>
+
+  <div include-html="inc/header.html"></div>
+  <script>
+    includeHTML();
+  </script>
+
+ 
+  
+  
+
+  <!-- 메인 시작 -->
+  <div class="main__visual">
+
+    <div class="main__visual__swiper">
+      <div class="swiper-wrapper main__slides">
+        <img src="img/main/main_vis1.jpg" class="swiper-slide">
+        <img src="img/main/main_vis2.jpg" class="swiper-slide">
+      </div>
+      <div class="container">
+        <div class="swiper-pagination">
+        </div>
+        <div class="swiper-button-play main-vis-btn ir_pm">play</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 메인비쥬얼 슬라이드
+    var mainSwiper = new Swiper('.main__visual__swiper', {
+      direction: 'horizontal',
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        autoplayDisableOnInteraction: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        clickable: true
+      },
+
+    });
+
+    var $mainVisBtn = $('.main-vis-btn');
+
+    $mainVisBtn.on('click', function () {
+      var playIs = $mainVisBtn.hasClass('swiper-button-play');
+
+      if (playIs == true) {
+        mainSwiper.autoplay.stop();
+        $mainVisBtn.removeClass('swiper-button-play').addClass('swiper-button-pause');
+
+      } else {
+        mainSwiper.autoplay.start();
+        $mainVisBtn.removeClass('swiper-button-pause').addClass('swiper-button-play');
+      }
+
+    });
+  </script>
+
+
+  <!-- 메인 카테고리 슬라이드 -->
+  <section class="main">
+    <div class="container">
+      <h2 class="main_tit">기획상품</h2>
+      <div class="plan-prd__sec clearfix">
+        <div class="plan-prd__lef">
+          <span class="width__ban">
+            <a href="#">
+              <img src="img/main/m_boxban_1.jpg">
+              <span class="cate__go-ico ir_pm">바로가기</span>
+            </a>
+          </span>
+          <ul class="plan__ban-box clearfix">
+            <li class="ban-one">
+              <a href="#">
+                <img src="img/main/m_boxban_2.jpg">
+                <span class="cate__go-ico ir_pm">바로가기</span>
+              </a>
+            </li>
+            <li class="ban-one">
+              <a href="#">
+                <img src="img/main/m_boxban_3.jpg">
+                <span class="cate__go-ico ir_pm">바로가기</span>
+              </a>
+            </li>
+            <li class="ban-one">
+              <a href="#">
+                <img src="img/main/m_boxban_4.jpg">
+                <span class="cate__go-ico ir_pm">바로가기</span>
+              </a>
+            </li>
+            <li class="ban-one">
+              <a href="#">
+                <img src="img/main/m_boxban_5.jpg">
+                <span class="cate__go-ico ir_pm">바로가기</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="plan-prd__right">
+          <ul class="plan__ban-box rig clearfix">
+            <li class="ban-one">
+              <a href="#">
+                <img src="img/main/m_boxban_6.jpg">
+                <span class="cate__go-ico ir_pm">바로가기</span>
+              </a>
+            </li>
+            <li class="ban-one">
+              <a href="#">
+                <img src="img/main/m_boxban_7.jpg">
+                <span class="cate__go-ico ir_pm">바로가기</span>
+              </a>
+            </li>
+            <li class="ban-one">
+              <a href="#">
+                <img src="img/main/m_boxban_8.jpg">
+                <span class="cate__go-ico ir_pm">바로가기</span>
+              </a>
+            </li>
+            <li class="ban-one">
+              <a href="#">
+                <img src="img/main/m_boxban_9.jpg">
+                <span class="cate__go-ico ir_pm">바로가기</span>
+              </a>
+            </li>
+          </ul>
+          <span class="width__ban">
+            <a href="#">
+              <img src="img/main/m_boxban_10.jpg">
+              <span class="cate__go-ico ir_pm">바로가기</span>
+            </a>
+          </span>
+        </div>
+      </div>
+      <!-- // plan-prd__sec -->
+      <h2 class="main_tit">카테고리별<em class="org-col"> 추천상품</em></h2>
+
+      <div class="recom-prd__sec recm-prd__beauty clearfix">
+        <span class="categ-tit__wrap">
+          <h3 class="categ__tit pink">뷰티</h3>
+          <a href="shop/prd_list.html" class="pink">바로가기</a>
+        </span>
+        <!-- //상단타이틀 -->
+        <div class="keyw__wrap">
+          <strong><em class="eng">HOT</em> 키워드</strong>
+          <ul class="hot_key pink">
+            <li><a href="shop/prd_list.html"> #향수</a></li>
+            <li><a href="shop/prd_list.html"> #스킨케어</a></li>
+            <li><a href="shop/prd_list.html"> #앰플</a></li>
+            <li><a href="shop/prd_list.html"> #남성화장품</a></li>
+          </ul>
+        </div>
+        <!-- //HOT 키워드 -->
+        <div class="cat-com__left">
+          <div class="swiper-container m__cat-slide " id="mainPrdSlide110000">
+            <ul class="swiper-wrapper" prd>
+              <li class="swiper-slide ">
+                <a href="#">
+                  <img src="img/main/m_sld_ban_1.jpg" alt="">
+                </a>
+              </li>
+              <li class="swiper-slide ">
+                <a href="#">
+                  <img src="img/main/m_sld_ban_1.jpg" alt="">
+                </a>
+              </li>
+              <li class="">
+                <a href="#">
+                  <img src="img/main/m_sld_ban_1.jpg" alt="">
+                </a>
+              </li>
+            </ul>
+            <div class="cate-prd__pager "><span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                tabindex="0" role="button" aria-label="Go to slide 1"></span></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+          <!-- //swiper-container -->
+          <!-- 내가 만든 버튼에 동작시키기 -->
+          <div class="cate-prd__controls" id="mainPrdNav110000">
+            <span class="cate_prev ir_pm" tabindex="0" role="button" aria-label="Previous slide">Prev Slide</span>
+            <span class="cate_next ir_pm" tabindex="0" role="button" aria-label="Next slide">Next Slide</span>
+          </div>
+        </div>
+        <!-- //cat-com__left -->
+
+        <!-- 여기 리스트 통으로 돌아가는 슬라이드 -->
+        <div class="swiper-container main__catelist__slide catelist__slide-beauty ">
+          <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-649px, 0px, 0px);">
+            <ul
+              class="swiper-slide cat-com__right clearfix swiper-slide-duplicate swiper-slide-prev swiper-slide-duplicate-next"
+              data-swiper-slide-index="1" style="width: 649px;">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_1.jpg" alt="JM 청광 마린 진주 모이스춰 토너 엑스라지 600"></span>
+                  <span class="cat__prd-name">JM 청광 마린 진주 모이스춰 토너 엑스라지 600</span>
+                  <span class="cat__prd-price"><strong>7,600</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_1.jpg" alt="메디 힐 DNA 아쿠아링 프로아틴 마스크팩"></span>
+                  <span class="cat__prd-name">메디 힐 DNA 아쿠아링 프로아틴 마스크팩</span>
+                  <span class="cat__prd-price"><strong>1,300</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/103451_M1.jpg" alt="몽블랑 레전드 100ml"></span>
+                  <span class="cat__prd-name">몽블랑 레전드 100ml</span>
+                  <span class="cat__prd-price"><strong>47,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/103330_M1.jpg" alt="바세린 립 에센스 10g x 4"></span>
+                  <span class="cat__prd-name">바세린 립 에센스 10g x 4</span>
+                  <span class="cat__prd-price"><strong>11,300</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/107591_M1.jpg"
+                      alt="[더마라인] 이든 캡처링 스텝123 3종세트_주름개선기능성/피부자극테스트완료"></span>
+                  <span class="cat__prd-name">[더마라인] 이든 캡처링 스텝123 3종세트_주름개선기능성/피부자극테스트완료</span>
+                  <span class="cat__prd-price"><strong>49,700</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/107805_M1.jpg" alt="[오일리아] 오브레 쉐어버터 핸드크림 60ml"></span>
+                  <span class="cat__prd-name">[오일리아] 오브레 쉐어버터 핸드크림 60ml</span>
+                  <span class="cat__prd-price"><strong>5,800</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="swiper-slide cat-com__right clearfix swiper-slide-active" data-swiper-slide-index="0"
+              style="width: 649px;">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_1.jpg" alt="[헤드스파7] 더프리미엄 210mlx2+썬트리샴푸 300ml"></span>
+                  <span class="cat__prd-name">[헤드스파7] 더프리미엄 210mlx2+썬트리샴푸 300ml</span>
+                  <span class="cat__prd-price"><strong>28,800</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_2.jpg"
+                      alt="[랑방] 정식수입원 에끌라 드 아르페쥬 우먼 오 드 퍼퓸 EDP+쇼핑백(용량 택1)"></span>
+                  <span class="cat__prd-name">[랑방] 정식수입원 에끌라 드 아르페쥬 우먼 오 드 퍼퓸 EDP+쇼핑백(용량 택1)</span>
+                  <span class="cat__prd-price"><strong>31,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_3.jpg"
+                      alt="[오마베베] 시카 판테놀 크림 300g_극건성 전용 대용량 수분크림"></span>
+                  <span class="cat__prd-name">[오마베베] 시카 판테놀 크림 300g_극건성 전용 대용량 수분크림</span>
+                  <span class="cat__prd-price"><strong>25,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_4.jpg"
+                      alt="[JMsolution] 제이엠솔루션 글램 컬러 립 트리오 세트 1.5g x 3ea (무드레드/허그오렌지/뮤트핑크)"></span>
+                  <span class="cat__prd-name">[JMsolution] 제이엠솔루션 글램 컬러 립 트리오 세트 1.5g x 3ea (무드레드/허그오렌지/뮤트핑크)</span>
+                  <span class="cat__prd-price"><strong>15,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_5.jpg" alt="닥터바이오 클렌징워터 700ml"></span>
+                  <span class="cat__prd-name">닥터바이오 클렌징워터 700ml</span>
+                  <span class="cat__prd-price"><strong>13,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_6.jpg" alt="레노마 프라미스 멀티 밤"></span>
+                  <span class="cat__prd-name">레노마 프라미스 멀티 밤</span>
+                  <span class="cat__prd-price"><strong>12,000</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="swiper-slide cat-com__right clearfix swiper-slide-next swiper-slide-duplicate-prev"
+              data-swiper-slide-index="1" style="width: 649px;">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_1.jpg" alt="JM 청광 마린 진주 모이스춰 토너 엑스라지 600"></span>
+                  <span class="cat__prd-name">JM 청광 마린 진주 모이스춰 토너 엑스라지 600</span>
+                  <span class="cat__prd-price"><strong>7,600</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_2.jpg" alt="메디 힐 DNA 아쿠아링 프로아틴 마스크팩"></span>
+                  <span class="cat__prd-name">메디 힐 DNA 아쿠아링 프로아틴 마스크팩</span>
+                  <span class="cat__prd-price"><strong>1,300</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_3.jpg" alt="몽블랑 레전드 100ml"></span>
+                  <span class="cat__prd-name">몽블랑 레전드 100ml</span>
+                  <span class="cat__prd-price"><strong>47,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_4.jpg" alt="바세린 립 에센스 10g x 4"></span>
+                  <span class="cat__prd-name">바세린 립 에센스 10g x 4</span>
+                  <span class="cat__prd-price"><strong>11,300</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_5.jpg"
+                      alt="[더마라인] 이든 캡처링 스텝123 3종세트_주름개선기능성/피부자극테스트완료"></span>
+                  <span class="cat__prd-name">[더마라인] 이든 캡처링 스텝123 3종세트_주름개선기능성/피부자극테스트완료</span>
+                  <span class="cat__prd-price"><strong>49,700</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/beauty_6.jpg" alt="[오일리아] 오브레 쉐어버터 핸드크림 60ml"></span>
+                  <span class="cat__prd-name">[오일리아] 오브레 쉐어버터 핸드크림 60ml</span>
+                  <span class="cat__prd-price"><strong>5,800</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <!-- //cat-com__right -->
+          </div>
+          <!-- swiper-wrapper -->
+          <div class="catelist__pager "><span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+              tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
+              tabindex="0" role="button" aria-label="Go to slide 2"></span></div>
+          <!-- 내가 만든 버튼에 동작시키기 -->
+          <div class="cate-prdlist__control">
+            <span class="catelist_prev ir_pm" tabindex="0" role="button" aria-label="Previous slide">Prev Slide</span>
+            <span class="catelist_next ir_pm" tabindex="0" role="button" aria-label="Next slide">Next Slide</span>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <!-- //catelist__slide-fashion -->
+      </div>
+      <!-- //recm-prd__fashion -->
+
+      <div class="main__line-ban winter-plan">
+      </div>
+      <!-- //띠배너 -->
+      <script>
+        const slide110000 = new Swiper('#mainPrdSlide110000', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+            delay: 3000,
+          },
+          navigation: {
+            nextEl: '#mainPrdNav110000 .cate_next',
+            prevEl: '#mainPrdNav110000 .cate_prev',
+          },
+          pagination: {
+            el: '.cate-prd__pager',
+            clickable: true,
+          }
+        });
+
+        const beautyList = new Swiper('.catelist__slide-beauty', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+              delay:3000,
+          },
+          navigation: {
+            nextEl: '.catelist__slide-beauty .catelist_next',
+            prevEl: '.catelist__slide-beauty .catelist_prev',
+          },
+          pagination: {
+            el: '.catelist__slide-beauty .catelist__pager',
+            clickable: true,
+          }
+        });
+      </script>
+      <div class="recom-prd__sec recm-prd__baby clearfix">
+        <span class="categ-tit__wrap">
+          <h3 class="categ__tit orange">출산/유아동</h3>
+          <a href="shop/prd_list.html" class="orange">바로가기</a>
+        </span>
+        <!-- //상단타이틀 -->
+        <div class="keyw__wrap">
+          <strong><em class="eng">HOT</em> 키워드</strong>
+          <ul class="hot_key orange">
+            <li><a href="shop/prd_list.html"> #기저귀</a></li>
+            <li><a href="shop/prd_list.html"> #더블하트</a></li>
+            <li><a href="shop/prd_list.html"> #카시트</a></li>
+            <li><a href="shop/prd_list.html"> #아기물티슈</a></li>
+          </ul>
+        </div>
+        <!-- //HOT 키워드 -->
+        <div class="cat-com__left">
+          <div class="swiper-container m__cat-slide " id="mainPrdSlide120000">
+            <ul class="swiper-wrapper" prd>
+              <li class="swiper-slide ">
+                <a href="#">
+                  <img src="img/main/m_sld_ban_2.jpg" alt="">
+                </a>
+              </li>
+              <li class="swiper-slide ">
+                <a href="#">
+                  <img src="img/main/m_sld_ban_2.jpg" alt="">
+                </a>
+              </li>
+              <li class="">
+                <a href="#">
+                  <img src="img/main/m_sld_ban_2.jpg" alt="">
+                </a>
+              </li>
+            </ul>
+            <div class="cate-prd__pager "><span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                tabindex="0" role="button" aria-label="Go to slide 1"></span></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+          <!-- //swiper-container -->
+          <!-- 내가 만든 버튼에 동작시키기 -->
+          <div class="cate-prd__controls" id="mainPrdNav120000">
+            <span class="cate_prev ir_pm" tabindex="0" role="button" aria-label="Previous slide">Prev Slide</span>
+            <span class="cate_next ir_pm" tabindex="0" role="button" aria-label="Next slide">Next Slide</span>
+          </div>
+        </div>
+        <!-- //cat-com__left -->
+
+        <!-- 여기 리스트 통으로 돌아가는 슬라이드 -->
+        <div class="swiper-container main__catelist__slide catelist__slide-baby ">
+          <div class="swiper-wrapper">
+            <ul class="swiper-slide cat-com__right clearfix">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/baby_1.jpg" alt="[베베루트] 씨꼬3"></span>
+                  <span class="cat__prd-name">[베베루트] 씨꼬3</span>
+                  <span class="cat__prd-price"><strong>29,200</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/baby_2.jpg" alt="[유팡] 유팡 젖병소독기 UP901"></span>
+                  <span class="cat__prd-name">[유팡] 유팡 젖병소독기 UP901</span>
+                  <span class="cat__prd-price"><strong>255,900</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/baby_3.jpg" alt="도노도노 멀티 범퍼침대 하이가드"></span>
+                  <span class="cat__prd-name">도노도노 멀티 범퍼침대 하이가드</span>
+                  <span class="cat__prd-price"><strong>284,400</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/baby_4.jpg" alt="핸디 바구니 카시트/컬러선택"></span>
+                  <span class="cat__prd-name">핸디 바구니 카시트/컬러선택</span>
+                  <span class="cat__prd-price"><strong>95,800</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/baby_5.jpg" alt="[몽프라] 키즈 페이스&amp;바디로션 (300mL)"></span>
+                  <span class="cat__prd-name">[몽프라] 키즈 페이스&amp;바디로션 (300mL)</span>
+                  <span class="cat__prd-price"><strong>12,500</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/baby_6.jpg" alt="모윰 실리콘 쪽쪽이 2개 + 케이스1개"></span>
+                  <span class="cat__prd-name">모윰 실리콘 쪽쪽이 2개 + 케이스1개</span>
+                  <span class="cat__prd-price"><strong>21,100</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="swiper-slide cat-com__right">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/baby_1.jpg" alt="한미헬스케어 마시는 텐텐 홍삼튼튼 100ml *10팩"></span>
+                  <span class="cat__prd-name">한미헬스케어 마시는 텐텐 홍삼튼튼 100ml *10팩</span>
+                  <span class="cat__prd-price"><strong>7,200</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/baby_2.jpg"
+                      alt="덴마크 짜지않은 아기치즈 단호박_ 170g(10매입) X 10  (총100매)"></span>
+                  <span class="cat__prd-name">덴마크 짜지않은 아기치즈 단호박_ 170g(10매입) X 10 (총100매)</span>
+                  <span class="cat__prd-price"><strong>22,500</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/baby_3.jpg"
+                      alt="한예지 PLAY 레이 진정 블루베리 아기물티슈 캡형 30매 x 14팩"></span>
+                  <span class="cat__prd-name">한예지 PLAY 레이 진정 블루베리 아기물티슈 캡형 30매 x 14팩</span>
+                  <span class="cat__prd-price"><strong>13,800</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/baby_4.jpg"
+                      alt="한예지 플레이 프리미엄 원피스 팬티기저귀 남녀공용 144입 대형(4단계, 9~14kg)"></span>
+                  <span class="cat__prd-name">한예지 플레이 프리미엄 원피스 팬티기저귀 남녀공용 144입 대형(4단계, 9~14kg)</span>
+                  <span class="cat__prd-price"><strong>38,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/baby_5.jpg" alt="다이치 루이 3IN1 올인원 아기띠"></span>
+                  <span class="cat__prd-name">다이치 루이 3IN1 올인원 아기띠</span>
+                  <span class="cat__prd-price"><strong>160,900</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/baby_6.jpg" alt="[비타민하우스] 어린이 종합비타민 앤 미네랄 60정"></span>
+                  <span class="cat__prd-name">[비타민하우스] 어린이 종합비타민 앤 미네랄 60정</span>
+                  <span class="cat__prd-price"><strong>14,000</strong>원</span>
+                </a>
+              </li>
+            </ul <!-- //cat-com__right -->
+            <!-- 리스트 6개감싸고 있는 부모 통 슬라이드 여기까지 -->
+
+          </div>
+          <!-- swiper-wrapper -->
+          <div class="catelist__pager "><span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+              tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
+              tabindex="0" role="button" aria-label="Go to slide 2"></span></div>
+          <!-- 내가 만든 버튼에 동작시키기 -->
+          <div class="cate-prdlist__control">
+            <span class="catelist_prev ir_pm" tabindex="0" role="button" aria-label="Previous slide">Prev Slide</span>
+            <span class="catelist_next ir_pm" tabindex="0" role="button" aria-label="Next slide">Next Slide</span>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <!-- //catelist__slide-fashion -->
+      </div>
+      <!-- //recm-prd__fashion -->
+
+      <div class="main__line-ban winter-plan">
+        <a href="shop/prd_list.html"><img src="img/main/m_lineban_2.jpg"></a>
+      </div>
+      <!-- //띠배너 -->
+      <script>
+        const slide120000 = new Swiper('#mainPrdSlide120000', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+            delay: 3000,
+          },
+          navigation: {
+            nextEl: '#mainPrdNav120000 .cate_next',
+            prevEl: '#mainPrdNav120000 .cate_prev',
+          },
+          pagination: {
+            el: '.cate-prd__pager',
+            clickable: true,
+          }
+        });
+
+        const babyList = new Swiper('.catelist__slide-baby', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+              delay:3000,
+          },
+          navigation: {
+            nextEl: '.catelist__slide-baby .catelist_next',
+            prevEl: '.catelist__slide-baby .catelist_prev',
+          },
+          pagination: {
+            el: '.catelist__slide-baby .catelist__pager',
+            clickable: true,
+          }
+        });
+      </script>
+      <div class="recom-prd__sec recm-prd__food clearfix">
+        <span class="categ-tit__wrap">
+          <h3 class="categ__tit green">식품</h3>
+          <a href="shop/prd_list.html" class="green">바로가기</a>
+        </span>
+        <!-- //상단타이틀 -->
+        <div class="keyw__wrap">
+          <strong><em class="eng">HOT</em> 키워드</strong>
+          <ul class="hot_key green">
+            <li><a href="shop/prd_list.html"> #간편식</a></li>
+            <li><a href="shop/prd_list.html"> #커피</a></li>
+            <li><a href="shop/prd_list.html"> #야식</a></li>
+            <li><a href="shop/prd_list.html"> #밀키트</a></li>
+          </ul>
+        </div>
+        <!-- //HOT 키워드 -->
+        <div class="cat-com__left">
+          <div class="swiper-container m__cat-slide " id="mainPrdSlide130000">
+            <ul class="swiper-wrapper" prd>
+              <li class="swiper-slide ">
+                <a
+                  href="shop/prd_view.html">
+                  <img src="img/main/m_sld_ban_3.jpg" alt="">
+                </a>
+              </li>
+              <li class="swiper-slide ">
+                <a
+                  href="shop/prd_view.html">
+                  <img src="img/main/m_sld_ban_3.jpg" alt="">
+                </a>
+              </li>
+              <li class="">
+                <a
+                  href="shop/prd_view.html">
+                  <img src="img/main/m_sld_ban_3.jpg" alt="">
+                </a>
+              </li>
+            </ul>
+            <div class="cate-prd__pager "><span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                tabindex="0" role="button" aria-label="Go to slide 1"></span></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+          <!-- //swiper-container -->
+          <!-- 내가 만든 버튼에 동작시키기 -->
+          <div class="cate-prd__controls" id="mainPrdNav130000">
+            <span class="cate_prev ir_pm" tabindex="0" role="button" aria-label="Previous slide">Prev Slide</span>
+            <span class="cate_next ir_pm" tabindex="0" role="button" aria-label="Next slide">Next Slide</span>
+          </div>
+        </div>
+        <!-- //cat-com__left -->
+
+        <!-- 여기 리스트 통으로 돌아가는 슬라이드 -->
+        <div class="swiper-container main__catelist__slide catelist__slide-food ">
+          <div class="swiper-wrapper">
+            <ul class="swiper-slide cat-com__right">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/food_1.jpg" alt="(홈쇼핑정품) 김오곤원장의 진한 쌍화차(15g*50개입)"></span>
+                  <span class="cat__prd-name">(홈쇼핑정품) 김오곤원장의 진한 쌍화차(15g*50개입)</span>
+                  <span class="cat__prd-price"><strong>23,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/food_2.jpg"
+                      alt="[청정원] 민속만두 2개묶음2종 x 2ea (납작군만두 450gx4ea, 왕교자 420gx4ea)"></span>
+                  <span class="cat__prd-name">[청정원] 민속만두 2개묶음2종 x 2ea (납작군만두 450gx4ea, 왕교자 420gx4ea)</span>
+                  <span class="cat__prd-price"><strong>18,900</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/food_3.jpg" alt="참스토리 우거지갈비탕 500g 4개"></span>
+                  <span class="cat__prd-name">참스토리 우거지갈비탕 500g 4개</span>
+                  <span class="cat__prd-price"><strong>12,700</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/food_4.jpg" alt="아이플라빈스 더치145 (250ml) * 2개입"></span>
+                  <span class="cat__prd-name">아이플라빈스 더치145 (250ml) * 2개입</span>
+                  <span class="cat__prd-price"><strong>18,600</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/food_5.jpg" alt="밤뜨래 양갱 3종"></span>
+                  <span class="cat__prd-name">밤뜨래 양갱 3종</span>
+                  <span class="cat__prd-price"><strong>2,700</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/food_6.jpg" alt="유기농ABC젤리"></span>
+                  <span class="cat__prd-name">유기농ABC젤리</span>
+                  <span class="cat__prd-price"><strong>20,400</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="swiper-slide cat-com__right clearfix ">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/food_1.jpg" alt="[한끼식당] 수제전 7종세트"></span>
+                  <span class="cat__prd-name">[한끼식당] 수제전 7종세트</span>
+                  <span class="cat__prd-price"><strong>66,500</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/food_2.jpg" alt="식탐 제주흑돼지 뒷다리살 모듬 세트"></span>
+                  <span class="cat__prd-name">식탐 제주흑돼지 뒷다리살 모듬 세트</span>
+                  <span class="cat__prd-price"><strong>8,700</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/food_3.jpg"
+                      alt="[양반] 한우사골곰탕&nbsp;460g 5+차돌 육개장&nbsp;460g 5"></span>
+                  <span class="cat__prd-name">[양반] 한우사골곰탕&nbsp;460g 5+차돌 육개장&nbsp;460g 5</span>
+                  <span class="cat__prd-price"><strong>20,600</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/food_4.jpg" alt="[무봉리]소대창 220g "></span>
+                  <span class="cat__prd-name">[무봉리]소대창 220g </span>
+                  <span class="cat__prd-price"><strong>11,700</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/food_5.jpg" alt="빕스 포터하우스 스테이크"></span>
+                  <span class="cat__prd-name">빕스 포터하우스 스테이크</span>
+                  <span class="cat__prd-price"><strong>49,500</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/food_6.jpg" alt="양구 고당도 홍로사과 5kg/10kg (사이즈 택1)"></span>
+                  <span class="cat__prd-name">양구 고당도 홍로사과 5kg/10kg (사이즈 택1)</span>
+                  <span class="cat__prd-price"><strong>32,300</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <!-- //cat-com__right -->
+            <!-- 리스트 6개감싸고 있는 부모 통 슬라이드 여기까지 -->
+            <ul class="swiper-slide cat-com__right clearfix swiper-slide-duplicate swiper-slide-duplicate-active"
+              data-swiper-slide-index="0" style="width: 649px;">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/104095_M1.jpg" alt="[한끼식당] 수제전 7종세트"></span>
+                  <span class="cat__prd-name">[한끼식당] 수제전 7종세트</span>
+                  <span class="cat__prd-price"><strong>66,500</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/107134_M1.jpg" alt="식탐 제주흑돼지 뒷다리살 모듬 세트"></span>
+                  <span class="cat__prd-name">식탐 제주흑돼지 뒷다리살 모듬 세트</span>
+                  <span class="cat__prd-price"><strong>8,700</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/103374_M1.jpg"
+                      alt="[양반] 한우사골곰탕&nbsp;460g 5+차돌 육개장&nbsp;460g 5"></span>
+                  <span class="cat__prd-name">[양반] 한우사골곰탕&nbsp;460g 5+차돌 육개장&nbsp;460g 5</span>
+                  <span class="cat__prd-price"><strong>20,600</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/103471_M1.jpg" alt="[무봉리]소대창 220g "></span>
+                  <span class="cat__prd-name">[무봉리]소대창 220g </span>
+                  <span class="cat__prd-price"><strong>11,700</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/118453_M1.jpg" alt="빕스 포터하우스 스테이크"></span>
+                  <span class="cat__prd-name">빕스 포터하우스 스테이크</span>
+                  <span class="cat__prd-price"><strong>49,500</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/118366_M1.jpg"
+                      alt="양구 고당도 홍로사과 5kg/10kg (사이즈 택1)"></span>
+                  <span class="cat__prd-name">양구 고당도 홍로사과 5kg/10kg (사이즈 택1)</span>
+                  <span class="cat__prd-price"><strong>32,300</strong>원</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- swiper-wrapper -->
+          <div class="catelist__pager "><span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+              tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
+              tabindex="0" role="button" aria-label="Go to slide 2"></span></div>
+          <!-- 내가 만든 버튼에 동작시키기 -->
+          <div class="cate-prdlist__control">
+            <span class="catelist_prev ir_pm" tabindex="0" role="button" aria-label="Previous slide">Prev Slide</span>
+            <span class="catelist_next ir_pm" tabindex="0" role="button" aria-label="Next slide">Next Slide</span>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <!-- //catelist__slide-fashion -->
+      </div>
+      <!-- //recm-prd__fashion -->
+
+      <div class="main__line-ban winter-plan">
+      </div>
+      <!-- //띠배너 -->
+      <script>
+        const slide130000 = new Swiper('#mainPrdSlide130000', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+            delay: 3000,
+          },
+          navigation: {
+            nextEl: '#mainPrdNav130000 .cate_next',
+            prevEl: '#mainPrdNav130000 .cate_prev',
+          },
+          pagination: {
+            el: '.cate-prd__pager',
+            clickable: true,
+          }
+        });
+
+        const foodList = new Swiper('.catelist__slide-food', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+              delay:3000,
+          },
+          navigation: {
+            nextEl: '.catelist__slide-food .catelist_next',
+            prevEl: '.catelist__slide-food .catelist_prev',
+          },
+          pagination: {
+            el: '.catelist__slide-food .catelist__pager',
+            clickable: true,
+          }
+        });
+      </script>
+      <div class="recom-prd__sec recm-prd__digital clearfix">
+        <span class="categ-tit__wrap">
+          <h3 class="categ__tit deep">가전디지털</h3>
+          <a href="shop/prd_list.html" class="deep">바로가기</a>
+        </span>
+        <!-- //상단타이틀 -->
+        <div class="keyw__wrap">
+          <strong><em class="eng">HOT</em> 키워드</strong>
+          <ul class="hot_key deep">
+            <li><a href="shop/prd_list.html"> #비스포크</a></li>
+            <li><a href="shop/prd_list.html"> #오브제</a></li>
+            <li><a href="shop/prd_list.html"> #안마기</a></li>
+            <li><a href="shop/prd_list.html"> #청소기</a></li>
+          </ul>
+        </div>
+        <!-- //HOT 키워드 -->
+        <div class="cat-com__left">
+          <div class="swiper-container m__cat-slide " id="mainPrdSlide170000">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide ">
+                <a href="#">
+                  <img src="img/main/m_sld_ban_4.jpg" alt="">
+                </a>
+              </li>
+              <li class="swiper-slide ">
+                <a href="#">
+                  <img src="img/main/m_sld_ban_4.jpg" alt="">
+                </a>
+              </li>
+              <li class="">
+                <a href="#">
+                  <img src="img/main/m_sld_ban_4.jpg" alt="">
+                </a>
+              </li>
+            </ul>
+            <div class="cate-prd__pager "><span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                tabindex="0" role="button" aria-label="Go to slide 1"></span></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+          <!-- //swiper-container -->
+          <!-- 내가 만든 버튼에 동작시키기 -->
+          <div class="cate-prd__controls" id="mainPrdNav170000">
+            <span class="cate_prev ir_pm" tabindex="0" role="button" aria-label="Previous slide">Prev Slide</span>
+            <span class="cate_next ir_pm" tabindex="0" role="button" aria-label="Next slide">Next Slide</span>
+          </div>
+        </div>
+        <!-- //cat-com__left -->
+
+        <!-- 여기 리스트 통으로 돌아가는 슬라이드 -->
+        <div class="swiper-container main__catelist__slide catelist__slide-digital ">
+          <div class="swiper-wrapper">
+            <ul class="swiper-slide cat-com__right clearfix">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/digi_1.jpg" alt="[쿠조] 네스프레소 캡슐 호환 커피머신 NPC-C1"></span>
+                  <span class="cat__prd-name">[쿠조] 네스프레소 캡슐 호환 커피머신 NPC-C1</span>
+                  <span class="cat__prd-price"><strong>109,800</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/digi_2.jpg" alt="[코웨이] 룰루 비데 BA14-E (설치비 포함)"></span>
+                  <span class="cat__prd-name">[코웨이] 룰루 비데 BA14-E (설치비 포함)</span>
+                  <span class="cat__prd-price"><strong>277,200</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/digi_3.jpg" alt="[사운드룩] 오디오 블루투스 LP턴테이블 SLT-5080PRO"></span>
+                  <span class="cat__prd-name">[사운드룩] 오디오 블루투스 LP턴테이블 SLT-5080PRO</span>
+                  <span class="cat__prd-price"><strong>215,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/digi_4.jpg" alt="[퀸메이드] 트윈클 물걸레 청소기 QM-C300W"></span>
+                  <span class="cat__prd-name">[퀸메이드] 트윈클 물걸레 청소기 QM-C300W</span>
+                  <span class="cat__prd-price"><strong>96,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/digi_5.jpg" alt="홍진영의 브람스 머슬타격안마 마사지건 BDI-0918BL"></span>
+                  <span class="cat__prd-name">홍진영의 브람스 머슬타격안마 마사지건 BDI-0918BL</span>
+                  <span class="cat__prd-price"><strong>63,700</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/digi_6.jpg" alt="[리웰] 무선 자동 헤어 고데기 LHAIR-200"></span>
+                  <span class="cat__prd-name">[리웰] 무선 자동 헤어 고데기 LHAIR-200</span>
+                  <span class="cat__prd-price"><strong>65,000</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="swiper-slide cat-com__right clearfix swiper-slide-active" data-swiper-slide-index="0"
+              style="width: 649px;">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/digi_1.jpg" alt="브람스 안마의자 마운틴 BRAMS-S8100"></span>
+                  <span class="cat__prd-name">브람스 안마의자 마운틴 BRAMS-S8100</span>
+                  <span class="cat__prd-price"><strong>1,920,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/digi_2.jpg" alt="파벡스수저살균기 FX-207SS"></span>
+                  <span class="cat__prd-name">파벡스수저살균기 FX-207SS</span>
+                  <span class="cat__prd-price"><strong>26,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/digi_3.jpg" alt="[오엘라] 2구 인덕션&amp;그릴팬 세트 DIG01"></span>
+                  <span class="cat__prd-name">[오엘라] 2구 인덕션&amp;그릴팬 세트 DIG01</span>
+                  <span class="cat__prd-price"><strong>108,800</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/digi_4.jpg"
+                      alt="21년 NEW 삼성 Lifestyle The Serif QLED 4K TV 50인치 (125cm) KQ50LST01FFXKR 코튼블루"></span>
+                  <span class="cat__prd-name">21년 NEW 삼성 Lifestyle The Serif QLED 4K TV 50인치 (125cm) KQ50LST01FFXKR
+                    코튼블루</span>
+                  <span class="cat__prd-price"><strong>1,195,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/digi_5.jpg"
+                      alt="[SK매직] 파워워시 터치온 UV살균 식기세척기 [빌트인] DWA80U5B00SL"></span>
+                  <span class="cat__prd-name">[SK매직] 파워워시 터치온 UV살균 식기세척기 [빌트인] DWA80U5B00SL</span>
+                  <span class="cat__prd-price"><strong>763,200</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/digi_6.jpg" alt="케어락 가열식 가습기 CR-240HH"></span>
+                  <span class="cat__prd-name">케어락 가열식 가습기 CR-240HH</span>
+                  <span class="cat__prd-price"><strong>42,500</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <!-- //cat-com__right -->
+          </div>
+          <!-- swiper-wrapper -->
+          <div class="catelist__pager "><span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+              tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
+              tabindex="0" role="button" aria-label="Go to slide 2"></span></div>
+          <!-- 내가 만든 버튼에 동작시키기 -->
+          <div class="cate-prdlist__control">
+            <span class="catelist_prev ir_pm" tabindex="0" role="button" aria-label="Previous slide">Prev Slide</span>
+            <span class="catelist_next ir_pm" tabindex="0" role="button" aria-label="Next slide">Next Slide</span>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <!-- //catelist__slide-fashion -->
+      </div>
+      <!-- //recm-prd__fashion -->
+
+      <div class="main__line-ban winter-plan">
+        <a href="javascript:goPartner(251012);"><img src="img/main/m_lineban_1.jpg"></a>
+      </div>
+      <!-- //띠배너 -->
+      <script>
+        const slide170000 = new Swiper('#mainPrdSlide170000', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+            delay: 3000,
+          },
+          navigation: {
+            nextEl: '#mainPrdNav170000 .cate_next',
+            prevEl: '#mainPrdNav170000 .cate_prev',
+          },
+          pagination: {
+            el: '.cate-prd__pager',
+            clickable: true,
+          }
+        });
+
+        const digitalList = new Swiper('.catelist__slide-digital', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+              delay:3000,
+          },
+          navigation: {
+            nextEl: '.catelist__slide-digital .catelist_next',
+            prevEl: '.catelist__slide-digital .catelist_prev',
+          },
+          pagination: {
+            el: '.catelist__slide-digital .catelist__pager',
+            clickable: true,
+          }
+        });
+      </script>
+      <div class="recom-prd__sec recm-prd__sport clearfix">
+        <span class="categ-tit__wrap">
+          <h3 class="categ__tit purple">스포츠/레저</h3>
+          <a href="shop/prd_list.html" class="purple">바로가기</a>
+        </span>
+        <!-- //상단타이틀 -->
+        <div class="keyw__wrap">
+          <strong><em class="eng">HOT</em> 키워드</strong>
+          <ul class="hot_key purple">
+            <li><a href="shop/prd_list.html"> #홈트레이닝</a></li>
+            <li><a href="shop/prd_list.html"> #삼천리</a></li>
+            <li><a href="shop/prd_list.html"> #요가</a></li>
+            <li><a href="shop/prd_list.html"> #자전거</a></li>
+          </ul>
+        </div>
+        <!-- //HOT 키워드 -->
+        <div class="cat-com__left">
+          <div class="swiper-container m__cat-slide " id="mainPrdSlide180000">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide ">
+                <a href="#">
+                  <img src="img/main/m_sld_ban_5.jpg" alt="">
+                </a>
+              </li>
+              <li class="swiper-slide ">
+                <a href="#">
+                  <img src="img/main/m_sld_ban_5.jpg" alt="">
+                </a>
+              </li>
+              <li class="">
+                <a href="#">
+                  <img src="img/main/m_sld_ban_5.jpg" alt="">
+                </a>
+              </li>
+            </ul>
+            <div class="cate-prd__pager "><span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                tabindex="0" role="button" aria-label="Go to slide 1"></span></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+          <!-- //swiper-container -->
+          <!-- 내가 만든 버튼에 동작시키기 -->
+          <div class="cate-prd__controls" id="mainPrdNav180000">
+            <span class="cate_prev ir_pm" tabindex="0" role="button" aria-label="Previous slide">Prev Slide</span>
+            <span class="cate_next ir_pm" tabindex="0" role="button" aria-label="Next slide">Next Slide</span>
+          </div>
+        </div>
+        <!-- //cat-com__left -->
+
+        <!-- 여기 리스트 통으로 돌아가는 슬라이드 -->
+        <div class="swiper-container main__catelist__slide catelist__slide-sport ">
+          <div class="swiper-wrapper">
+            <ul class="swiper-slide cat-com__right clearfix">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_1.jpg" alt="핏분 스쿼트밴드 L (블루)"></span>
+                  <span class="cat__prd-name">핏분 스쿼트밴드 L (블루)</span>
+                  <span class="cat__prd-price"><strong>13,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_2.jpg" alt="오엘라 진동 마사지 폼롤러"></span>
+                  <span class="cat__prd-name">오엘라 진동 마사지 폼롤러</span>
+                  <span class="cat__prd-price"><strong>59,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_3.jpg" alt="[노르딕 캠프] 레인보우 체어"></span>
+                  <span class="cat__prd-name">[노르딕 캠프] 레인보우 체어</span>
+                  <span class="cat__prd-price"><strong>12,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_4.jpg" alt="[나이키골프] 클래식 보스턴백 DH3285"></span>
+                  <span class="cat__prd-name">[나이키골프] 클래식 보스턴백 DH3285</span>
+                  <span class="cat__prd-price"><strong>138,300</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_5.jpg"
+                      alt="[골프버디] AIM L11 레이저형 골프 거리측정기 / 0.2s 측정속도 ZST기술"></span>
+                  <span class="cat__prd-name">[골프버디] AIM L11 레이저형 골프 거리측정기 / 0.2s 측정속도 ZST기술</span>
+                  <span class="cat__prd-price"><strong>177,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_6.jpg"
+                      alt="[푸마코리아-정품] 푸마 PUMA X PTC P 110 SNAPBACK CAP"></span>
+                  <span class="cat__prd-name">[푸마코리아-정품] 푸마 PUMA X PTC P 110 SNAPBACK CAP</span>
+                  <span class="cat__prd-price"><strong>42,900</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="swiper-slide cat-com__right clearfix swiper-slide-active" data-swiper-slide-index="0"
+              style="width: 649px;">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_1.jpg" alt="[제이린드버그] 2021 트리니티 3.0 골프 스탠드백"></span>
+                  <span class="cat__prd-name">[제이린드버그] 2021 트리니티 3.0 골프 스탠드백</span>
+                  <span class="cat__prd-price"><strong>507,200</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_2.jpg" alt="[세인트나인] PUTTING CONTROL"></span>
+                  <span class="cat__prd-name">[세인트나인] PUTTING CONTROL</span>
+                  <span class="cat__prd-price"><strong>38,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_3.jpg" alt="[PGA TOUR] 맥스플렉스 합피 장갑 "></span>
+                  <span class="cat__prd-name">[PGA TOUR] 맥스플렉스 합피 장갑 </span>
+                  <span class="cat__prd-price"><strong>4,500</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_4.jpg" alt="[몽크로스] 하우젠 3단 고급등산스틱 2종 "></span>
+                  <span class="cat__prd-name">[몽크로스] 하우젠 3단 고급등산스틱 2종 </span>
+                  <span class="cat__prd-price"><strong>34,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_5.jpg" alt="[몽크로스] 원터치 텐트 5~6인용 "></span>
+                  <span class="cat__prd-name">[몽크로스] 원터치 텐트 5~6인용 </span>
+                  <span class="cat__prd-price"><strong>122,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_6.jpg" alt="다니고 우드무늬 접이식 캠핑 롤테이블"></span>
+                  <span class="cat__prd-name">다니고 우드무늬 접이식 캠핑 롤테이블</span>
+                  <span class="cat__prd-price"><strong>45,700</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="swiper-slide cat-com__right clearfix swiper-slide-next swiper-slide-duplicate-prev"
+              data-swiper-slide-index="1" style="width: 649px;">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_1.jpg" alt="핏분 스쿼트밴드 L (블루)"></span>
+                  <span class="cat__prd-name">핏분 스쿼트밴드 L (블루)</span>
+                  <span class="cat__prd-price"><strong>13,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_2.jpg" alt="오엘라 진동 마사지 폼롤러"></span>
+                  <span class="cat__prd-name">오엘라 진동 마사지 폼롤러</span>
+                  <span class="cat__prd-price"><strong>59,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_3.jpg" alt="[노르딕 캠프] 레인보우 체어"></span>
+                  <span class="cat__prd-name">[노르딕 캠프] 레인보우 체어</span>
+                  <span class="cat__prd-price"><strong>12,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_4.jpg" alt="[나이키골프] 클래식 보스턴백 DH3285"></span>
+                  <span class="cat__prd-name">[나이키골프] 클래식 보스턴백 DH3285</span>
+                  <span class="cat__prd-price"><strong>138,300</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_5.jpg"
+                      alt="[골프버디] AIM L11 레이저형 골프 거리측정기 / 0.2s 측정속도 ZST기술"></span>
+                  <span class="cat__prd-name">[골프버디] AIM L11 레이저형 골프 거리측정기 / 0.2s 측정속도 ZST기술</span>
+                  <span class="cat__prd-price"><strong>177,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/sport_6.jpg"
+                      alt="[푸마코리아-정품] 푸마 PUMA X PTC P 110 SNAPBACK CAP"></span>
+                  <span class="cat__prd-name">[푸마코리아-정품] 푸마 PUMA X PTC P 110 SNAPBACK CAP</span>
+                  <span class="cat__prd-price"><strong>42,900</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <!-- //cat-com__right -->
+            <!-- 리스트 6개감싸고 있는 부모 통 슬라이드 여기까지 -->
+            <ul class="swiper-slide cat-com__right clearfix swiper-slide-duplicate swiper-slide-duplicate-active"
+              data-swiper-slide-index="0" style="width: 649px;">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/105304_M1.jpg"
+                      alt="[제이린드버그] 2021 트리니티 3.0 골프 스탠드백"></span>
+                  <span class="cat__prd-name">[제이린드버그] 2021 트리니티 3.0 골프 스탠드백</span>
+                  <span class="cat__prd-price"><strong>507,200</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/105370_M1.jpg" alt="[세인트나인] PUTTING CONTROL"></span>
+                  <span class="cat__prd-name">[세인트나인] PUTTING CONTROL</span>
+                  <span class="cat__prd-price"><strong>38,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/108238_M1.jpg" alt="[PGA TOUR] 맥스플렉스 합피 장갑 "></span>
+                  <span class="cat__prd-name">[PGA TOUR] 맥스플렉스 합피 장갑 </span>
+                  <span class="cat__prd-price"><strong>4,500</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/105061_M1.jpg" alt="[몽크로스] 하우젠 3단 고급등산스틱 2종 "></span>
+                  <span class="cat__prd-name">[몽크로스] 하우젠 3단 고급등산스틱 2종 </span>
+                  <span class="cat__prd-price"><strong>34,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/102455_M1.jpg" alt="[몽크로스] 원터치 텐트 5~6인용 "></span>
+                  <span class="cat__prd-name">[몽크로스] 원터치 텐트 5~6인용 </span>
+                  <span class="cat__prd-price"><strong>122,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/108045_M1.jpg" alt="다니고 우드무늬 접이식 캠핑 롤테이블"></span>
+                  <span class="cat__prd-name">다니고 우드무늬 접이식 캠핑 롤테이블</span>
+                  <span class="cat__prd-price"><strong>45,700</strong>원</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- swiper-wrapper -->
+          <div class="catelist__pager "><span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+              tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
+              tabindex="0" role="button" aria-label="Go to slide 2"></span></div>
+          <!-- 내가 만든 버튼에 동작시키기 -->
+          <div class="cate-prdlist__control">
+            <span class="catelist_prev ir_pm" tabindex="0" role="button" aria-label="Previous slide">Prev Slide</span>
+            <span class="catelist_next ir_pm" tabindex="0" role="button" aria-label="Next slide">Next Slide</span>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <!-- //catelist__slide-fashion -->
+      </div>
+      <!-- //recm-prd__fashion -->
+
+      <div class="main__line-ban winter-plan">
+      </div>
+      <!-- //띠배너 -->
+      <script>
+        const slide180000 = new Swiper('#mainPrdSlide180000', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+            delay: 3000,
+          },
+          navigation: {
+            nextEl: '#mainPrdNav180000 .cate_next',
+            prevEl: '#mainPrdNav180000 .cate_prev',
+          },
+          pagination: {
+            el: '.cate-prd__pager',
+            clickable: true,
+          }
+        });
+
+        const sportList = new Swiper('.catelist__slide-sport', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+              delay:3000,
+          },
+          navigation: {
+            nextEl: '.catelist__slide-sport .catelist_next',
+            prevEl: '.catelist__slide-sport .catelist_prev',
+          },
+          pagination: {
+            el: '.catelist__slide-sport .catelist__pager',
+            clickable: true,
+          }
+        });
+      </script>
+      <div class="recom-prd__sec recm-prd__health clearfix">
+        <span class="categ-tit__wrap">
+          <h3 class="categ__tit melon">헬스/건강식품</h3>
+          <a href="shop/prd_list.html" class="melon">바로가기</a>
+        </span>
+        <!-- //상단타이틀 -->
+        <div class="keyw__wrap">
+          <strong><em class="eng">HOT</em> 키워드</strong>
+          <ul class="hot_key melon">
+            <li><a href="shop/prd_list.html"> #홍삼</a></li>
+            <li><a href="shop/prd_list.html"> #산삼배양근</a></li>
+            <li><a href="shop/prd_list.html"> #비타민</a></li>
+            <li><a href="shop/prd_list.html"> #유산균</a></li>
+          </ul>
+        </div>
+        <!-- //HOT 키워드 -->
+        <div class="cat-com__left">
+          <div class="swiper-container m__cat-slide " id="mainPrdSlide240000">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="shop/prd_list.html">
+                  <img src="img/main/m_sld_ban_6.jpg" alt="">
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="shop/prd_list.html">
+                  <img src="img/main/m_sld_ban_6.jpg" alt="">
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="shop/prd_list.html">
+                  <img src="img/main/m_sld_ban_6.jpg" alt="">
+                </a>
+              </li>
+            </ul>
+            <div class="cate-prd__pager "><span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                tabindex="0" role="button" aria-label="Go to slide 1"></span></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+          <!-- //swiper-container -->
+          <!-- 내가 만든 버튼에 동작시키기 -->
+          <div class="cate-prd__controls" id="mainPrdNav240000">
+            <span class="cate_prev ir_pm" tabindex="0" role="button" aria-label="Previous slide">Prev Slide</span>
+            <span class="cate_next ir_pm" tabindex="0" role="button" aria-label="Next slide">Next Slide</span>
+          </div>
+        </div>
+        <!-- //cat-com__left -->
+
+        <!-- 여기 리스트 통으로 돌아가는 슬라이드 -->
+        <div class="swiper-container main__catelist__slide catelist__slide-health ">
+          <div class="swiper-wrapper">
+            <ul class="swiper-slide cat-com__right clearfix">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/health_1.jpg" alt="김소형원장 공비다이어트 14포*2박스(4주)"></span>
+                  <span class="cat__prd-name">김소형원장 공비다이어트 14포*2박스(4주)</span>
+                  <span class="cat__prd-price"><strong>36,400</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/health_2.jpg" alt="일양약품]데일리뷰티 스킨케어 히알루론산 60정(1개월분)"></span>
+                  <span class="cat__prd-name">일양약품]데일리뷰티 스킨케어 히알루론산 60정(1개월분)</span>
+                  <span class="cat__prd-price"><strong>21,400</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/health_3.jpg"
+                      alt="물넣지 않고 그대로 짜낸 NFC 100% 원액 나이젠 타트체리주스 1000ml "></span>
+                  <span class="cat__prd-name">물넣지 않고 그대로 짜낸 NFC 100% 원액 나이젠 타트체리주스 1000ml </span>
+                  <span class="cat__prd-price"><strong>14,500</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/health_4.jpg"
+                      alt="[뱀파이어슬림] 칼로베네[체중조절용 조제 식품]510g(1,980Kcal)"></span>
+                  <span class="cat__prd-name">[뱀파이어슬림] 칼로베네[체중조절용 조제 식품]510g(1,980Kcal)</span>
+                  <span class="cat__prd-price"><strong>29,700</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/health_5.jpg" alt="[광동] 황제침향액(20mlx30vial)"></span>
+                  <span class="cat__prd-name">[광동] 황제침향액(20mlx30vial)</span>
+                  <span class="cat__prd-price"><strong>45,500</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/health_6.jpg" alt="락토핏 생유산균 골드 선물세트 (50포x3통)"></span>
+                  <span class="cat__prd-name">락토핏 생유산균 골드 선물세트 (50포x3통)</span>
+                  <span class="cat__prd-price"><strong>36,800</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="swiper-slide cat-com__right clearfix">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/health_1.jpg" alt="[이경제의 건강보감]황제 신로환 1박스(4g*30환) 건강환"></span>
+                  <span class="cat__prd-name">[이경제의 건강보감]황제 신로환 1박스(4g*30환) 건강환</span>
+                  <span class="cat__prd-price"><strong>50,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/health_2.jpg" alt="[천호엔케어]면역엔 알로에뮨 1박스 알로에겔 면역력증진"></span>
+                  <span class="cat__prd-name">[천호엔케어]면역엔 알로에뮨 1박스 알로에겔 면역력증진</span>
+                  <span class="cat__prd-price"><strong>16,200</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/health_3.jpg"
+                      alt="[대상웰라이프]메이크미 멀티비타민 (1200mlx90정) x 2ea"></span>
+                  <span class="cat__prd-name">[대상웰라이프]메이크미 멀티비타민 (1200mlx90정) x 2ea</span>
+                  <span class="cat__prd-price"><strong>12,700</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/health_4.jpg" alt="[광동] 비타500 데일리스틱 1박스 (30포)"></span>
+                  <span class="cat__prd-name">[광동] 비타500 데일리스틱 1박스 (30포)</span>
+                  <span class="cat__prd-price"><strong>5,100</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/health_5.jpg" alt="홍삼진 프로바이오EX"></span>
+                  <span class="cat__prd-name">홍삼진 프로바이오EX</span>
+                  <span class="cat__prd-price"><strong>25,200</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="img/sub/health_6.jpg"
+                      alt="[농협 한삼인] 발효홍삼파워골드 50ml x 20포 + 쇼핑백"></span>
+                  <span class="cat__prd-name">[농협 한삼인] 발효홍삼파워골드 50ml x 20포 + 쇼핑백</span>
+                  <span class="cat__prd-price"><strong>32,200</strong>원</span>
+                </a>
+              </li>
+            </ul>
+            <!-- //cat-com__right -->
+            <!-- 리스트 6개감싸고 있는 부모 통 슬라이드 여기까지 -->
+            <ul class="swiper-slide cat-com__right clearfix swiper-slide-duplicate swiper-slide-duplicate-active"
+              data-swiper-slide-index="0" style="width: 649px;">
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/110844_M1.jpg"
+                      alt="[이경제의 건강보감]황제 신로환 1박스(4g*30환) 건강환"></span>
+                  <span class="cat__prd-name">[이경제의 건강보감]황제 신로환 1박스(4g*30환) 건강환</span>
+                  <span class="cat__prd-price"><strong>50,000</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/105641_M1.jpg"
+                      alt="[천호엔케어]면역엔 알로에뮨 1박스 알로에겔 면역력증진"></span>
+                  <span class="cat__prd-name">[천호엔케어]면역엔 알로에뮨 1박스 알로에겔 면역력증진</span>
+                  <span class="cat__prd-price"><strong>16,200</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/100778_M1.jpg"
+                      alt="[대상웰라이프]메이크미 멀티비타민 (1200mlx90정) x 2ea"></span>
+                  <span class="cat__prd-name">[대상웰라이프]메이크미 멀티비타민 (1200mlx90정) x 2ea</span>
+                  <span class="cat__prd-price"><strong>12,700</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/101173_M1.jpg" alt="[광동] 비타500 데일리스틱 1박스 (30포)"></span>
+                  <span class="cat__prd-name">[광동] 비타500 데일리스틱 1박스 (30포)</span>
+                  <span class="cat__prd-price"><strong>5,100</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/104085_M1.jpg" alt="홍삼진 프로바이오EX"></span>
+                  <span class="cat__prd-name">홍삼진 프로바이오EX</span>
+                  <span class="cat__prd-price"><strong>25,200</strong>원</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop/prd_view.html">
+                  <span class="prd_img"><img src="/data/prdimg/105220_M1.jpg"
+                      alt="[농협 한삼인] 발효홍삼파워골드 50ml x 20포 + 쇼핑백"></span>
+                  <span class="cat__prd-name">[농협 한삼인] 발효홍삼파워골드 50ml x 20포 + 쇼핑백</span>
+                  <span class="cat__prd-price"><strong>32,200</strong>원</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- swiper-wrapper -->
+          <div class="catelist__pager "><span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+              tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
+              tabindex="0" role="button" aria-label="Go to slide 2"></span></div>
+          <!-- 내가 만든 버튼에 동작시키기 -->
+          <div class="cate-prdlist__control">
+            <span class="catelist_prev ir_pm" tabindex="0" role="button" aria-label="Previous slide">Prev Slide</span>
+            <span class="catelist_next ir_pm" tabindex="0" role="button" aria-label="Next slide">Next Slide</span>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <!-- //catelist__slide-fashion -->
+      </div>
+      <!-- //recm-prd__fashion -->
+
+      <div class="main__line-ban winter-plan">
+        <a href="" target="_BLANK"><img src="img/main/main_btm_lineban.jpg"></a>
+      </div>
+      <!-- //띠배너 -->
+      <script>
+        const slide240000 = new Swiper('#mainPrdSlide240000', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+            delay: 3000,
+          },
+          navigation: {
+            nextEl: '#mainPrdNav240000 .cate_next',
+            prevEl: '#mainPrdNav240000 .cate_prev',
+          },
+          pagination: {
+            el: '.cate-prd__pager',
+            clickable: true,
+          }
+        });
+
+        const healthList = new Swiper('.catelist__slide-health', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+              delay:3000,
+          },
+          navigation: {
+            nextEl: '.catelist__slide-health .catelist_next',
+            prevEl: '.catelist__slide-health .catelist_prev',
+          },
+          pagination: {
+            el: '.catelist__slide-health .catelist__pager',
+            clickable: true,
+          }
+        });
+      </script>
+
+      <!-- 오른쪽 aside 메뉴 -->
+      <div class="aside__right-menu">
+        <span class="aside_cart"><a href="shop/prd_basket.php" data-amount="7">장바구니</a></span>
+        <div class="aside_btm">
+          <span class="latest-see">최근 본 상품</span>
+          <div class="swiper-container latest__slide">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="shop/prd_view.html"><img src="img/sub/list_prd_1.jpg"></a>
+              </li>
+              <li class="swiper-slide ">
+                <a href="shop/prd_view.html"><img src="img/sub/list_prd_2.jpg"></a>
+              </li>
+              <li class="swiper-slide ">
+                <a href="shop/prd_view.html"><img src="img/sub/list_prd_3.jpg"></a>
+              </li>
+            </ul>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+
+          <div class="paging_btn">
+            <button type="button" class="prev swiper-button-disabled" tabindex="0" role="button"
+              aria-label="Previous slide" aria-disabled="true"></button>
+            <div class="latest__pagination swiper-pagination-fraction"><span class="swiper-pagination-current">1</span>
+              / <span class="swiper-pagination-total">1</span></div>
+            <button type="button" class="next swiper-button-disabled" tabindex="0" role="button" aria-label="Next slide"
+              aria-disabled="true"></button>
+          </div>
+        </div>
+      </div>
+      <!-- //오른쪽 aside메뉴 -->
+
+      <script>
+        var latest__swiper = new Swiper('.latest__slide', {
+          slidesPerView: 3,
+          pagination: {
+            el: '.latest__pagination',
+            type: 'fraction',
+          },
+          navigation: {
+            nextEl: '.paging_btn .next',
+            prevEl: '.paging_btn .prev',
+          },
+          direction: 'vertical',
+        });
+      </script>
+    </div>
+    <!-- //container -->
+  </section>
+  <!-- 메인 끝 -->
+
+  <!-- 푸터 시작 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <ul class="footer__list">
+          <!--<li><a href="/center/company.php">회사소개</a></li>-->
+          <li><a href="">공지사항</a></li>
+          <li><a href="">고객센터</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">개인정보취급방침</a></li>
+        </ul>
+      </div>
+      <!-- //footer__top -->
+      <div class="footer__bottom clearfix">
+        <div class="footer__lef">
+          <h2 class="foot__logo"><a href="" class="ir_pm">biosmart</a></h2>
+          <span class="foot__txt">(주)바이오스마트 대표 : 윤호권</span>
+          <span class="foot__txt">서울시 성동구 광나루로 172(성수동1가 13-5) 린하우스 4층</span>
+          <span class="foot__txt">사업자등록번호 : 201-81-49003 / 통신판매업신고번호 : 제 2021-서울성동-01114호</span>
+          <small class="copyright">COPYLIGHT ⓒ 2021 bswelfare.com All rights reserved.</small>
+        </div>
+        <div class="footer__rig">
+          <strong>고객센터</strong>
+          <span class="foot__txt">개인정보보호책임자 : 민창석 </span>
+          <span class="foot__txt">전화 : <em class="org-col eng-txt">02-3218-9070</em> (평일 <b class="eng-txt"> 09:00 ~
+              18:00</b>)</span>
+          <span class="foot__txt">팩스 : <b class="eng-txt">02-3218-9050 / E-mail : <em
+                class="org-col">csmin@bs-group.kr</em></b></span>
+        </div>
+      </div>
+      <!-- //footer__bottom -->
+    </div>
+    <div class="go-top__btn">
+      <button type="button" class="ir_pm">TOP</button>
+    </div>
+    <!-- //go-top__btn -->
+
+    <script>
+        // go-top버튼
+    $('.go-top__btn').click(function(){
+        $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+        return false;
+    });
+
+    </script>
+  </footer>
+
+</div>
+
+
+<script>
+  $(function(){
+  function includeHTML(callback) {
+    var z, i, elmnt, file, xhr;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("include-html");
+      //console.log(file);
+      if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {
+              elmnt.innerHTML = this.responseText;
+            }
+            if (this.status == 404) {
+              elmnt.innerHTML = "Page not found.";
+            }
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("include-html");
+            includeHTML(callback);
+          }
+        };
+        xhr.open("GET", file, true);
+        xhr.send();
+        /*exit the function:*/
+        return;
+      }
+    }
+    setTimeout(function() {
+      callback();
+    }, 0);
+  }
+});
+</script>

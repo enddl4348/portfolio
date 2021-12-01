@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MRO쇼핑몰 관리자</title>
+	<link rel="stylesheet" href="../css/font.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/jquery-ui.css">
+	<link rel="stylesheet" href="../css/c3.min.css">
+
+	<!--[if lt IE 9]>
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/selectivizr-min.js"></script>
+    <![endif]-->
+	<!--[if gte IE 9]>
+    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+    <![endif]-->
+	<!--[if !IE]> -->
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<!-- <![endif]-->
+	<script src="../js/jquery-ui.js"></script>
+	<script src="../js/calendar.js"></script>
+	<script src="../js/c3.min.js"></script>
+	<script src="../js/cmn.js"></script>
+</head>
+
+<body>
+	<header class="header clearfix">
+		<h1 class="logo"><a href="../index.html">자생 <em>MRO</em> 시스템</a></h1>
+		<ul class="hd__menu">
+			<li><button type="button" class="cart_btn">장바구니</button></li>
+			<li><a href="#">로그아웃</a></li>
+		</ul>
+	</header>
+
+	<div class="bg"></div>
+
+	<div class="cart-pop-wrap cmn-pop-wrap">
+		<div class="pop-btn">
+			<button type="button" class="view-all"></button>
+			<button type="button" class="cls-pop"></button>
+		</div>
+
+		<div class="cart-pop">
+			<h4 class="pop-tit">장바구니 <span class="cart-num">2</span> </h4>
+			<div class="cart-inner clearfix">
+				<section class="cart-list-sect">
+					<p class="cart_chk-opt">
+						<input type="checkbox" id="all-selct">
+						<label for="all-selct">전체선택</label>
+						<button type="button" class="selt-del">선택상품 삭제</button>
+					</p>
+					<table class="cart__list">
+						<thead>
+							<tr class="list_top">
+								<td colspan="6">
+									<input type="checkbox">
+									<strong>오피스프랜드</strong>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="cart__list-item">
+								<td width="58px" class="chk">
+									<input type="checkbox">
+								</td>
+								<td width="93px">
+									<div class="prd-img">
+										<img src="../img/sub/prod_1.jpg" alt="제품이미지">
+									</div>
+								</td>
+								<td class="prd-name" width="308px">
+									<a href="">명함통(808L)</a>
+								</td>
+								<td class="amnt-box">
+									<div class="num-box">
+										<button type="button" class="minus"><img src="../img/ico/minus.png" alt=""></button>
+										<span class="amnt-num">1</span>
+										<button type="button" class=""><img src="../img/ico/plus.png" alt=""></button>
+									</div>
+								</td>
+								<td class="prd-prc" width="136px">
+									<em>7,200</em> 원
+								</td>
+								<td width="58px" class="del-btn">
+									<button type="button"><img src="../img/ico/cart-del.png" alt="제품 삭제버튼"></button>
+								</td>
+							</tr>
+							<!-- //가운데 제품 리스트 항목 하나 -->
+						</tbody>
+						<tfoot>
+							<tr class="list_btm">
+								<td colspan="6" class="prc-sect">
+									<span>총 구매금액</span>
+									<strong class="all-prc"><em>13,400</em> 원</strong>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</section>
+				<section class="cart-prc-sect cmn-prd-btn">
+					<strong>전체 합계</strong>
+					<dl class="cmn__all-prc clearfix">
+						<dt>총 구매 금액</dt>
+						<dd><em>7,200</em> 원</dd>
+					</dl>
+					<a href="" class="req-btn">승인요청</a>
+					<!-- <button class="req-btn">승인요청</button>  -->
+				</section>
+			</div>
+		</div> <!-- //cart-pop -->
+	</div> <!-- //cart-pop-wrap -->
+
+	<div class="buy-pop-wrap cmn-pop-wrap">
+		<div class="pop-btn">
+			<button type="button" class="view-all"></button>
+			<button type="button" class="cls-pop"></button>
+		</div>
+
+		<div class="buy-pop">
+			<h4 class="pop-tit">승인요청 <span class="cart-num">1</span> </h4>
+			<div class="buy-inner clearfix">
+				<section class="buy__prd-list">
+					<div class="list-top_opt clearfix">
+						<span class="prd-info">구매 상품 정보</span>
+						<span class="prd-amnt">수량</span>
+						<span class="prd-prc">제품 가격</span>
+					</div> <!-- //list-top_opt -->
+
+					<div class="list-wrap">
+						<div class="buy-list-item">
+							<table class="cart__list">
+								<thead>
+									<tr class="list_top">
+										<td colspan="4">
+											<strong>테스트몰</strong>
+										</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="cart__list-item">
+										<td width="134px" class="img-wrap">
+											<div class="prd-img">
+												<img src="../img/sub/prod_1.jpg" alt="엑셀업로드 테스트상품2">
+											</div>
+										</td>
+										<td class="prd-name" width="310px">
+											엑셀업로드 테스트상품2 </td>
+										<td width="152px" class="amnt">1</td>
+										<td class="prd-prc" width="177px">
+											<em>1,500</em> 원
+										</td>
+									</tr>
+									<tr class="req_date">
+										<td colspan="4">
+											<dl class="clearfix">
+												<dt>납품 요청일</dt>
+												<dd> <input type="text" name="del_date[13]" value="2021-11-05"
+														class="prd__datepicker hasDatepicker" autocomplete="off" id=""><button type="button"
+														class="ui-datepicker-trigger"><img src="../img/ico/cal.gif" alt="..."></button></dd>
+											</dl>
+										</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr class="list_btm">
+										<td colspan="6" class="prc-sect">
+											<span>총 구매금액</span>
+											<strong class="all-prc"><em>1,500</em> 원</strong>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+							<div class="add-detail">
+
+								<dl class="clearfix">
+									<dt>업체 요청사항</dt>
+									<dd>
+										<textarea name="com_request[testmall]" cols="30" rows="1"
+											placeholder="요청사항을 입력해주세요 (예.물건 파손되지 않게 포장 잘 부탁드립니다)"></textarea>
+									</dd>
+								</dl>
+							</div> <!-- //add-detail -->
+						</div> <!-- //buy-list-item -->
+					</div> <!-- //list-wrap -->
+				</section> <!-- //buy__prd-list -->
+				<section class="buy-prc-sect cmn-prd-btn">
+					<div class="dvey-info">
+						<strong>배송 정보</strong>
+						<dl class="delv-sect">
+							<dt>배송지 선택</dt>
+							<dd>
+								<select onchange="sel_del(this.value);">
+									<option value="">선택</option>
+								</select>
+							</dd>
+							<dt>수령자</dt>
+							<dd><input type="text" name="name" placeholder="수령자 성명을 입력해 주세요."></dd>
+							<dt>연락처</dt>
+							<dd><input type="text" name="hphone" placeholder="연락처를 입력해 주세요."></dd>
+							<dt>배송지 주소</dt>
+							<dd>
+								<p><input type="text" name="post" class="sm-input" onclick="zipSearch('');" readonly=""> <button
+										type="button">주소 찾기</button></p>
+								<p><input type="text" name="address" readonly=""></p>
+								<p><input type="text" name="address2" placeholder="상세주소를 입력해 주세요."></p>
+							</dd>
+						</dl>
+					</div>
+					<div class="prd-sect">
+						<strong>전체 합계</strong>
+						<dl class="cmn__all-prc clearfix">
+							<dt>총 구매 금액</dt>
+							<dd><em>1,500</em> 원</dd>
+						</dl>
+						<button type="button" class="req-btn">승인요청</button>
+						<div class="rep-step__wrap clearfix">
+							<ul class="rep-step__box">
+								<li>요청자</li>
+								<li>행정1팀</li>
+								<li>테스트</li>
+							</ul>
+							<ul class="rep-step__box">
+								<li>승인(1차)</li>
+								<li>행정팀</li>
+								<li>행정팀결재자</li>
+							</ul>
+							<ul class="rep-step__box">
+								<li>승인(2차)</li>
+								<li>행정실</li>
+								<li>행정실결재자</li>
+							</ul>
+						</div>
+					</div>
+				</section> <!-- //buy-prc-sect -->
+			</div>
+			<!-- //buy-inner -->
+
+			<script>
+				// datepicker 오늘 날짜 배경색 관련코드
+				var today = new Date();
+				var dd = today.getDate();
+				var mm = today.getMonth() + 1;
+				var yyyy = today.getFullYear();
+
+				if (dd < 10) {
+					dd = '0' + dd
+				}
+
+				if (mm < 10) {
+					mm = '0' + mm
+				}
+
+				today = yyyy + '/' + mm + '/' + dd; //오늘날짜 ex. 2016/11/12
+				var todaydate = [today]; //배열에 넣음
+				// datepicker 오늘 날짜 배경색 관련코드 여기까지
+
+
+
+				$(".prd__datepicker").datepicker({
+					dateFormat: 'yy-mm-dd',
+					//yearSuffix: '년',
+					showOn: "both", // 버튼과 텍스트 필드 모두 캘린더를 보여준다.
+					buttonImage: "/admin/css/images/cal.gif", // 버튼 이미지
+					dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+					monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+					changeMonth: true, // 월을 바꿀수 있는 셀렉트 박스를 표시한다.
+					changeYear: true, // 년을 바꿀 수 있는 셀렉트 박스를 표시한다.
+					showMonthAfterYear: true, // 년월 셀렉트 박스 위치 변경
+					currentText: '오늘 날짜', // 오늘 날짜로 이동하는 버튼 패널
+					nextText: '다음 달', // next 아이콘의 툴팁.
+					prevText: '이전 달', // prev 아이콘의 툴팁.
+					//yearRange : "c-80:c+10"
+					//altField: "#date", // 타겟 필드
+					//minDate: '-0d', // 오늘 이전 날짜는 선택 못함
+
+					// 오늘날짜와 같으면 오늘 날짜 색깔 변경 관련 코드
+					beforeShowDay: function (dateStr) {
+
+						var dd = dateStr.getDate();
+						var mm = dateStr.getMonth() + 1;
+						var yyyy = dateStr.getFullYear();
+
+						if (dd < 10) {
+							dd = '0' + dd
+						}
+
+						if (mm < 10) {
+							mm = '0' + mm
+						}
+
+						date = yyyy + '/' + mm + '/' + dd; //jquery 달력의 날짜를 yyyy/mm/dd 형태로 만듬.							
+						var Highlight = todaydate[date]; //스타일을 적용할 날짜
+
+						if ($.inArray(date, todaydate) >= 0) { //jquery달력의 날짜가 오늘날짜와 같다면
+							return [true, "Highlighted", Highlight]; //스타일 적용
+						} else {
+							return [true, '', ''];
+						}
+					},
+					// 오늘날짜와 같으면 오늘 날짜 색깔 변경 관련 코드 여기까지
+				}); //datepicker
+			</script>
+		</div> <!-- //buy-pop -->
+	</div> <!-- //buy-pop-wrap -->
+
+	<div class="prd-vw-wrap cmn-pop-wrap">	
+		<div class="prd-vw-btn pop-btn">
+			<button type="button" class="view-all"></button>
+			<button type="button" class="cls-pop" onclick="scrollOn();"></button>
+		</div>
+
+  <script>
+  //레이어 팝업 닫았을 때 바디 스크롤 되게
+    function scrollOn() {
+      $('body').removeClass('scrollOff').off('scroll touchmove mousewheel');
+    }
+  </script>
+
+	<div class="prd-vw-pop ">
+		<section class="prd-view-top clearfix">
+			<div class="prd-opt-sect clearfix">
+				<div class="prd-img-wrap">
+					<div class="big-img">
+						<img src="../img/sub/prod_1.jpg" alt="엑셀업로드 테스트상품1">
+						<img src="../img/sub/prod_2.jpg" alt="엑셀업로드 테스트상품2">
+						<img src="../img/sub/prod_3.jpg" alt="엑셀업로드 테스트상품3">					
+					</div>
+					<div class="thumb-img clearfix">
+					<span>
+						<img src="../img/sub/prod_1.jpg" alt="엑셀업로드 테스트상품1">
+					</span>
+					<span>
+						<img src="../img/sub/prod_2.jpg" alt="엑셀업로드 테스트상품2">
+					</span>
+					<span>
+						<img src="../img/sub/prod_3.jpg" alt="엑셀업로드 테스트상품3">
+					</span>					
+				</div>
+				</div>
+				<div class="prd-option">
+					<strong class="prd-name">엑셀업로드 테스트상품</strong>
+					<ul class="opt-list">
+						<li><span class="opt-tit">상품코드</span><strong>10000</strong></li>
+						<li><span class="opt-tit">구매가</span><strong>10,000 원</strong></li>
+						<li><span class="opt-tit">공급사</span><strong>테스트몰</strong></li>
+						<li><span class="opt-tit">모델명</span><strong>Excel1001</strong></li>
+						<li><span class="opt-tit">사양</span><strong>sp</strong></li>
+						<li><span class="opt-tit">포장단위</span><strong>10 EA/BOX</strong></li>
+						<li><span class="opt-tit">주문단위</span><strong>BOX</strong></li>
+						<li><span class="opt-tit">제조사</span><strong>자생</strong></li>
+						<li><span class="opt-tit">최소주문수량</span><strong>10</strong></li>
+						<li><span class="opt-tit">최소납기일</span><strong>5일</strong></li>
+					</ul>
+				</div> <!-- //prd-option -->
+			</div> <!-- //prd-opt-sect -->
+			<div class="prd-buy-sect">
+				<div class="amnt-box">
+					<span class="prd-name">엑셀업로드 테스트상품</span>
+					<p class="num-box">
+						<button type="button" class="minus">
+							<img src="../img/ico/minus.png" alt="">
+						</button>
+						<span class="amnt-num" id="view_amount_text">10</span>
+						<button type="button" class="">
+							<img src="../img/ico/plus.png" alt="">
+						</button>
+					</p>
+					<strong class="prd-prc"><em class="view_total_price_text">10,000</em> 원</strong>
+				</div>
+				<dl class="cmn__all-prc clearfix">
+					<dt>총 구매 금액</dt>
+					<dd><em class="view_total_price_text">100,000</em> 원</dd>
+				</dl>
+
+				<div class="cmn__prd-btn">
+					<button type="button" class="wish"> <img id="wish_img" src="../img/ico/wish.png" alt="찜하기 아이콘"> </button>
+					<button type="button" class="cart">장바구니 담기</button>
+					<button class="req-btn">구매하기</button>
+				</div>
+			</div> <!-- //prd-buy-sect -->
+		</section>
+		<section class="prd-view-btm">
+			<h4 class="tit">상품 상세 설명</h4>
+			<p class="prd-desc">상세설명 자리입니다.</p>
+		</section>
+	</div>
+
+	<script>
+		// 상품 뷰 이미지 호버
+		var $prdBigimg = $('.prd-view-top .big-img > img');
+		var $prdTmbimg = $('.prd-view-top .thumb-img > span');
+
+		$prdBigimg.eq(0).show().siblings().hide();
+
+		$prdTmbimg.mouseenter(function(){
+			var idx = $(this).index();
+			$prdBigimg.eq(idx).show().siblings().hide();
+		});
+	
+	</script>
+</div>
+
+	<div class="ad-manage-wrap clearfix">
+		<div class="lnb-wrap">
+			<div class="lnb-box">
+				<h4 class="lnb__tit">구매</h4>
+				<ul class="lnb__menu">
+					<li class="active"><a href="#">상품목록</a></li>
+					<li class=""><a href="#">견적서출력</a></li>
+					<li class=""><a href="#">주문현황</a></li>
+					<li class=""><a href="#">신규상품등록요청</a></li>
+					<li class=""><a href="#">신규공급사등록요청</a></li>
+					<li class=""><a href="#">즐겨찾기</a></li>
+				</ul>
+			</div>
+			<!-- //구매 -->
+			<div class="lnb-box">
+				<h4 class="lnb__tit">주문관리</h4>
+				<ul class="lnb__menu">
+					<li class=""><a href="#">주문승인</a></li>
+					<li class=""><a href="#">구매확정등록</a></li>
+					<li class=""><a href="#">주문취소/변경요청</a></li>
+					<li class=""><a href="#">주문반품/교환요청</a></li>
+					<li class=""><a href="#">주문수정이력확인</a></li>
+					<li class=""><a href="#">거래명세서출력</a></li>
+					<li><a href="#">마감승인관리</a></li>
+				</ul>
+			</div>
+			<!-- //주문관리 -->
+			<div class="lnb-box">
+				<h4 class="lnb__tit">회원관리/설정</h4>
+				<ul class="lnb__menu">
+					<li class=""><a href="#">회원관리</a></li>
+					<li class=""><a href="#">부서관리</a></li>
+					<li class=""><a href="#">메일관리</a></li>
+					<li class=""><a href="#">배송지</a></li>
+				</ul>
+			</div>
+			<!-- //회원관리 -->
+		</div>
+		<!-- .lnb-wrap -->
+
+		<div class="content-wrap">
+			<div class="cmn-srch">
+				<div class="srch-input-box">
+					<form action="" method="get">
+						<input type="text" name="" value="" placeholder="검색어를 입력해 주세요.">
+						<button type="submit">통합 검색</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="prd-nav-wrap">
+				<ul class="clearfix nav-category">
+					<li class="on">
+						<button type="button" class="all-menu-btn">전체카테고리</button>
+						<div class="almenu-dpt-wrap clearfix">
+							<div class="depth-menu-box">
+								<strong class="nav__type-tit"><a href="./purc_req.html">사무용품</a></strong>
+								<ul class="nav__depth1-list">
+									<li><a href="./purc_req.html">POP/표지판/아크릴박스</a></li>
+									<li><a href="./purc_req.html">도장/인주/잉크</a></li>
+									<li><a href="./purc_req.html">명함철/통/꽂이</a></li>
+									<li><a href="./purc_req.html">보관정리용품</a></li>
+									<li><a href="./purc_req.html">보드/칠판/액자</a></li>
+									<li><a href="./purc_req.html">복사용지/지류/라벨용지</a></li>
+								</ul>
+							</div>
+							<div class="depth-menu-box">
+								<strong class="nav__type-tit"><a href="./purc_req.html">생활용품</a></strong>
+								<ul class="nav__depth1-list">
+									<li><a href="./purc_req.html">귀마개/안대/베개</a></li>
+									<li><a href="./purc_req.html">방향/탈취/살충제</a></li>
+								</ul>
+							</div>
+							<div class="depth-menu-box">
+								<strong class="nav__type-tit"><a href="./purc_req.html">의료소모품</a></strong>
+								<ul class="nav__depth1-list">
+								</ul>
+							</div>
+							<div class="depth-menu-box">
+								<strong class="nav__type-tit"><a href="./purc_req.html">인쇄몰</a></strong>
+								<ul class="nav__depth1-list">
+								</ul>
+							</div>
+							<div class="depth-menu-box">
+								<strong class="nav__type-tit"><a href="./purc_req.html">전산용품</a></strong>
+								<ul class="nav__depth1-list">
+								</ul>
+							</div>
+							<div class="depth-menu-box">
+								<strong class="nav__type-tit"><a href="./purc_req.html">복리후생용품</a></strong>
+								<ul class="nav__depth1-list">
+								</ul>
+							</div>
+							<div class="depth-menu-box">
+								<strong class="nav__type-tit"><a href="./purc_req.html">한방과립제</a></strong>
+								<ul class="nav__depth1-list">
+								</ul>
+							</div>
+							<div class="depth-menu-box">
+								<strong class="nav__type-tit"><a href="./purc_req.html">자생</a></strong>
+								<ul class="nav__depth1-list">
+								</ul>
+							</div>
+						</div> <!-- //almenu-dpt-wrap -->
+					</li>
+					<li><a href="./purc_req.html">사무용품</a></li>
+					<li><a href="./purc_req.html">생활용품</a></li>
+					<li><a href="./purc_req.html">의료소모품</a></li>
+					<li><a href="./purc_req.html">인쇄몰</a></li>
+					<li><a href="./purc_req.html">전산용품</a></li>
+					<li><a href="./purc_req.html">복리후생용품</a></li>
+					<li><a href="./purc_req.html">한방과립제</a></li>
+					<li><a href="./purc_req.html">자생</a></li>
+				</ul>
+			</div> <!-- //prd-nav-wrap -->
+
+
+			<form name="" action="" method="get">
+				<div class="prd-opt-wrap">
+					<a href="../index.html"><span class="home ir_pm">홈</span></a>
+					<em class="arr-ico"></em>
+					<select name="dep_code" class="cmn-slct">
+						<option value="">전체보기</option>
+						<option value="11">사무용품</option>
+						<option value="13">생활용품</option>
+						<option value="20">의료소모품</option>
+						<option value="14">인쇄몰</option>
+						<option value="16">전산용품</option>
+						<option value="15">복리후생용품</option>
+						<option value="17">한방과립제</option>
+						<option value="18">자생</option>
+					</select>
+
+					<em class="arr-ico"></em>
+					<select name="dep2_code" class="cmn-slct">
+						<option value="">전체보기</option>
+					</select>
+
+					<em class="arr-ico"></em>
+					<select name="dep3_code" class="cmn-slct">
+						<option value="">전체보기</option>
+					</select>
+				</div> <!-- //prd-opt-wrap -->
+			</form>
+
+			<div class="purc__prd-list cmn-prd-list">
+				<h2 class="page_ttl">전체카테고리</h2>
+				<p class="prd-amnt-txt">총 <em>3</em>개의 상품이 검색되어 있습니다.</p>
+				<div style="text-align: right; margin-bottom: 5px;" class="prd_detail_srch">
+					<input type="text" name="" value="" class="cmn-ip" placeholder="리스트 내 검색">
+					<button type="button" class="cmn-btn">검색</button>
+				</div>
+
+				<div class="purc_list-opt">
+					<span class="all-select">
+						<input type="checkbox" id="all_slct" class="">
+						<label for="all_slct">전체선택</label>
+					</span>
+					<span class="alg-tit">정렬방식</span>
+					<div class="align-btn">
+						<button type="button" class="ir_pm col on">가로형리스트 버튼</button>
+						<button type="button" class="ir_pm row">세로형리스트 버튼</button>
+					</div>
+					<select class="cmn-slct">
+						<option value="10" selected="">10개씩 보기</option>
+						<option value="20">20개씩 보기</option>
+						<option value="30">30개씩 보기</option>
+					</select>
+					<select class="cmn-slct">
+						<option value="wp.wdate desc" selected="">최근등록상품</option>
+						<option value="wpm.memprice desc">높은가격순</option>
+						<option value="wpm.memprice asc">낮은가격순</option>
+					</select>
+					<button type="button" class="cart-btn">장바구니 담기</button>
+					<button type="button" class="buy-btn">구매하기</button>
+				</div> <!-- //purc_list-opt -->
+
+				<div class="prd-list-type">
+					<div class="prd-list-box clm-list clearfix">
+						<div class="list-clm-item">
+							<div class="prd-img">
+								<img src="../img/sub/prod_1.jpg" alt="엑셀업로드 테스트상품">
+								<div class="prd-item-hover">
+									<div class="lnk-wrap ">
+										<button type="button" class="detail ㅇㅇ">자세히 보기</button>
+										<button type="button" class="cart cart-btn">장바구니 담기</button>
+									</div>
+								</div> <!-- //prd-item-hover -->
+							</div>
+							<div class="prd-desc">
+								<div class="dec-top">
+									<input type="checkbox" name="" class="chk chk_1" value="">
+									<strong class="prd-name">엑셀업로드 테스트상품</strong>
+									<span class="prd-prc"><em>11,000</em> 원</span>
+								</div>
+								<div class="prd-opt">
+									<p class="row-wrap"><span class="prd-model">모델명: <em>Excel1001</em> </span> <span>사양: <em>sp</em>
+										</span></p>
+									<p class="row-wrap"><span>포장단위: <em>10 EA/BOX</em></span> <span>주문단위: <em>BOX</em> </span> </p>
+									<span class="last">공급사: <em>테스트몰2</em> </span>
+								</div>
+							</div> <!-- //prd-desc -->
+						</div>
+						<div class="list-clm-item">
+							<div class="prd-img">
+								<img src="../img/sub/prod_2.jpg" alt="엑셀업로드 테스트상품">
+								<div class="prd-item-hover">
+									<div class="lnk-wrap ">
+										<button type="button" class="detail">자세히 보기</button>
+										<button type="button" class="cart cart-btn">장바구니 담기</button>
+									</div>
+								</div> <!-- //prd-item-hover -->
+							</div>
+							<div class="prd-desc">
+								<div class="dec-top">
+									<input type="checkbox" name="" class="chk chk_1" value="">
+									<strong class="prd-name">엑셀업로드 테스트상품</strong>
+									<span class="prd-prc"><em>10,000</em> 원</span>
+								</div>
+								<div class="prd-opt">
+									<p class="row-wrap"><span class="prd-model">모델명: <em>Excel1001</em> </span> <span>사양: <em>sp</em>
+										</span></p>
+									<p class="row-wrap"><span>포장단위: <em>10 EA/BOX</em></span> <span>주문단위: <em>BOX</em> </span> </p>
+									<span class="last">공급사: <em>테스트몰</em> </span>
+								</div>
+							</div> <!-- //prd-desc -->
+						</div>
+						<div class="list-clm-item">
+							<div class="prd-img">
+								<img src="../img/sub/prod_3.jpg" alt="엑셀업로드 테스트상품2">
+								<div class="prd-item-hover">
+									<div class="lnk-wrap ">
+										<button type="button" class="detail">자세히 보기</button>
+										<button type="button" class="cart cart-btn">장바구니 담기</button>
+									</div>
+								</div> <!-- //prd-item-hover -->
+							</div>
+							<div class="prd-desc">
+								<div class="dec-top">
+									<input type="checkbox" name="" class="chk chk_1" value="">
+									<strong class="prd-name">엑셀업로드 테스트상품2</strong>
+									<span class="prd-prc"><em>1,500</em> 원</span>
+								</div>
+								<div class="prd-opt">
+									<p class="row-wrap"><span class="prd-model">모델명: <em>Excel1002</em> </span> <span>사양: <em>sp</em>
+										</span></p>
+									<p class="row-wrap"><span>포장단위: <em>5 EA/BOX</em></span> <span>주문단위: <em>BOX</em> </span> </p>
+									<span class="last">공급사: <em>테스트몰</em> </span>
+								</div>
+							</div> <!-- //prd-desc -->
+						</div>
+					</div><!-- //가로형 리스트 마크업 여기까지 -->
+
+					<table class="prd-list-tb prd-list-box">
+						<tbody>
+							<tr>
+								<td width="38px"><input type="checkbox" name="" class="chk chk_2" value=""> </td>
+								<td width="150px">
+									<div class="prd-img"><img src="../img/sub/prod_2.jpg" alt="엑셀업로드 테스트상품"></div>
+								</td>
+								<td class="prd-desc row-desc">
+									<strong class="prd-name">엑셀업로드 테스트상품</strong>
+									<div class="prd-opt">
+										<p class="dt-wrap"><span>상품코드: <em>10000</em> </span> <span>모델명: <em>Excel1001</em> </span>
+											<span>사양: <em>sp</em></span></p>
+										<p class="dt-wrap"><span>포장단위: <em>10 EA/BOX</em></span> <span>주문단위: <em>BOX</em></span></p>
+										<p class="dt-wrap"><span>최소주문수량: <em>10</em></span> <span>최소납기일: <em>5일</em> </span></p>
+									</div>
+								</td>
+								<td class="prd-prc" width="385px">
+									<strong class="producer">테스트몰2</strong> 
+									<em>11,000</em> 원
+								</td>
+								<td class="prd-link" width="150px">
+									<button type="button" class="detail">자세히 보기</button>
+									<button type="button" class="cart cart-btn">장바구니 담기</button>
+								</td>
+							</tr>
+							<tr>
+								<td width="38px"><input type="checkbox" name="" class="chk chk_2" value=""> </td>
+								<td width="150px">
+									<div class="prd-img"><img src="../img/sub/prod_1.jpg" alt="엑셀업로드 테스트상품"></div>
+								</td>
+								<td class="prd-desc row-desc">
+									<strong class="prd-name">엑셀업로드 테스트상품</strong>
+									<div class="prd-opt">
+										<p class="dt-wrap"><span>상품코드: <em>10000</em> </span> <span>모델명: <em>Excel1001</em> </span>
+											<span>사양: <em>sp</em></span></p>
+										<p class="dt-wrap"><span>포장단위: <em>10 EA/BOX</em></span> <span>주문단위: <em>BOX</em></span></p>
+										<p class="dt-wrap"><span>최소주문수량: <em>10</em></span> <span>최소납기일: <em>5일</em> </span></p>
+									</div>
+								</td>
+								<td class="prd-prc" width="385px">
+									<strong class="producer">테스트몰</strong> <!-- 여기도 추가 -->
+									<em>10,000</em> 원
+								</td>
+								<td class="prd-link" width="150px">
+									<button type="button" class="detail">자세히 보기</button>
+									<button type="button" class="cart cart-btn">장바구니 담기</button>
+								</td>
+							</tr>
+							<tr>
+								<td width="38px"><input type="checkbox" name="" class="chk chk_2" value=""> </td>
+								<td width="150px">
+									<div class="prd-img"><img src="../img/sub/prod_2.jpg" alt="엑셀업로드 테스트상품2"></div>
+								</td>
+								<td class="prd-desc row-desc">
+									<strong class="prd-name">엑셀업로드 테스트상품2</strong>
+									<div class="prd-opt">
+										<p class="dt-wrap"><span>상품코드: <em>10001</em> </span> <span>모델명: <em>Excel1002</em> </span>
+											<span>사양: <em>sp</em></span></p>
+										<p class="dt-wrap"><span>포장단위: <em>5 EA/BOX</em></span> <span>주문단위: <em>BOX</em></span></p>
+										<p class="dt-wrap"><span>최소주문수량: <em>0</em></span> <span>최소납기일: <em>3일</em> </span></p>
+									</div>
+								</td>
+								<td class="prd-prc" width="385px">
+									<strong class="producer">테스트몰</strong>
+									<em>1,500</em> 원
+								</td>
+								<td class="prd-link" width="150px">
+									<button type="button" class="detail">자세히 보기</button>
+									<button type="button" class="cart cart-btn">장바구니 담기</button>
+								</td>
+							</tr>
+						</tbody>
+					</table> <!-- //세로형 리스트 마크업 여기까지 -->
+				</div> <!-- //prd-list-type -->
+
+				<div class="paging">
+					<a href="" class="ir_pm ico prev">맨 처음</a>
+					<a href="" class="ir_pm ico prev2">이전으로</a>
+					<b>1</b>
+					<a href="" class="ir_pm ico next"> 다음으로</a>
+					<a href="" class="ir_pm ico next2"> 맨 마지막</a>
+				</div>
+			</div> <!-- //purc__prd-list -->
+
+		</div><!-- //content-wrap -->
+	</div> <!-- //ad-manage-wrap -->
+
+
+</body>

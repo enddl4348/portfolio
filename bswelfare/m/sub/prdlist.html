@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>BS Welfare</title>
+    <meta name="description" content="바이오스마트 모바일입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BIO SMART">
+    <meta property="og:description" content="바이오스마트 모바일입니다.">
+    <!-- og image 이미지의 경우 최소한 600 x 315 픽셀은 되어야 하며, 1200 x 630 픽셀 크기를 권장 -->
+    <meta property="og:image" content="../img/main/mobile_logo.jpg">
+    <!-- 파비콘 16*16 or 32*32 사이즈 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/respon.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+  </head>
+
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="header__top container">
+        <button type="button" class="gnb__btn ir_pm">전체메뉴버튼</button>
+        <h1 class="m__logo"><a href="../index.html"><img src="../img/main/logo.png" alt="로고"></a></h1>
+        <div class="icon__area">
+          <button type="button" class="sch_btn ir_pm">검색버튼</button>
+          <a href="./sub/cart.html" class="m__cart"><span class="cart__amnt">7</span></a>
+        </div><!-- //icon__area -->
+      </div>
+      <ul class="gnb__menubar">
+        <li class="on"><a href="../index.html">홈</a></li>
+        <li><a href="./prdlist.html">타임딜</a></li>
+        <li><a href="./prdlist.html">공동구매</a></li>
+        <li><a href="./prdlist.html">베스트</a></li>
+        <li><a href="./prdlist.html">MD's Pick</a></li>
+      </ul>
+    </header><!-- //header -->
+
+    <!-- 검색 버튼 클릭했을 때 마크업 시작 -->
+    <div class="sch__wrap">
+      <div class="container">
+        <div class="sch__top">
+          <form name="" method="get">
+            <button type="button" class="prev ir_pm">닫기</button>
+            <input type="text" name="" value="" placeholder="검색어를 입력해주세요">
+            <button type="submit" class="sch__submit ir_pm">검색</button>
+          </form>
+        </div>
+        <!-- //sch__top -->
+
+        <ul class="sch__tab">
+          <li><button type="button" class="hotBtn">인기검색어</button></li>
+          <li><button type="button" class="lateBtn">최근검색어</button></li>
+        </ul>
+
+        <div class="sch__result">
+          <!-- 인기검색어 리스트 나오는 거 -->
+          <div class="sch__cont hot">
+            <div class="sch__cont-txt">2021.02.23 기준</div>
+            <ul class="sch__keyword">
+              <li>1.검색어</li>
+              <li>2.검색어</li>
+              <li>3.검색어</li>
+              <li>4.검색어</li>
+            </ul>
+          </div>
+          <!-- //sch__cont -->
+
+          <!-- 최근검색어 있을 때 리스트 나오는 거 -->
+          <div class="sch__cont late ">
+            <div class="sch__cont-txt">검색어 전체 삭제</div>
+            <ul class="sch__keyword">
+              <li>검색어<span class="sch__date">2.23<button type="button" class="sch__del ir_pm">검색기록 삭제</button></span>
+              </li>
+              <li>검색어<span class="sch__date">2.23<button type="button" class="sch__del ir_pm">검색기록 삭제</button></span>
+              </li>
+              <li>검색어<span class="sch__date">2.23<button type="button" class="sch__del ir_pm">검색기록 삭제</button></span>
+              </li>
+            </ul>
+          </div>
+          <!-- //sch__cont -->
+
+          <!-- 최근검색어 없을 때 나오는 마크업 -->
+          <div class="sch__cont latest">
+            <div class="sch__none">
+              최근 검색어가 없습니다.
+            </div>
+          </div>
+          <!-- //sch__cont -->
+        </div>
+        <!-- //sch__result -->
+
+      </div>
+      <!-- //container -->
+      <ul class="company__bar">
+        <li><a href="#">고객센터 <span class="ico"></span> </a></li>
+        <li><a href="#">회사소개 <span class="ico"></span> </a></li>
+      </ul>
+    </div>
+    <!-- //sch__wrap -->
+
+    <script>
+      var $schTab = $('.sch__tab li');
+      var $hotBtn = $('.hotBtn');
+      var $lateBtn = $('.lateBtn');
+      var $hotCont = $('.hot');
+      var $lateCont = $('.late');
+      var $schClose = $('.prev');
+      var $schBtn = $('.sch_btn');
+      var $schWrap = $('.sch__wrap');
+
+
+      $schBtn.on('click', function () {
+        $schWrap.addClass('active');
+      });
+
+      $schClose.click(function () {
+        $schWrap.removeClass('active');
+      });
+
+      $schTab.click(function () {
+        $(this).addClass('on').siblings().removeClass('on');
+      });
+
+      $hotBtn.on('click', function () {
+        $hotCont.addClass('on').siblings().removeClass('on');
+      });
+
+      $lateBtn.on('click', function () {
+        $lateCont.addClass('on').siblings().removeClass('on');
+      });
+    </script>
+
+    
+    <!-- 전체메뉴 클릭했을 때 마크업 시작 -->
+    <div class="gnb__wrap">
+      <div class="gnb__top">
+        <div class="container">
+          <div class="top__util">
+            <strong class="log__tit login-on">홍길동 님 <span class="log-ico"></span></strong>
+            <a href="" class="log__sub m__logout"
+              style="border:1px solid #ddd; padding:5px 10px;">로그아웃</a>
+          </div>
+          <!-- //top__util -->
+          <button type="button" class="gnb__wrap-cls"></button>
+          <div class="gnb__point-wrap">
+            <a href="./my_reserve.html" class="point">
+              복지포인트 <span class="point-amnt"><em>0</em>P</span>
+            </a>
+            <a href="./my_reserve.html" class="point-spec">
+              특별포인트 <span class="point-amnt"><em>110,000</em>P</span>
+            </a>
+          </div>
+          <!-- //gnb__point-wrap -->
+        </div>
+        <!-- //container -->
+        <div class="top__lnk">
+          <ul>
+            <li>
+              <a href="#" class="ordlist-lnk">
+                주문/배송
+              </a>
+            </li>
+            <li>
+              <a href="./cart.html" class="cart-lnk">
+                장바구니
+                <span class="amnt">7</span>
+              </a>
+            </li>
+            <li>
+              <a href="./my_wish.html" class="wishlist-lnk">
+                관심상품
+              </a>
+            </li>
+            <li>
+              <a href="./myinfo.html" class="mypage-lnk">
+                MY PAGE
+              </a>
+            </li>
+          </ul>
+        </div><!-- //top_lnk -->
+      </div>
+      <!-- gnb__top -->
+
+      <div class="gnb__btm" style="height: 566px;">
+        <div class="nav__categ-wrap">
+          <h2 class="categ-tit">카테고리</h2>
+          <ul>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate1.png"> 패션의류/잡화</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate2.png"> 뷰티</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate3.png"> 출산/유아동</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate4.png"> 식품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate5.png"> 주방용품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate6.png"> 생활용품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate7.png"> 홈인테리어</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate8.png"> 가전디지털</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate9.png"> 스포츠/레저</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate10.png"> 자동차용품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate11.png"> 완구/취미</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate14.png"> 반려동물용품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate15.png"> 헬스/건강식품</a></li>
+            <li><a href="./prdlist.html"><img src="../img/icon/cate16.png"> 제휴관</a></li>
+          </ul>
+        </div>
+        <!-- //nav__categ-wrap -->
+        <ul class="company__bar">
+          <!-- <li><a href="./sub/login.php">로그인</a></li> -->
+          <li><a href="#">고객센터 <span class="ico"></span> </a></li>
+          <li><a href="#">회사소개 <span class="ico"></span> </a></li>
+          <!--링크는 정확하지 않음-->
+        </ul>
+      </div>
+    </div><!-- //gnb__wrap -->
+
+
+
+    <!-- 하단 퀵메뉴 -->
+    <div class="fix-quick_menu">
+      <ul class="quick_menu">
+        <li class="all_menu"><button type="button">카테고리</button></li>
+        <li class="on"><a href="" class="quick_home">HOME</a></li>
+        <li class=""><a href="./myinfo.html" class="quick_my">MY PAGE</a></li>
+        <li class=""><a href="./cart.html" class="quick_cart">장바구니 <span class="cart-amnt">7</span></a></li>
+      </ul>
+    </div>
+    <!-- //fix-quick_menu -->
+
+    <script>
+      // gnb__wrap 높이값 계산
+      var wHeight = $(window).height();
+      var gnbHeadHeight = $('.gnb__top').innerHeight();
+
+      console.log(gnbHeadHeight);
+      var gnbBodyHeight = wHeight - gnbHeadHeight;
+
+      $('.gnb__btm').css({
+        'height': gnbBodyHeight + 'px'
+      });
+
+      //  상단 햄버거메뉴 클릭했을 때 나오는거
+      var $topHam = $('.gnb__btn');
+      var $hamBtn = $('.quick_menu .all_menu');
+      var $cateAll = $('.gnb__wrap');
+      var $closeHam = $('.gnb__wrap-cls');
+
+      $topHam.click(function () {
+        $cateAll.addClass('on');
+      });
+
+      $hamBtn.click(function () {
+        $(this).addClass('on');
+        $cateAll.addClass('on');
+        // $cateAll.show();
+      });
+
+      $closeHam.click(function () {
+        $cateAll.removeClass('on');
+        $hamBtn.removeClass('on');
+      });
+    </script>
+
+    <script>
+      $(window).on('orientationchange', function (event) {
+        /* 모바일 세로모드에서 가로모드로 뷰 변환 시 */
+        $('.gnb_wrap').hide();
+      });
+    </script>
+
+   
+   
+    <!-- <div class="m__main"> -->
+
+    <div class="prd__list-pg">
+
+      <!-- 중분류 선택 마크업 -->
+      <div class="prdlist__top-tit">
+        <button type="button" class="sub__prev ir_pm" onclick="history.back();">이전으로</button>
+        <div class="mid__cate">
+          <a>식품</a> <!-- 중분류 자리-->
+          <span class="prdlist_arr"></span>
+        </div>
+        <ul class="mid__depth">
+          <li><a href="#">과일</a></li>
+          <li><a href="#">견과/건과</a></li>
+          <li><a href="#">채소</a></li>
+          <li><a href="#">쌀/잡곡</a></li>
+          <li><a href="#">축산/계란</a></li>
+          <li><a href="#">수산물/건어물</a></li>
+          <li><a href="#">생수/음료</a></li>
+          <li><a href="#">커피/원두/차</a></li>
+          <li><a href="#">과자/초콜릿/시리얼</a></li>
+          <li><a href="#">면/통조림/가공식품</a></li>
+          <li><a href="#">가루/조미료/오일</a></li>
+          <li><a href="#">장/소스/드레싱/식초</a></li>
+          <li><a href="#">유제품/아이스크림</a></li>
+          <li><a href="#">냉장/냉동/간편요리</a></li>
+        </ul>
+      </div>
+      <!-- //sub_title -->
+
+      <!-- 중분류 펼침 스크립트 -->
+      <script>
+        var $listCate = $('.mid__cate');
+        var $selectIcon = $('.prdlist_arr');
+
+        $listCate.on('click', function (e) {
+          e.preventDefault();
+          //$('.mid__depth').toggleClass('on');
+          $('.prdlist_category').toggle();
+          $selectIcon.toggleClass('on');
+        });
+      </script><!-- 소분류 카테고리 마크업 -->
+      <div class="prdlist_category" style="display:none;">
+        <ul>
+          <li class="on">
+            <a href="#">전체</a>
+          </li>
+          <li class="">
+            <a href="#">과일</a>
+          </li>
+          <li class="">
+            <a href="#">견과/건과</a>
+          </li>
+          <li class="">
+            <a href="#">채소</a>
+          </li>
+          <li class="">
+            <a href="#">쌀/잡곡</a>
+          </li>
+          <li class="">
+            <a href="#">축산/계란</a>
+          </li>
+          <li class="">
+            <a href="#">수산물/건어물</a>
+          </li>
+          <li class="">
+            <a href="#">생수/음료</a>
+          </li>
+          <li class="">
+            <a href="#">커피/원두/차</a>
+          </li>
+          <li class="">
+            <a href="#">과자/초콜릿/시리얼</a>
+          </li>
+          <li class="">
+            <a href="#">면/통조림/가공식품</a>
+          </li>
+          <li class="">
+            <a href="#">가루/조미료/오일</a>
+          </li>
+          <li class="">
+            <a href="#">장/소스/드레싱/식초</a>
+          </li>
+          <li class="">
+            <a href="#">유제품/아이스크림</a>
+          </li>
+          <li class="">
+            <a href="#">냉장/냉동/간편요리</a>
+          </li>
+        </ul>
+      </div><!-- .prdlist_category -->
+
+      <form action="" method="get">
+        <div class="prdlist_list-top">
+          <div class="filter">
+            <p class="menu__type"> </p>
+            <button type="button" class="filter_btn">필터</button>
+          </div>
+          <div class="prdlist__sort" style="padding:0 4.4%;">
+            <span class="total_amnt">총 <em>691개</em> 상품</span>
+            <select name="" onchange="" class="select_opt">
+              <option value="prior desc" selected="">최근등록순</option>
+              <option value="viewcnt desc">인기순</option>
+              <option value="sellprice">낮은가격순</option>
+              <option value="sellprice desc">높은가격순</option>
+            </select>
+          </div>
+          <!-- //prdlist__sort -->
+        </div>
+        <!-- //prdlist_list-top -->
+
+        <div class="filter_box">
+          <div class="layer__bg ir_pm">필터창 배경</div>
+          <div class="filter__wrap">
+            <div class="filter__top">
+              <strong class="tit">필터</strong>
+              <button type="buttom" class="reset_btn">초기화</button>
+              <button type="button" class="filt__close ir_pm">닫기 버튼</button>
+            </div>
+            <ul class="filter__catelist">
+              <li>
+                <button type="button" class="filt__catetit">별점</button>
+                <span class="focus__tit">별점전체</span>
+                <ul class="filter__depth radio_opt">
+                  <li><input type="radio" name="star" value="" id="starall" checked=""><label for="starall">별점전체</label></li>
+                  <li><input type="radio" name="star" value="4" id="star4"><label for="star4"><span class="star-rev"><img src="../img/icon/star_4.png" alt="평점4점"></span>4점이상</label></li>
+                  <li><input type="radio" name="star" value="3" id="star3"><label for="star3"><span class="star-rev"><img src="../img/icon/star_3.png" alt="평점3점"></span>3점이상</label></li>
+                  <li><input type="radio" name="star" value="2" id="star2"><label for="star2"><span class="star-rev"><img src="../img/icon/star_2.png" alt="평점2점"></span>2점이상</label> </li>
+                  <li><input type="radio" name="star" value="1" id="star1"><label for="star1"><span class="star-rev"><img src="../img/icon/star_1.png" alt="평점1점"></span>1점이상</label></li>
+                </ul>
+              </li>
+              <li>
+                <button type="button" class="filt__catetit">가격</button>
+                <ul class="filter__depth radio_opt">
+                  <li>
+                    <input type="text" name="sprice" value="" placeholder="최저가" style="display:inline-block; width:33%; height:3rem; font-size:1.3rem;">
+                    <span class="range">~</span>
+                    <input type="text" name="eprice" value="" placeholder="최고가" style="display:inline-block; width:33%; height:3rem; font-size:1.3rem;">
+                    <button type="submit" style="width:25%; height:3rem; background:#fff; border:1px solid #ddd; font-size:1.3rem;">검색</button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- //filter__catelist -->
+          </div>
+          <!-- //filter__wrap -->
+        </div>
+        <!-- //filter_box -->
+      </form>
+
+      <script>
+        var $optionM = $('.filt__catetit');
+        var $filterClose = $('.filt__close');
+        var $filterBtn = $('.filter_btn');
+
+        $filterBtn.on('click', function () {
+          $('.filter_box').addClass('on');
+        });
+
+        $optionM.on('click', function () {
+          $(this).toggleClass('on');
+          $(this).siblings('.filter__depth').toggleClass('on');
+        });
+
+        $filterClose.on('click', function () {
+          $('.filter_box').removeClass('on');
+        });
+      </script>
+
+      <div class="prdlist__list">
+        <ul>
+          <li>
+            <div class="prdlist__img">
+              <a href="./prdview.html"><img src="../img/sub/list_prd9.jpg" alt="동원 덴마크 청미채 옐로우/그린 200ml 48팩"></a>
+            </div>
+            <h3 class="prdname"><a href="./prdview.html">[제주낭] 새콤달콤 제주
+                서귀포 감귤 10kg (70과 내외)</a></h3>
+            <p class="saleprice"><span class="sale_percent">64%</span><del>50,000원</del></p> <strong
+              class="prdprice">17,800원</strong>
+            <p class="prd_reviews">
+            </p>
+          </li>
+          <li>
+            <div class="prdlist__img">
+              <a href="./prdview.html"><img src="../img/sub/list_prd2.jpg" alt="팔도뽀로로 음료수 6종 20입
+                24입 / 밀크 / 딸기 / 사과 / 블루베리 / 샤인머스캣 / 보리차 / 샘물"></a>
+            </div>
+            <h3 class="prdname"><a href="./prdview.html">팔도뽀로로 음료수 6종 20입
+                24입 / 밀크 / 딸기 / 사과 / 블루베리 / 샤인머스캣 / 보리차 / 샘물</a></h3>
+            <p class="saleprice"><span class="sale_percent">10%</span><del>11,900원</del></p> <strong
+              class="prdprice">10,700원</strong>
+            <p class="prd_reviews">
+            </p>
+          </li>
+          <li>
+            <div class="prdlist__img">
+              <a href="./prdview.html"><img src="../img/sub/list_prd3.jpg" alt="팔도 뽀로로 과일맛 젤리
+                53g 12개입 / 어린이간식"></a>
+            </div>
+            <h3 class="prdname"><a href="./prdview.html">팔도 뽀로로 과일맛 젤리
+                53g 12개입 / 어린이간식</a></h3>
+            <p class="saleprice"><span class="sale_percent">10%</span><del>11,900원</del></p> <strong
+              class="prdprice">10,700원</strong>
+            <p class="prd_reviews">
+            </p>
+          </li>
+          <li>
+            <div class="prdlist__img">
+              <a href="./prdview.html"><img src="../img/sub/list_prd4.jpg" alt="팔도 뽀로로 과일맛 젤리
+                150g 6개 12개 24개 / 어린이간식"></a>
+            </div>
+            <h3 class="prdname"><a href="./prdview.html">팔도 뽀로로 과일맛 젤리
+                150g 6개 12개 24개 / 어린이간식</a></h3>
+            <p class="saleprice"><span class="sale_percent">10%</span><del>15,500원</del></p> <strong
+              class="prdprice">14,000원</strong>
+            <p class="prd_reviews">
+            </p>
+          </li>
+          <li>
+            <div class="prdlist__img">
+              <a href="./prdview.html"><img src="../img/sub/list_prd5.jpg" alt="팔도 왕뚜껑 컵라면 110g
+                2종 18개 / 왕뚜껑 / 김치왕뚜껑"></a>
+            </div>
+            <h3 class="prdname"><a href="./prdview.html">팔도 왕뚜껑 컵라면 110g
+                2종 18개 / 왕뚜껑 / 김치왕뚜껑</a></h3>
+            <p class="saleprice"><span class="sale_percent">10%</span><del>21,500원</del></p> <strong
+              class="prdprice">19,400원</strong>
+            <p class="prd_reviews">
+            </p>
+          </li>
+          <li>
+            <div class="prdlist__img">
+              <a href="./prdview.html"><img src="../img/sub/list_prd6.jpg" alt="팔도 뽀로로 짜장컵라면 65g
+                  6입 12입 / 어린이컵라면"></a>
+            </div>
+            <h3 class="prdname"><a href="./prdview.html">팔도 뽀로로 짜장컵라면 65g
+                6입 12입 / 어린이컵라면</a></h3>
+            <p class="saleprice"><span class="sale_percent">10%</span><del>8,800원</del></p> <strong
+              class="prdprice">7,900원</strong>
+            <p class="prd_reviews">
+            </p>
+          </li>
+          <li>
+            <div class="prdlist__img">
+              <a href="./prdview.html"><img src="../img/sub/list_prd7.jpg" alt="팔도 톡톡쏘는 뿌요소다
+                  245ml 3종 24입 / 오렌지 / 파인애플 / 소다향"></a>
+            </div>
+            <h3 class="prdname"><a href="./prdview.html">팔도 톡톡쏘는 뿌요소다
+                245ml 3종 24입 / 오렌지 / 파인애플 / 소다향</a></h3>
+            <p class="saleprice"><span class="sale_percent">10%</span><del>17,500원</del></p> <strong
+              class="prdprice">15,800원</strong>
+            <p class="prd_reviews">
+            </p>
+          </li>
+          <li>
+            <div class="prdlist__img">
+              <a href="./prdview.html"><img src="../img/sub/list_prd8.jpg" alt="팔도 비빔면 컵라면 115g
+                  16개"></a>
+            </div>
+            <h3 class="prdname"><a href="./prdview.html">팔도 비빔면 컵라면 115g
+                16개</a></h3>
+            <p class="saleprice"><span class="sale_percent">10%</span><del>18,900원</del></p> <strong
+              class="prdprice">17,000원</strong>
+            <p class="prd_reviews">
+            </p>
+          </li>
+          <li>
+            <div class="prdlist__img">
+              <a href="./prdview.html"><img src="../img/sub/list_prd1.jpg" alt="동원 덴마크 인포켓치즈  200g 4개 오리지널 / 라이트"></a>
+            </div>
+            <h3 class="prdname"><a href="./prdview.html">동원 덴마크 인포켓치즈
+              200g 4개 오리지널 / 라이트</a></h3>
+            <p class="saleprice"><span class="sale_percent">10%</span><del>24,900원</del></p> <strong
+              class="prdprice">22,400원</strong>
+            <p class="prd_reviews">
+            </p>
+          </li>
+          <li>
+            <div class="prdlist__img">
+              <a href="./prdview.html"><img src="../img/sub/list_prd10.jpg" alt="동원 덴마크 오리진커피
+                250ml 3종 12입 / 카페라떼 / 토피넛라떼 / 돌체라떼"></a>
+            </div>
+            <h3 class="prdname"><a href="./prdview.html">동원 덴마크 오리진커피
+              250ml 3종 12입 / 카페라떼 / 토피넛라떼 / 돌체라떼 </a></h3>
+            <p class="saleprice"><span class="sale_percent">10%</span><del>16,900원</del></p> <strong
+              class="prdprice">14,500원</strong>
+            <p class="prd_reviews">
+            </p>
+          </li>
+        </ul>
+      </div>
+      <!-- //prdlist__list -->
+
+      <div class="cmn__page-num">
+        <div class="paging"> 
+            <strong class="pagenum_1"><a href="#"></a></strong> 
+            <strong class="pagenum_2"><a href="#"></a></strong> 
+            <b>
+              <em>1</em>
+              <a href="#">2</a> 
+              <a href="#">3</a> 
+              <a href="#">4</a> 
+              <a href="#">5</a> 
+            </b>
+            <strong class="pagenum_3"><a href="#"></a></strong> 
+            <strong class="pagenum_4"><a href="#"></a></strong> 
+        </div>
+      </div>
+
+    </div>
+    <!-- //prd__list-pg -->
+
+    <footer class="footer">
+      <div class="footer__top">
+        <ul class="footer__menu">
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#"">이용약관</a></li>
+          <li><a href="#">개인정보취급방침</a></li>
+        </ul>
+      </div>
+      <div class="footer__btm">
+        <h2 class="footer__logo"><a href=""><img src="../img/main/logo.png" alt="푸터 로고 이미지"></a></h2>
+        <div class="footer__info-top">
+          <p>(주)바이오스마트</p>
+          <p>서울시 성동구 광나루로 172(성수동1가 13-5) 린하우스 4층 </p>
+          <p>사업자등록번호:201-81-49003 </p>
+          <p> 통신판매업신고:제 2021-서울성동-01114호</p>
+          <small>COPYLIGHT ⓒ 2021 bswelfare.com All rights reserved.</small>
+        </div>
+
+        <strong class="foot__tit">고객센터</strong>
+        <div class="footer__info-btm">
+          <p>개인정보보호책임자 :민창석 </p>
+          <p>전화 :<em class="col"> 02-3218-9073</em> (평일09:00 ~ 18:00)</p>
+          <p> 팩스 :02-3218-9050/ E-mail :<em class="col"> csmin@bs-group.kr </em> </p>
+        </div>
+
+        <!-- 위로가기버튼 -->
+        <button type="button" class="go_top ir_pm">위로가기버튼</button>
+
+      </div>
+      <!-- //footer_s_btm -->
+
+      <!--위로가기 버튼 구현 -->
+      <script>
+        var $goTop = $('.go_top');
+
+        $goTop.click(function () {
+          $('html, body').animate({
+            scrollTop: 0
+          }, 400);
+          return false;
+        });
+
+
+        var $goTopview = $('.prd-vw');
+
+        $goTopview.click(function () {
+          $('html, body').animate({
+            scrollTop: 0
+          }, 400);
+          return false;
+        });
+      </script>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>
