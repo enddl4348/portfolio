@@ -25,7 +25,11 @@
 	<script src="../js/main_210208.js" type="text/javascript"></script>
 	<script src="../js/lib.js" type="text/javascript"></script>
 </head>
-<body>
+
+  <div include-html="../inc/header.html"></div>
+  <script>
+    includeHTML();
+  </script>
 <!-- //헤더 -->
 <div class="path basic-page">
 	<div class="container">
@@ -425,3 +429,8 @@ counselHead.click(function(i){
  counselDetail.eq(idx).toggleClass('on');
 });
 </script>
+
+<div include-html="../inc/footer.html"></div>
+  <script>
+    includeHTML();
+  </script>

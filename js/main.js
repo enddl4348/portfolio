@@ -48,10 +48,10 @@ $(function(){
   var workSlide = new Swiper(".work-slide", {
     direction: "horizontal",
     speed: 2500,
-    autoplay:{
-    delay:5000,
-    disableOnInteraction: true,
-    },
+    // autoplay:{
+    // delay:5000,
+    // disableOnInteraction: true,
+    // },
     effect: "fade",
     pagination: {
       el: ".work-slide .swiper-pagination",
@@ -78,7 +78,7 @@ $(function(){
    //풀페이지
   new fullpage('#full-page',{
     licenseKey:'',
-    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage','5thPage'],
+    anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage','5thPage'],
     menu: '#gnb__menu',
     navigation:true, //nav indicator
     navigationTooltips:['Home', 'About', 'Skill', 'Work','Contact'],
