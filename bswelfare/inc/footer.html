@@ -1,56 +1,52 @@
-<footer class="footer">
-    <div class="footer__top">
-      <ul class="footer__menu">
-        <li><a href="#">공지사항</a></li>
-        <li><a href="#">고객센터</a></li>
-        <li><a href="#">이용약관</a></li>
-        <li><a href="#">개인정보취급방침</a></li>
-      </ul>
-    </div>
-    <div class="footer__btm">
-      <h2 class="footer__logo"><a href="/m/"><img src="/m/img/main/logo.png" alt="푸터 로고 이미지"></a></h2>
-      <div class="footer__info-top">
-        <p>(주)바이오스마트</p>
-        <p>서울시 성동구 광나루로 172(성수동1가 13-5) 린하우스 4층 </p>
-        <p>사업자등록번호:201-81-49003 </p>
-        <p> 통신판매업신고:제 2021-서울성동-01114호</p>
-        <small>COPYLIGHT ⓒ 2021 bswelfare.com All rights reserved.</small>
+
+  <!-- 푸터 시작 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <ul class="footer__list">
+          <!--<li><a href="/center/company.php">회사소개</a></li>-->
+          <li><a href="">공지사항</a></li>
+          <li><a href="">고객센터</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">개인정보취급방침</a></li>
+        </ul>
       </div>
-      <strong class="foot__tit">고객센터</strong>
-      <div class="footer__info-btm">
-        <p>개인정보보호책임자 :민창석 </p>
-        <p>전화 :<em class="col"> 02-3218-9073</em> (평일09:00 ~ 18:00)</p>
-        <p> 팩스 :02-3218-9050/ E-mail :<em class="col"> csmin@bs-group.kr </em> </p>
+      <!-- //footer__top -->
+      <div class="footer__bottom clearfix">
+        <div class="footer__lef">
+          <h2 class="foot__logo"><a href="" class="ir_pm">biosmart</a></h2>
+          <span class="foot__txt">(주)바이오스마트 대표 : 윤호권</span>
+          <span class="foot__txt">서울시 성동구 광나루로 172(성수동1가 13-5) 린하우스 4층</span>
+          <span class="foot__txt">사업자등록번호 : 201-81-49003 / 통신판매업신고번호 : 제 2021-서울성동-01114호</span>
+          <small class="copyright">COPYLIGHT ⓒ 2021 bswelfare.com All rights reserved.</small>
+        </div>
+        <div class="footer__rig">
+          <strong>고객센터</strong>
+          <span class="foot__txt">개인정보보호책임자 : 민창석 </span>
+          <span class="foot__txt">전화 : <em class="org-col eng-txt">02-3218-9070</em> (평일 <b class="eng-txt"> 09:00 ~
+              18:00</b>)</span>
+          <span class="foot__txt">팩스 : <b class="eng-txt">02-3218-9050 / E-mail : <em
+                class="org-col">csmin@bs-group.kr</em></b></span>
+        </div>
       </div>
-      <!-- 위로가기버튼 -->
-      <button type="button" class="go_top ir_pm">위로가기버튼</button>
+      <!-- //footer__bottom -->
     </div>
-    <!-- //footer__btm -->
-  
-    <!--위로가기 버튼 구현 -->
+    <div class="go-top__btn">
+      <button type="button" class="ir_pm">TOP</button>
+    </div>
+    <!-- //go-top__btn -->
+
     <script>
-      var $goTop = $('.go_top');
-  
-      $goTop.click(function () {
-        $('html, body').animate({
-          scrollTop: 0
-        }, 400);
+        // go-top버튼
+    $('.go-top__btn').click(function(){
+        $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
         return false;
-      });
-  
-      var $goTopview = $('.prd-vw');
-  
-      $goTopview.click(function () {
-        $('html, body').animate({
-          scrollTop: 0
-        }, 400);
-        return false;
-      });
+    });
+
     </script>
-  
   </footer>
-  </div> <!-- //wrap -->
-  
-  </body>
-  </html>
-  
+
+</div>
+</body>
+</html>
+

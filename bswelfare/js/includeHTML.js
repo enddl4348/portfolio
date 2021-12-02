@@ -1,4 +1,4 @@
-$(function(){
+
   function includeHTML(callback) {
     var z, i, elmnt, file, xhr;
     /*loop through a collection of all HTML elements:*/
@@ -35,4 +35,3 @@ $(function(){
     }, 0);
   }
 
-});
